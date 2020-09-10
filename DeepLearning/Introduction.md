@@ -32,3 +32,8 @@ Other approaches of machine learning tend to focus on learning only one or two l
 In deep learning, these layered representations are learned via models called *neural networks*, structured in literal layers stacked on top of each other. The term
 *neural network* is a reference to neurobiology, but although some of the central concepts in deep learning were developed in part by drawing inspiration from our
 understanding of the brain, deep-learning models are not models of the brain.
+
+You can think of a deep network as a multistage information-distillation , where information goes through successive filters and comes out increasingly *purified*.
+
+Technically, deep learning is a multistage way to learn data representations. It's a simple idea - but as it turns out, very simple mechanisms, sufficiently scaled,
+can end up looking like magic.
