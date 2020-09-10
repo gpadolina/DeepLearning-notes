@@ -56,3 +56,11 @@ theorem while assuming that the features in the input data are all independent.
 
 A closely related model is the *logistic regression*. Don't be misled by its name - logreg is a classification algorithm rather than a regression algorithm. It's often
 the first thing a data scientist will try on a dataset to get a feel for the classification task at hand.
+#### Kernel methods
+*Kernel methods* are a group of classification algorithms, the best known of which is the *support vector machine* (SVM). SVMs aim at solving classification problems
+by finding good *decision boundaries* between two points of belonging to two different categories.
+
+To find good decision hyperplanes in the new representation space, you don't have to explicitly compute the coordinates of your points in the new space; you just need
+to compute the distance between pairs of points in that space, which can be done efficiently using a *kernel function*. A kernel function is a computationally
+tractable operation that maps any two points in your inital space to the distance between these points in your target representation space, completely bypassing the
+explicit computation of the new representation.
