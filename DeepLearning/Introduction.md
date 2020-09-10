@@ -41,3 +41,11 @@ can end up looking like magic.
 The specification of what a layer does to its input data is stored in the layer's *weights*, which in essence are a bunch of numbers. In technical terms, the transformation
 implemented by a layer is *parameterized* by its weights. In this context, *learning* means finding a set of values for the weights of all layers in a network, such
 that the network will correctly map example inputs to their associated targets. A deep neural network can contain tens of millions of parameters.
+
+To control the output of a neural network, you need to be able to measure how far this output is from what you expected. This is the job of the *loss function* of the
+network, also called the *objective function*. The loss function takes the predictions of the network and the true target and computes a distance score, capturing how
+well the network has done on this example.
+
+The fundamental trick in deep learning is to use this score as a feedback signal to adjust the value of the weights a little, in a direction that will lower the loss
+score for the current example. This adjustment is the job of the *optimizer*, which implements what's called the *Backpropagation* algorithm: the central algorithm in
+deep learning.
