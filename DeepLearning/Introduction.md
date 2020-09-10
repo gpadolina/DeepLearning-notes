@@ -49,6 +49,8 @@ well the network has done on this example.
 The fundamental trick in deep learning is to use this score as a feedback signal to adjust the value of the weights a little, in a direction that will lower the loss
 score for the current example. This adjustment is the job of the *optimizer*, which implements what's called the *Backpropagation* algorithm: the central algorithm in
 deep learning.
+## Before machine learning
+
 #### Probabilistic modeling
 *Probabilistic modeling* is the application of the principles of statistics to data analysis. It was one of the earliest forms of machine learning and it's still
 widely used to this day. One of the best-known algorithms is the Naive Bayes algorithm. Naive Bayes is a type of machine learning classifier based on applying Bayes'
@@ -64,3 +66,14 @@ To find good decision hyperplanes in the new representation space, you don't hav
 to compute the distance between pairs of points in that space, which can be done efficiently using a *kernel function*. A kernel function is a computationally
 tractable operation that maps any two points in your inital space to the distance between these points in your target representation space, completely bypassing the
 explicit computation of the new representation.
+#### Decision trees, random forests, and gradient boosting machines
+*Decision trees* are flowchart-like structures that let you classify input data points or predict output values given inputs. They're easy to visualize and interpret.
+
+The *random forest* algorith introduced a robust, practical take on decision-tree learning that involves building a large number of specialized decision trees and
+then ensembling their outputs. Random forests are applicable to a wide range of problems - you could say that they're almost always the second-best algorithm for any
+shallow machine-learning task.
+
+A *gradient boosting machine*, much like a random forest, is a machine-learning technique based on ensembling weak prediction models, generally decision trees. It
+uses *gradient boosting*, a way to improve any machine-learning model by iteratively training new models that specialize in addressing the weak points of the previous
+models. Applied to decision trees, the use of the gradient boosting technique results in models that strictly outperform random forests most of the time, while having
+similar properties. It may be one of the best algorithm for dealing with nonperceptual data.
