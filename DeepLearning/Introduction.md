@@ -49,3 +49,10 @@ well the network has done on this example.
 The fundamental trick in deep learning is to use this score as a feedback signal to adjust the value of the weights a little, in a direction that will lower the loss
 score for the current example. This adjustment is the job of the *optimizer*, which implements what's called the *Backpropagation* algorithm: the central algorithm in
 deep learning.
+#### Probabilistic modeling
+*Probabilistic modeling* is the application of the principles of statistics to data analysis. It was one of the earliest forms of machine learning and it's still
+widely used to this day. One of the best-known algorithms is the Naive Bayes algorithm. Naive Bayes is a type of machine learning classifier based on applying Bayes'
+theorem while assuming that the features in the input data are all independent.
+
+A closely related model is the *logistic regression*. Don't be misled by its name - logreg is a classification algorithm rather than a regression algorithm. It's often
+the first thing a data scientist will try on a dataset to get a feel for the classification task at hand.
