@@ -22,3 +22,13 @@ context of machine learning, describes an automatic search process for better re
 
 Technically, machine learning is searching for useful representations of some input data, within a predefined space of possibilities, using guidance from a feedback
 signal.
+#### Deep learning
+Deep learning is a specific subfield of machine learning: a new tkae on learning representations from data that puts on emphasis on learning successive layers of
+increasingly meaningful representations. The *deep* in *deep learning* isn't a reference to any kind of deeper undestanding achieved by the approach; rather, it stands
+for this idea of successive layers of representations. How many layers contribute to a model of the data is called the *depth* of the model.
+
+Other approaches of machine learning tend to focus on learning only one or two layers of representations of the data; hence, they're sometimes called *shallow learning*.
+
+In deep learning, these layered representations are learned via models called *neural networks*, structured in literal layers stacked on top of each other. The term
+*neural network* is a reference to neurobiology, but although some of the central concepts in deep learning were developed in part by drawing inspiration from our
+understanding of the brain, deep-learning models are not models of the brain.
