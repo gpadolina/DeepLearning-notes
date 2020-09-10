@@ -37,3 +37,7 @@ You can think of a deep network as a multistage information-distillation , where
 
 Technically, deep learning is a multistage way to learn data representations. It's a simple idea - but as it turns out, very simple mechanisms, sufficiently scaled,
 can end up looking like magic.
+#### Understanding how deep learning works
+The specification of what a layer does to its input data is stored in the layer's *weights*, which in essence are a bunch of numbers. In technical terms, the transformation
+implemented by a layer is *parameterized* by its weights. In this context, *learning* means finding a set of values for the weights of all layers in a network, such
+that the network will correctly map example inputs to their associated targets. A deep neural network can contain tens of millions of parameters.
