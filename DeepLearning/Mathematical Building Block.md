@@ -42,3 +42,17 @@ The data you'll manipulate will almost always fall into one of the following cat
 * *Timeseries data or sequence data* - 3D tensors of shape (samples, timesteps, features)
 * *Images* - 4D tensors of shape (samples, height, width, channels) or (samples, channels, height, width)
 * *Video* - 5D tensors of shape (samples, frames, height, width, channels) or (samples, frames, channels, height, width)
+#### Vector data
+This is the most common case. In such a dataset, each single data point can be encoded as a vector, and thus a batch of data will be encoded as a 2D tensor, where the
+first axis is the *samples axis* and the second axis is the *features axis*.
+#### Timeseries data or a sequence data
+Whenever time matters in your data, it makes sense to store it in a 3D tensor with an explicit time axis. The time axis is always the second axis (axis of index 1),
+by convention.
+#### Image data
+Images typicaly have three dimensions: height, width, and color depth. There are two conventions for shapes of images tensors: the *channels-last* convention (Tensorflow)
+and the *channels-first* convention (Theano). The TensorFlow machine-learning framework places the color-depth axis at the end: (samples, height, width, color_depth).
+Meanwhile, Theano places the color depth axis right after the batch axis: (samples, color_depth, height, width).
+### Video data
+Video data is one of the few types of real-world data for which you'll need 5D tensors. A video can be understood as a sequence of frames, each frame being a color image.
+Because each frame can be stored in a 3D tensor (height, width, color_depth), a sequence of frames can be stored in a 4D tensor (frames, height, width, color_depth),
+and thus a batch of different videos can be stored in a 5D tensor of shape (samples, frames, height, width, color_depth).
