@@ -67,3 +67,6 @@ operations are highly amenable to massively parallele implementations.
 When possiblle, the smaller tensor will be *broadcaster* to match the shape of the larger tensor. Broadcasting consists of two steps:
 * Axes (called *broadcast axes*) are added to the smaller tensor to match the ndim of the larger tensor.
 * The smaller tensor is repeated alongside these new axes to match the full shape of the larger tensor.
+#### Tensor dot
+The dot operation, also called a *tensor product* is the most common, most useful tensor operations. Contrary to element-wise operations, it combines entries in the
+input tensors. An element-wise product is done with the asterisk operator in Numpy, Keras, Theano, and Tensorflow.dot uses a different syntax in TensorFlow.
