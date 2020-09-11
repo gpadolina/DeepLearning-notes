@@ -5,3 +5,6 @@ in a more useful form. Specifically, layers extract *representations* out of the
 at hand.
 
 To make a network ready for training, we need to pick three more things, as part of the *compilation* step:
+* *Loss function* - How the network will be able to measure its performance on the training data, and thus how it will be able to steer itself in the right direction.
+* *Optimizer* - The mechanism through which the network will update itself based on the data it sees and its loss function.
+* *Metrics to monitor during training and testing*
