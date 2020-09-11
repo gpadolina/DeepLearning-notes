@@ -72,3 +72,9 @@ The dot operation, also called a *tensor product* is the most common, most usefu
 input tensors. An element-wise product is done with the asterisk operator in Numpy, Keras, Theano, and Tensorflow.dot uses a different syntax in TensorFlow.
 
 You can take the dot product of the two matrices x and y (dot(x, y)) if and only if x.shape[1] == y.shape[0]. The result is a matrix with shape (x.shape[0], y.shape[1]).
+#### Tensor reshaping
+A third type of tensor operation that's essential to understand is *tensor reshaping*. Reshaping a tensor means rearranging its rows and columns to match a target shape.
+Naturally, the reshaped tensor has the same total number of coefficients as the initial tensor.
+
+A special case of reshaping that's commonly encountered is *transposition*. *Transposing* a matrix means exchanging its rows and its columns so that x[i, :] becomes
+x[:, i].
