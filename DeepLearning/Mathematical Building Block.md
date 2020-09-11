@@ -78,3 +78,6 @@ Naturally, the reshaped tensor has the same total number of coefficients as the 
 
 A special case of reshaping that's commonly encountered is *transposition*. *Transposing* a matrix means exchanging its rows and its columns so that x[i, :] becomes
 x[:, i].
+#### A geometric interpretation of deep learning
+Uncrumpling paper balls is what machine learning is about: finding neat representations for complex, highly folded data manifolds. Each layer in a deep network applies
+a transformation that disentangles the data a little - and a deep stack of layers makes tractable an extremely complicated disentanglement process.
