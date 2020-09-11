@@ -70,3 +70,5 @@ When possiblle, the smaller tensor will be *broadcaster* to match the shape of t
 #### Tensor dot
 The dot operation, also called a *tensor product* is the most common, most useful tensor operations. Contrary to element-wise operations, it combines entries in the
 input tensors. An element-wise product is done with the asterisk operator in Numpy, Keras, Theano, and Tensorflow.dot uses a different syntax in TensorFlow.
+
+You can take the dot product of the two matrices x and y (dot(x, y)) if and only if x.shape[1] == y.shape[0]. The result is a matrix with shape (x.shape[0], y.shape[1]).
