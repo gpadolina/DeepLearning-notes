@@ -96,3 +96,6 @@ in a small change in y - that's the intuition behind continuity.
 
 The slope is called the *derivative* of f in p. For every differentiable function f(x) (*differentiable* means "can be derived": for example, smooth, continuous functions
 can be derived), there exists a derivative function f'(x) that maps values of x to the slope of the local linear approximation of f in those points.
+#### Derivative of a tensor operation: the gradient
+A *gradient* is the derivative of a tensor operation. It's the generalization of the concept of derivatives to functions of multidimensional inputs: that is, to
+functions that take tensors as inputs.
