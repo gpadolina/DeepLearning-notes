@@ -90,3 +90,9 @@ In this expression, W and b are tensors that are attributes of the layer. They'r
 Initially, these weight matrices are filled with small random values (a step called *random initialization*). The resulting representations are meaningless - but they're
 a starting point. What comes next is to gradually adjust these weights, based on a feedback signal. This is gradual adjustments, also called *training*, is basically
 the learning that machine learning is all about. This happens within what's called a *training loop*.
+#### Derivative
+Consider a continuous, smooth function f(x)=y, mapping a real number x to a new real number y. Because a function is *continuous*, a small change in x can only result
+in a small change in y - that's the intuition behind continuity.
+
+The slope is called the *derivative* of f in p. For every differentiable function f(x) (*differentiable* means "can be derived": for example, smooth, continuous functions
+can be derived), there exists a derivative function f'(x) that maps values of x to the slope of the local linear approximation of f in those points.
