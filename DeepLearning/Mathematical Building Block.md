@@ -36,3 +36,9 @@ Selecting specific elements in a tensor is called *tensor slicing*.
 #### Data batches
 When considering such a batch tensor, the first axis (axis 0) is called the *batch axis* or *batch dimension*. In addition, deep-learning models don't process an entire
 dataset at once. They break the data into small batches.
+#### Real-world examples
+The data you'll manipulate will almost always fall into one of the following categories:
+* *Vector data* - 2D tensors of shape (samples, features)
+* *Timeseries data or sequence data* - 3D tensors of shape (samples, timesteps, features)
+* *Images* - 4D tensors of shape (samples, height, width, channels) or (samples, channels, height, width)
+* *Video* - 5D tensors of shape (samples, frames, height, width, channels) or (samples, frames, channels, height, width)
