@@ -52,7 +52,18 @@ by convention.
 Images typicaly have three dimensions: height, width, and color depth. There are two conventions for shapes of images tensors: the *channels-last* convention (Tensorflow)
 and the *channels-first* convention (Theano). The TensorFlow machine-learning framework places the color-depth axis at the end: (samples, height, width, color_depth).
 Meanwhile, Theano places the color depth axis right after the batch axis: (samples, color_depth, height, width).
-### Video data
+#### Video data
 Video data is one of the few types of real-world data for which you'll need 5D tensors. A video can be understood as a sequence of frames, each frame being a color image.
 Because each frame can be stored in a 3D tensor (height, width, color_depth), a sequence of frames can be stored in a 4D tensor (frames, height, width, color_depth),
 and thus a batch of different videos can be stored in a 5D tensor of shape (samples, frames, height, width, color_depth).
+
+## Tensor operations
+Much as any computer program can be ultimately reduced to a small set of binary operations on binary inputs (AND, OR, NOR, and so on), all transformation learned by
+deep neural networks can be reduced to a handful of *tensor operations* applied to tensors of numeric data.
+#### Element-wise operations
+The relu operation and addition are *element-wise* operations: operations that are applied independently to each entry in the tensors beind considered. This means these
+operations are highly amenable to massively parallele implementations.
+#### Broadcasting
+When possiblle, the smaller tensor will be *broadcaster* to match the shape of the larger tensor. Broadcasting consists of two steps:
+* Axes (called *broadcast axes*) are added to the smaller tensor to match the ndim of the larger tensor.
+* The smaller tensor is repeated alongside these new axes to match the full shape of the larger tensor.
