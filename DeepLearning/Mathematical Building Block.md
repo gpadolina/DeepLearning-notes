@@ -81,3 +81,12 @@ x[:, i].
 #### A geometric interpretation of deep learning
 Uncrumpling paper balls is what machine learning is about: finding neat representations for complex, highly folded data manifolds. Each layer in a deep network applies
 a transformation that disentangles the data a little - and a deep stack of layers makes tractable an extremely complicated disentanglement process.
+## The engine of neural networks: gradient-based optimization
+```
+output = relu(dot(W, input) + b)
+```
+In this expression, W and b are tensors that are attributes of the layer. They're called the *weights* or *trainable parameters* of the layer.
+
+Initially, these weight matrices are filled with small random values (a step called *random initialization*). The resulting representations are meaningless - but they're
+a starting point. What comes next is to gradually adjust these weights, based on a feedback signal. This is gradual adjustments, also called *training*, is basically
+the learning that machine learning is all about. This happens within what's called a *training loop*.
