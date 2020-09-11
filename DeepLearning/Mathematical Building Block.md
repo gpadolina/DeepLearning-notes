@@ -21,3 +21,18 @@ A tensor that contains only one number is called a *scalar* (or scalar tensor, 0
 #### Vectors (1D tensors)
 An array of numbers is called a *vector*, or 1D tensor. A 1D tensor is said to have exactly one axis. *Dimensionality* can denote either the number of entries along
 specific axis or the number of axes in a tensor.
+#### Matrices (2D tensors)
+An array of vectors ia *matrix* or 2D tensor. A matrix has two axes (*rows* and *columns*).
+#### 3D tensors and higher-dimensional tensors
+If you pack such matrices in a new array, you obtain a 3D tensor, which you can visually interpret as a cube of numbers. By packing 3D tensors in an array, you can
+create a 4D tensor and so on. In deep learning, you'll generally manipulate tensors that are 0D to 4D, although you may go up to 5D if you process video data.
+#### Key attributes
+A tensor is defined by three key attributes:
+* *Number of axes (rank)* - For instance, a 3D tensor has three axes and a matrix has two axes.
+* *Shape* - This is a tuple of integers that describes how many dimensions the tensor has along each axis.
+* *Data type* - This is the type of the data contained in the tensor.
+#### Manipulating tensors in Numpy
+Selecting specific elements in a tensor is called *tensor slicing*.
+#### Data batches
+When considering such a batch tensor, the first axis (axis 0) is called the *batch axis* or *batch dimension*. In addition, deep-learning models don't process an entire
+dataset at once. They break the data into small batches.
