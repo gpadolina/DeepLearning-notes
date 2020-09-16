@@ -131,4 +131,5 @@ Backpropagation starts with the final loss value and works backward from the top
 each parameter had in the loss value.
 
 *Categorical_crossentropy* is the loss function that's used as a feedback signal for learning the weight tensors, and which the training phase will attempt to minimize.
-You also know that this reduction of the loss happens via mini-batch stochastic gradient descent. Each iteration over all the training data is called an *epoch*.
+You also know that this reduction of the loss happens via mini-batch stochastic gradient descent. Each iteration over all the training data is called an *epoch*. At each
+iteration, the network will compute the gradients of the weights with regard to the loss on the batch, and update the weights accordingly.
