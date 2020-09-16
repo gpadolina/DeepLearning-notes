@@ -104,3 +104,10 @@ Given a differentiable function, it's theoretically possible to find its minimum
 so all you have to do is find all the points where the derivative goes to 0 and check for which of these points the function has the lowest value.
 
 The term *stochastic* refers to the fact that each batch of data is drawn at random (*stochastic* is a scientific synonym of *random*).
+
+*Mini-batch stochastic gradient descent* (mini-batch SGD) is run as follows:
+1. Draw a batch of training samples x and corresponding targets y.
+2. Run the network on x to obtain predictions y_pred.
+3. Compute the loss of the network on the batch, a measure of the mismatch between y_pred and y.
+4. Compute the gradient of the loss to the nwtwork's parameters (a *backward pass*).
+5. Move the parameters a little in the opposite direction from the gradient - for example W -= step * gradient - thus reducing the loss on the batch a bit.
