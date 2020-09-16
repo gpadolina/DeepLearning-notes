@@ -111,3 +111,7 @@ The term *stochastic* refers to the fact that each batch of data is drawn at ran
 3. Compute the loss of the network on the batch, a measure of the mismatch between y_pred and y.
 4. Compute the gradient of the loss to the nwtwork's parameters (a *backward pass*).
 5. Move the parameters a little in the opposite direction from the gradient - for example W -= step * gradient - thus reducing the loss on the batch a bit.
+
+Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteratoin, rathen than drawing a batch of data. This would be
+*true* SGD (as opposed to *mini-batch SGD*). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called *batch SGD*.
+Each update would then be more accurate, but far more expensive. The efficient compromise between these two extreme is to use mini-batches of reasonable size.
