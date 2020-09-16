@@ -123,3 +123,9 @@ If the parameter under consideration were being optimized via SGD with a small l
 of making its way to the global minimum. You can avoid such issues by using momentum, which draws inspiration from physics. A useful mentak image is to think of the
 optimization process as a small ball rolling down the loss curve. If it has enough momentum, the ball won't get stuck in a small ravine and will end up at the global
 minimum.
+
+#### Chaining derivatives: the Backpropagation algorithm
+Calculus tells us that a chain of function can be derived using the following identity, called the *chain rule*: f(g(x)) = f'(g(x)) * g'(x). Applying the chain rule to
+the computation of the gradient values of a neural network gives rise to an algorithm called *Backpropagation* (also sometimes called *reverse-mode differentiation*. 
+Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that
+each parameter had in the loss value.
