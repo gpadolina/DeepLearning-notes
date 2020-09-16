@@ -17,3 +17,5 @@ as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D c
 
 Building deep-learning models in Keras is done by clipping together compatible layers to form useful data-transformation pipelines. The notion of *layer compatibility*
 here refers specifically to the fact that every layer will only accept input tensors of a certain shape and will return output tensors of a certain shape.
+
+When using Keras, you don't have to worry about compatibility, because the layers you add to your models are dynamically built to match the shape of the incoming layer.
