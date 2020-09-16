@@ -99,3 +99,8 @@ can be derived), there exists a derivative function f'(x) that maps values of x 
 #### Derivative of a tensor operation: the gradient
 A *gradient* is the derivative of a tensor operation. It's the generalization of the concept of derivatives to functions of multidimensional inputs: that is, to
 functions that take tensors as inputs.
+#### Stochastic gradient descent
+Given a differentiable function, it's theoretically possible to find its minimum analytically: it's known that a function's minimum is a point where the derivative is 0,
+so all you have to do is find all the points where the derivative goes to 0 and check for which of these points the function has the lowest value.
+
+The term *stochastic* refers to the fact that each batch of data is drawn at random (*stochastic* is a scientific synonym of *random*).
