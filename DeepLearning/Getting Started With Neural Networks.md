@@ -8,3 +8,9 @@
 
 ![Figure](https://github.com/gpadolina/DeepLearning-notes/blob/master/DeepLearning/Figures/Anatomy%20of%20a%20neural%20network.png)
 #### Layers: the building blocks of deep learning
+A layer is a data-processing module that takes as input one or more tensors and that outputs one or more tensors. Some layers are stateless, but more frequently layers
+have a state: the layer's *weights*, one or several tensors learned with stochastic gradient descent, which together contain the network's *knowledge*.
+
+For instance, simple vector data, stored in 2D tensors of shape (samples, features) is often processed by *densely connected* layers, also called *fully connected* or
+*dense* layers (the Dense class in Keras). Sequence data, stored in 3D tensors of shape (samples, timesteps, features) is typically processed by *recurrent* layers such
+as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D convolution layers (Conv2D).
