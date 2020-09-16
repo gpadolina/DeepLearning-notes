@@ -115,3 +115,11 @@ The term *stochastic* refers to the fact that each batch of data is drawn at ran
 Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteratoin, rathen than drawing a batch of data. This would be
 *true* SGD (as opposed to *mini-batch SGD*). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called *batch SGD*.
 Each update would then be more accurate, but far more expensive. The efficient compromise between these two extreme is to use mini-batches of reasonable size.
+
+There is also SGD with momemtum, as well as Adagrad, RMSProp, and several others. Such variants are known as *optimization methods* or *optimizers*. In particular, the
+concept of *momentum*, which is used in many of these variants, deserves your attention. Momentum addresses two issues with SGD: convergence speed and local minima. 
+
+If the parameter under consideration were being optimized via SGD with a small learning rate, then the optimization process would get stuck at the local minimum instead
+of making its way to the global minimum. You can avoid such issues by using momentum, which draws inspiration from physics. A useful mentak image is to think of the
+optimization process as a small ball rolling down the loss curve. If it has enough momentum, the ball won't get stuck in a small ravine and will end up at the global
+minimum.
