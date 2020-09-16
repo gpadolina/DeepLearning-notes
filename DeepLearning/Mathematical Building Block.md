@@ -129,3 +129,6 @@ Calculus tells us that a chain of function can be derived using the following id
 the computation of the gradient values of a neural network gives rise to an algorithm called *Backpropagation* (also sometimes called *reverse-mode differentiation*. 
 Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that
 each parameter had in the loss value.
+
+*Categorical_crossentropy* is the loss function that's used as a feedback signal for learning the weight tensors, and which the training phase will attempt to minimize.
+You also know that this reduction of the loss happens via mini-batch stochastic gradient descent. Each iteration over all the training data is called an *epoch*.
