@@ -14,3 +14,6 @@ have a state: the layer's *weights*, one or several tensors learned with stochas
 For instance, simple vector data, stored in 2D tensors of shape (samples, features) is often processed by *densely connected* layers, also called *fully connected* or
 *dense* layers (the Dense class in Keras). Sequence data, stored in 3D tensors of shape (samples, timesteps, features) is typically processed by *recurrent* layers such
 as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D convolution layers (Conv2D).
+
+Building deep-learning models in Keras is done by clipping together compatible layers to form useful data-transformation pipelines. The notion of *layer compatibility*
+here refers specifically to the fact that every layer will only accept input tensors of a certain shape and will return output tensors of a certain shape.
