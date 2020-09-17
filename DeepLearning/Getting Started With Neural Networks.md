@@ -182,3 +182,20 @@ history = model.fit(partial_x_train,
 ```
 On CPU, this will take less than 2 seconds per epoch - training is over in 20 seconds. At the end of every epoch, there is a slight pause as the model computes its
 loss and accuracy on the 10,000 samples of the validation data.
+```
+# Plotting the training and validation loss
+import matplotlib.pyplot as plt
+
+history_dict = history.history
+loss_values = history_dict['loss']
+val_loss_values = history_dict['val_loss']
+
+epochs = range(1, len(acc) + 1)
+
+plt.plot(epochs, loss_values, 'bo', label='Training loss')          # 'bo' is for blue dot
+plt.plot(epochs, val_loss_values, 'b', label='Validation loss')     # 'b' is for solid blue line
+plt.title('Training and validation loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend( )
+```
