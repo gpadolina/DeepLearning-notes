@@ -94,3 +94,15 @@ You can't feed lists of integers into a neural network. You have to turn your li
 * Pad your lists so that they all have the same length, turn them into an integer tensor of shape (samples, word_indices), and then use as the first layer in your network
 a  layer of capable of handling such integer tensors
 * One-hot encode your lists to turn them into vectors of 0s and 1s
+```
+# Encoding the integer sequences into a binary matrix
+import numpy as np
+
+def vectorize_sequences(sequences, dimension=10000):
+  results = np.zeros((len(sequences), dimension))       # creates an all-zero matrix of shape (len(sequences), dimension)
+  for i, sequence in enumerate(sequences):
+      results[i, sequence] = 1.                         # sets specific indices of results[i] to 1s
+  return results
+  
+x_train = vectorize_sequences(train_data)               # vectorized training data
+x_test = vectorize_sequences(test_data)                 # vectorized test data
