@@ -127,3 +127,8 @@ model.add(layers.Dense(16, activation='relu'))
 mdoel.add(layers.Dense(1, activation='sigmoid'))
 ```
 Without an activation function like relu, the Dense layer would consist of two linear operations - a dot product and an addition.
+
+Finally, choose a loss function and an optimizer. Because you're facing a binary classification problem and the output of your network is a probability, it's best to
+use the binary_crossentropy loss. Crossentropy is usually the best choise when you're dealing with models that output probabilities. *Crossentropy* is a quantity from
+the field of Information Theory that measures the distance between probability distributions or, in this case, between the ground-truth distribution and your
+predictions.
