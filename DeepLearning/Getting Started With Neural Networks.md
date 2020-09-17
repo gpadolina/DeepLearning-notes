@@ -106,3 +106,13 @@ def vectorize_sequences(sequences, dimension=10000):
   
 x_train = vectorize_sequences(train_data)               # vectorized training data
 x_test = vectorize_sequences(test_data)                 # vectorized test data
+```
+#### Building your network
+The input data is vectors and the labels are scalars (1s and 0s). A *hidden unit* is a dimension in the representation space of the layer.
+
+There are two key architecture to be made about such a stack of Dense layers.
+* How many layers to use
+* How many hidden units to choose for each layer
+
+A relu (rectified linear unit) is a function meant to zero out negative values, whereas a sigmoid squashes arbitrary values into the [0,1] interval, outputting
+something that can be interpreted as a probability.
