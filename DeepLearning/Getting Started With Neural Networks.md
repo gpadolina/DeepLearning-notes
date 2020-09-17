@@ -40,3 +40,12 @@ instance, you'll use binary crosstentropy for a two-class classification problem
 a regression problem, connectionist temportal classification (CTC) for a sequence-learning problem, and so on.
 
 ## Introduction to Keras
+Keras is a deep-learning framework for Python that provides a convenient way to define and train almost any kind of deep-learning model. keras was initially developed for
+researches, with the aim of enabling fast experimentation.
+
+Keras has the following key features:
+* It allows the same code to run seamlessly on CPU or GPU.
+* It has a user-friendly API that makes it easy to quickly prototype deep-learning models.
+* It has built-in support convolutional networks (for computer vision), recurrent networks (for sequence processing), and any combination of both.
+* It supports arbitrary network architectures: multi-input or multi-output models, layer sharing, model sharing, and so on. This means Keras is appropriate for building
+essentially any deep-learning model, from a generative adversarial network to a neural Turing machine.
