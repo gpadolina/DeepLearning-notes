@@ -10,3 +10,7 @@ This is by far the most common case. Although supervised learning mostly consist
 * *Syntax tree prediction* Given a sentence, predict its decomposition into a syntax tree.
 * *Object detection* - Given a picture, draw a bounding box around certain objects inside the picture.
 * *Image segmentation* - Given a picture, draw a pixel-lvel mask on a specific object.
+#### Unsupervised learning
+Consists of finding interesting transformation of the input data without the help of any targets. Unsupervised learning is the bread and butter of data analytics and it's
+often a necessary step in better understanding a dataset before attempting to solve a supervised-learning problem. *Dimensionality reduction* and *clustering* are
+well-known categories of unsupervised learning.
