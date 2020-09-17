@@ -24,3 +24,7 @@ The most commong instance is a linear stack of layers, mapping out a single inpu
 
 But as you move forward, you'll be exposed to a much broader variety of network topologies. Someone common ones include the following: two-branch networks, multihead 
 networks, and inception blocks.
+
+The topology of a network defines a *hypothesis space*. You may remember that we defined machine learning as "searching for useful representations of some input data,
+within a predefined space of possibilities, using guidance from a feedback signal." By choosing a network topology, you constrain your *space of possibilities*
+(hypothesis space) to a specific series of tensor operations, mapping input data to output data.
