@@ -140,3 +140,21 @@ model.compile(optimizer='rmsprop',
 ```
 You're passing your optimizer, loss function, and metrics as strings, which is possible because rmsprop, binary_crossentropy, and accuracy are packaged as part of
 Keras.
+```
+# Configuring the optimizer
+from keras import optimizers
+
+model.compile(optimizer=optimizers.RMSprop(lr=0.001),
+            loss='binary_crossentropy',
+            metrics=['accuracy']
+```
+
+```
+# Uisng custom losses and metrics
+from keras import losses
+from keras import metrics
+
+model.compile(optimizer=optimizers.RMSprop(lr=0.001),
+            loss=losses.binary_crossentropy,
+            metrics=[metrics.binary_accuracy])
+```
