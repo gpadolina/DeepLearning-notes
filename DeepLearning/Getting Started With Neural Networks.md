@@ -199,3 +199,17 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend( )
 ```
+
+```
+# Plotting the training and validation accuracy
+plt.clf( )  # clears the figure
+acc_values = history_dict['acc']
+val_acc_values = history_dict['val_acc']
+
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend( )
+```
