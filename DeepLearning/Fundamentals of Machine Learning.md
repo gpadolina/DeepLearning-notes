@@ -14,3 +14,8 @@ This is by far the most common case. Although supervised learning mostly consist
 Consists of finding interesting transformation of the input data without the help of any targets. Unsupervised learning is the bread and butter of data analytics and it's
 often a necessary step in better understanding a dataset before attempting to solve a supervised-learning problem. *Dimensionality reduction* and *clustering* are
 well-known categories of unsupervised learning.
+#### Self-supervised learning
+This is a specific instance of supervised learning, but it's different enough that it deserves its own category. Self-supervised learning is supervised learning without
+human-annotated labels. There are still labels involved, but they're generated form the input data, typically using a heuristic algorithm.
+#### Reinforcement learning
+In reinforcement learning, an *agent* receives information about its environment and learns to choose actions that will maximize some reward.
