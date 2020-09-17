@@ -158,3 +158,27 @@ model.compile(optimizer=optimizers.RMSprop(lr=0.001),
             loss=losses.binary_crossentropy,
             metrics=[metrics.binary_accuracy])
 ```
+#### Validating your approach
+```
+# Setting aside a validation set
+x_val = x_train[:10000]
+partial_x_train = x_train[10000:]
+
+y_val = y_train[:10000]
+partial_y_train = y_train[10000:]
+```
+
+```
+# Training your model
+model.compile(optimizer='rmsprop',
+            loss='binary_crossentropy',
+            metrics=['acc']
+            
+history = model.fit(partial_x_train,
+                    partial_y_train,
+                    epochs=20,
+                    batch_size=512,
+                    validation_data=(x_val, y_val))
+```
+On CPU, this will take less than 2 seconds per epoch - training is over in 20 seconds. At the end of every epoch, there is a slight pause as the model computes its
+loss and accuracy on the 10,000 samples of the validation data.
