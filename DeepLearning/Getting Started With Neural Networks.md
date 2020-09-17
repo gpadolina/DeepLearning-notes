@@ -89,3 +89,8 @@ decoded_review = ' '.join(
   [reverse_word_index.get(i - 3, '?') for in in train_data[0]]) # Decodes the review. Note that the indices are offset by 3
                                       # because 0, 1, and 2 are reserved indices for "padding", "start of sequence", and "unknown"
 ```
+#### Preparing the data
+You can't feed lists of integers into a neural network. You have to turn your lists into tensors. There are two ways to do that:
+* Pad your lists so that they all have the same length, turn them into an integer tensor of shape (samples, word_indices), and then use as the first layer in your network
+a  layer of capable of handling such integer tensors
+* One-hot encode your lists to turn them into vectors of 0s and 1s
