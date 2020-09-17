@@ -116,3 +116,14 @@ There are two key architecture to be made about such a stack of Dense layers.
 
 A relu (rectified linear unit) is a function meant to zero out negative values, whereas a sigmoid squashes arbitrary values into the [0,1] interval, outputting
 something that can be interpreted as a probability.
+```
+# Model definition
+from keras import models
+from keras import layers
+
+model = models.Sequential( )
+model.add(layers.Dense(16, activation='relu', input_shape=(10000,)))
+model.add(layers.Dense(16, activation='relu'))
+mdoel.add(layers.Dense(1, activation='sigmoid'))
+```
+Without an activation function like relu, the Dense layer would consist of two linear operations - a dot product and an addition.
