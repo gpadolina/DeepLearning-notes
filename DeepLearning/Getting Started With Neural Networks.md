@@ -34,3 +34,9 @@ Once the network architecture is defined, you still have to choose to more thing
 * *Optimizer* - Determines how the network will be updated based on the loss function. It implements a specific variant of stochastic gradient descent (SGD).
 A neural network that has multiple outputs may have multiple loss functions (one per output). But the gradient-descent process must be based on a *single* scalar loss
 value; so for multiloss networks, all losses are combined (via averaging) into a single scalar quantity.
+
+When it comes to common problems such as classification, regression, and sequence prediction, there are simple guidelines you can follow to choose the correct loss. For
+instance, you'll use binary crosstentropy for a two-class classification problem, categorical crossentropy for a many-class classification problem, mean-squared error for
+a regression problem, connectionist temportal classification (CTC) for a sequence-learning problem, and so on.
+
+## Introduction to Keras
