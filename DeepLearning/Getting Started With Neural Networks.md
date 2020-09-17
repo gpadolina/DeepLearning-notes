@@ -19,3 +19,8 @@ Building deep-learning models in Keras is done by clipping together compatible l
 here refers specifically to the fact that every layer will only accept input tensors of a certain shape and will return output tensors of a certain shape.
 
 When using Keras, you don't have to worry about compatibility, because the layers you add to your models are dynamically built to match the shape of the incoming layer.
+#### Models: networks of layers
+The most commong instance is a linear stack of layers, mapping out a single input to a single output.
+
+But as you move forward, you'll be exposed to a much broader variety of network topologies. Someone common ones include the following: two-branch networks, multihead 
+networks, and inception blocks.
