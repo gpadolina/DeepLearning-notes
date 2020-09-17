@@ -28,3 +28,9 @@ networks, and inception blocks.
 The topology of a network defines a *hypothesis space*. You may remember that we defined machine learning as "searching for useful representations of some input data,
 within a predefined space of possibilities, using guidance from a feedback signal." By choosing a network topology, you constrain your *space of possibilities*
 (hypothesis space) to a specific series of tensor operations, mapping input data to output data.
+#### Loss functions and optimizers
+Once the network architecture is defined, you still have to choose to more things:
+* *Loss function (objective function)* - The quantity that will be minimized during training. It represents a measure of success for the task at hand.
+* *Optimizer* - Determines how the network will be updated based on the loss function. It implements a specific variant of stochastic gradient descent (SGD).
+A neural network that has multiple outputs may have multiple loss functions (one per output). But the gradient-descent process must be based on a *single* scalar loss
+value; so for multiloss networks, all losses are combined (via averaging) into a single scalar quantity.
