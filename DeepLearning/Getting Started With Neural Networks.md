@@ -71,3 +71,21 @@ review as positive or negative, based on the text content of the reviews.
 #### The IMDB dataset
 The IMDB dataset: a set of 50,000 highly polarized reviews from the Internet Movie Database. They're split into 25,000 reviews for training and 25,000 reviews for testing,
 each set consisting of 50% of negative and 50% positive reviews.
+```
+# Loading the IMDB dataset
+from keras.datasets import imdb
+
+(train_data, train_labels), (test_data, test_labels) = imdb.load_data(num_words=10000)
+
+train_data[0]
+train_labels[0]
+
+max([max(sequences) for sequence in train_data])
+
+word_index = imdb.get_word_index      # word_index is a dictionary mapping words to an integer index
+reverse_word_index = dict(
+  [(value, key) for (key, value) in word_index.items()]) # Reverses it, mapping integer indices to words
+decoded_review = ' '.join(
+  [reverse_word_index.get(i - 3, '?') for in in train_data[0]]) # Decodes the review. Note that the indices are offset by 3
+                                      # because 0, 1, and 2 are reserved indices for "padding", "start of sequence", and "unknown"
+```
