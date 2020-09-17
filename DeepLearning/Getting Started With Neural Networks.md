@@ -58,3 +58,7 @@ The typical workflow looks just like that example:
 
 There are two ways to define a model: using the *Sequential* class (only for linear stacks of layers, which is the most common network architecture by far) for the
 *functional API* (fore directed acyclic graphs of layers, which lets you build completely arbitary architectures).
+## Setting up a deep-learning workstation
+#### Jupyter notebooks: the preferred way
+Jupyter notebooks are a great way to run deep-learning experiments. A notebook allows you to break up long experiments into smaller pieces that can be executed independently,
+which makes development interactive and means you don't have to rerun all of your previous code if something goes wrong late in an experiment.
