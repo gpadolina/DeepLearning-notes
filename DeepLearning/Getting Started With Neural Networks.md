@@ -49,3 +49,12 @@ Keras has the following key features:
 * It has built-in support convolutional networks (for computer vision), recurrent networks (for sequence processing), and any combination of both.
 * It supports arbitrary network architectures: multi-input or multi-output models, layer sharing, model sharing, and so on. This means Keras is appropriate for building
 essentially any deep-learning model, from a generative adversarial network to a neural Turing machine.
+#### Developing with Keras
+The typical workflow looks just like that example:
+1. Define your training data: input tensors and target tensors.
+2. Define a network of layers or model that maps your inputs to your targets.
+3. Configure the learning process by choosing a loss function, an optimizer, and some metrics to monitor.
+4. Iterate on your training data by calling the *fit( )* methof of your model.
+
+There are two ways to define a model: using the *Sequential* class (only for linear stacks of layers, which is the most common network architecture by far) for the
+*functional API* (fore directed acyclic graphs of layers, which lets you build completely arbitary architectures).
