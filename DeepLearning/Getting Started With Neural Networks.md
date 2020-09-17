@@ -66,3 +66,8 @@ independently, which makes development interactive and means you don't have to r
 The first thing to note is that it must be an NVIDIA GPU. NVIDIA is the only graphics computing company that has invested heavily in deep learning so far and modern
 deep-learning frameworks can only run on NVIDIA cards.
 ## Classifying movie reviews: a binary classification example
+Two-class classification or binary classification may be the most widely applied kind of machine-learning problem. In this example, you'll learn to classify movie
+review as positive or negative, based on the text content of the reviews.
+#### The IMDB dataset
+The IMDB dataset: a set of 50,000 highly polarized reviews from the Internet Movie Database. They're split into 25,000 reviews for training and 25,000 reviews for testing,
+each set consisting of 50% of negative and 50% positive reviews.
