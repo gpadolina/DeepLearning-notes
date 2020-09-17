@@ -132,3 +132,11 @@ Finally, choose a loss function and an optimizer. Because you're facing a binary
 use the binary_crossentropy loss. Crossentropy is usually the best choise when you're dealing with models that output probabilities. *Crossentropy* is a quantity from
 the field of Information Theory that measures the distance between probability distributions or, in this case, between the ground-truth distribution and your
 predictions.
+```
+# Compiling the model
+model.compile(optimizer='rmsprop',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+```
+You're passing your optimizer, loss function, and metrics as strings, which is possible because rmsprop, binary_crossentropy, and accuracy are packaged as part of
+Keras.
