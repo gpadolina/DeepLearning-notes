@@ -62,3 +62,6 @@ first turn into tensors, a step called *data normalization*.
 In general, it isn't safe to feed into a neural network data that takes relatively large values or data that is heterogeneous. Doing so can trigger large gradient updates
 that will prevent the network from converging. To make learning easier for your networks, your data should *take small values* - typically in the 0-1 range, and *be
 homogeneous* - all features should take values in roughly the same range.
+* *Handling missing values* - In general, with neural networks, it's safe to input missing values as 0, with the condition that 0 isn't already a meaningful value. The
+network will learn from exposure to the data that the value 0 means *missing data* and will start ignoring the value. Note that if you're expecting missing values in the
+test data, but the network was trained on data without any missing values, the network won't have learned to ignore missing values.
