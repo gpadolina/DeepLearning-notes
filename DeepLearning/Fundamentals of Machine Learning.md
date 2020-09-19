@@ -26,3 +26,12 @@ their performance on never-before-seen data started stalling or worsening compar
 progresses.
 In machine learning, the goal is to achieve models that *generalize* - that perform on never-before-seen data and overfitting is the central obstacle. You can only control
 that which you can observe, so it's crucial to be able to reliably measure the generalization power of your model.
+#### Traning, validation, and test sets
+Evaluating a model always boils down to splitting the available data into three sets: training, validation, and test. You train on the training data and evaluate your model
+on the validation data. Once your model is ready for prime time, you test it one final time on the test data.
+
+Why not have two sets? The reason is that developing a model always involves tuning its configuration: for example, choosing the number of layers or the size of the layers
+(called the *hyperparameters* of the model, to distinguish them from the *parameters*, which are the network's weights). You do this tuning by using as a feedback signal
+the performance of the model on the validation data. In essence, this tuning is a form of *learning*: a search for a good configuration in some parameter space. Tuning the
+configuration of the model based on its performance on the validation set can quickly result in *overfitting to the validation set*, even though your model is never directly
+trained on it.
