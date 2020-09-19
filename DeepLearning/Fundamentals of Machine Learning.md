@@ -71,3 +71,8 @@ applying hardcoded transformations to the data before it goes into the model.
 
 The essence of feature engineering: making a problem easier by expressing it in a simpler way. It usually requires understanding the problem in depth. Fortunately, modern
 deep learning removes the need for most feature engineering because neural networks are capable of automatically extracting useful features from raw data.
+## Overfitting and underfitting
+Overfitting happens in every machine-learning problem. The fundamental issue in machine learning is the tension between optimization and generalization. *Optimization*
+refers to the process of adjusting a model to get the best performance possible on the training data (the *learning* in *machine learning*), whereas *generalization*
+refers to how well the trained model performs on data it has never seen before. The goal of the game is to get good generalization, but you don't control generalization;
+you can only adjust the model based on its training data.
