@@ -65,3 +65,6 @@ homogeneous* - all features should take values in roughly the same range.
 * *Handling missing values* - In general, with neural networks, it's safe to input missing values as 0, with the condition that 0 isn't already a meaningful value. The
 network will learn from exposure to the data that the value 0 means *missing data* and will start ignoring the value. Note that if you're expecting missing values in the
 test data, but the network was trained on data without any missing values, the network won't have learned to ignore missing values.
+#### Feature engineering
+*Feature engineering* is the process of using your own knowledge about the data and about the machine-learning algorithm at hand to make the algorithm work better by
+applying hardcoded transformations to the data before it goes into the model.
