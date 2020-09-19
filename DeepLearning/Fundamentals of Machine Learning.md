@@ -51,3 +51,14 @@ evaluate it on partition i. Your final score is then the averages of the K score
 variance based on your train-test split. Like hold-out validation, this method doesn't exempt you from using a distinct validation set for model calibration.
 * *Iterated K-fold validation with shuffling*: This one is for situations in which you have relatively little data available and you need to evaluate your model as
 precisely as possible. It consists of applying K-fold validation multiple times, shuffling the data every time before splitting it K ways.
+## Data preprocessing, feature engineering, and feature learning
+How do you prepare the input data and targets before fedding them into a neural network? Many data-preprocessing and feature-engineering techniques are domain specific.
+#### Data preproceesing for neural networks
+Data preprocessing aims at making the raw data at hand more amenable to neura networks. This includes vectoriation, normalization, handling missing values, and feature
+extraction.
+* *Vectorization* - All inputs and targets in a neural network must be tensors of floating-point data. Whatever data you need to process - sound, images, text - you must
+first turn into tensors, a step called *data normalization*.
+* *Value normalization* - Before you feed data into a network, you have to normalize each feature independently so that it has a standard deviation of 1 and a mean of 0.
+In general, it isn't safe to feed into a neural network data that takes relatively large values or data that is heterogeneous. Doing so can trigger large gradient updates
+that will prevent the network from converging. To make learning easier for your networks, your data should *take small values* - typically in the 0-1 range, and *be
+homogeneous* - all features should take values in roughly the same range.
