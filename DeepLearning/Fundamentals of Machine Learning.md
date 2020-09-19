@@ -68,3 +68,6 @@ test data, but the network was trained on data without any missing values, the n
 #### Feature engineering
 *Feature engineering* is the process of using your own knowledge about the data and about the machine-learning algorithm at hand to make the algorithm work better by
 applying hardcoded transformations to the data before it goes into the model.
+
+The essence of feature engineering: making a problem easier by expressing it in a simpler way. It usually requires understanding the problem in depth. Fortunately, modern
+deep learning removes the need for most feature engineering because neural networks are capable of automatically extracting useful features from raw data.
