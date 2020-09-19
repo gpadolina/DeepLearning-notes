@@ -19,3 +19,10 @@ This is a specific instance of supervised learning, but it's different enough th
 human-annotated labels. There are still labels involved, but they're generated form the input data, typically using a heuristic algorithm.
 #### Reinforcement learning
 In reinforcement learning, an *agent* receives information about its environment and learns to choose actions that will maximize some reward.
+
+## Evaluating machine-learning models
+The reason not to evaluate the models on the same data they were trained on quickly became evident: after just a few epochs, all three models began to *overfit*. That is,
+their performance on never-before-seen data started stalling or worsening compared to their performance on the training data - which always improves as training
+progresses.
+In machine learning, the goal is to achieve models that *generalize* - that perform on never-before-seen data and overfitting is the central obstacle. You can only control
+that which you can observe, so it's crucial to be able to reliably measure the generalization power of your model.
