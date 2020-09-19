@@ -43,6 +43,9 @@ At the end of the day, you'll end up with a model that performs artifically well
 on completely new data, not the validation data, so you need to use a completely different, never-before-seen dataset to evaluate the model: the test dataset.
 
 Let's review three classic  evaluation recipes: simple hold-out validation, K-fold avalidation, and iterated K-fold validation with shuffling.
-* Simple hold-out validation: Set apart some fraction of your data as your test set. Train on the remaining data, and evaluate on the test set. This is the simplest
+* *Simple hold-out validation*: Set apart some fraction of your data as your test set. Train on the remaining data, and evaluate on the test set. This is the simplest
 evaluation protocol and it suffers from one flaw: if little data is available, then your validation and test sets may contain too few samples to be statistically
 representative of the data at hand.
+* *K-fold validation*: With this approach, you split your data into K partitions of equal size. For each partition i, train a model on the remaining K-1 partitions, and
+evaluate it on partition i. Your final score is then the averages of the K scores obtained. This method is helpful when the performance of your model shows significant
+variance based on your train-test split. Like hold-out validation, this method doesn't exempt you from using a distinct validation set for model calibration.
