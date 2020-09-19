@@ -35,3 +35,14 @@ Why not have two sets? The reason is that developing a model always involves tun
 the performance of the model on the validation data. In essence, this tuning is a form of *learning*: a search for a good configuration in some parameter space. Tuning the
 configuration of the model based on its performance on the validation set can quickly result in *overfitting to the validation set*, even though your model is never directly
 trained on it.
+
+Central to this phenomenon is the notion of *information leaks*. Every time you tune a hyperparameter of your model based on the model's performance on the validation set,
+some information about the validation data leaks into the model.
+
+At the end of the day, you'll end up with a model that performs artifically well on the validation data, because that's why you optimized it for. You care about performance
+on completely new data, not the validation data, so you need to use a completely different, never-before-seen dataset to evaluate the model: the test dataset.
+
+Let's review three classic  evaluation recipes: simple hold-out validation, K-fold avalidation, and iterated K-fold validation with shuffling.
+* Simple hold-out validation: Set apart some fraction of your data as your test set. Train on the remaining data, and evaluate on the test set. This is the simplest
+evaluation protocol and it suffers from one flaw: if little data is available, then your validation and test sets may contain too few samples to be statistically
+representative of the data at hand.
