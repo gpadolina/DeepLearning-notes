@@ -125,3 +125,11 @@ To recap, these are the most common ways to prevent overfitting in neural networ
 * Reduce the capacity of the network.
 * Add weight regularization.
 * Add dropout.
+## The universal workflow of machine learning
+The blueprint ties together the concepts in this chapter: problem definition, evaluation, feature engineering, and fighting overfitting.
+#### Defining the problem and assembling a dataset
+First, you must define the problem at hand:
+* What will your input be> What you trying to predict?
+* What type of problem are you facing? Is it binary classifications? Multiclass classification? Scalar regression? Vector regression? Multiclass, multilabel classification?
+Somehing else, like clustering, generation, or reinforcement learning?
+You can't move to the next stage until you know what your inputs and outputs are, and what data you'll use. Be aware of the hypotheses you make at this stage.
