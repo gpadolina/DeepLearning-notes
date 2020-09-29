@@ -155,3 +155,8 @@ For class-imblanced problems, you can use precision and recall. For ranking prob
 #### Preparing your data
 Once you know what you're training on, what you're optimizing for, and how to evaluate your approach, you're almost ready to begin training models. But first, you should
 format your data in a way that can be fed into a machine-learning model - here, we'll assume a deep neural network.
+#### Developing a model that does better than a baseline
+Your goal at this stage is to achieve *statistical power:* that is, to develop a small model that is capable of beating a dumb baseline. Remember that you make two
+hypotheses:
+* You hypothesize that your outputs can be predicted given your inputs.
+* You hypothesize that the available data is sufficiently informative to learn the relationship between inputs and outputs.
