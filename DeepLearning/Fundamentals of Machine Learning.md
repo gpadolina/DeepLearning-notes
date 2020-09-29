@@ -119,3 +119,9 @@ prevent conspiracies and thus reduce overfitting." The core idea is that introdu
 which the network will start memorizing if no noise is present.
 
 In Keras, you can introduce dropout in a network via the *Dropout* layer, which is applied to the output of the layer right before it.
+
+To recap, these are the most common ways to prevent overfitting in neural networks:
+* Get more training data.
+* Reduce the capacity of the network.
+* Add weight regularization.
+* Add dropout.
