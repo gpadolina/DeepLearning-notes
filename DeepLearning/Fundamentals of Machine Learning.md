@@ -101,3 +101,7 @@ values (multiple models) could explain the data. Simpler models are less likley 
 A *simple model* in this context is a model where the distribution of parameter values has less entropy (or a model with fewer paramters). Thus a common way to mitigate
 overfitting is to put constaints on the complexity of a network by forcing its weights to take only small values, which makes the distribution of weight values more
 *regular.* This is called *weight regularization,* and it's done by adding to the loss function of the network a *cost* associated with having large weights.
+* *L1 regularization* - The cost added is proportional to the *absolute value of the weights coefficients* (the *L1 norm* of the weights).
+* *L2 regularization* - The cost added is proportional to the *square of the value of the weight coefficients* (the *L2 norm* of the weights). L2 regularization is also
+called *weight decay* in the context of neural networks. 
+In Keras, weight regularization is added by passing *weight regularizer instances* to layers as keyword arguments.
