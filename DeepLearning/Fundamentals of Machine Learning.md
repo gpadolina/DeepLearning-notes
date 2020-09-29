@@ -80,3 +80,9 @@ you can only adjust the model based on its training data.
 At the beginning of training, optimization and generalization are correlated: the lower the loss on training data, the lower the loss on test data. While this is happening,
 your model is said to be *underfit.* But after a certain number of iterations on the training data, generalization stops improving, and validation metrics stall and then
 begin to degrade: the model is starting to overfit.
+
+To prevent a model from learning misleading or irrelevant patterns found in the training data, *the best solution is to get more training data.* All model trained on more
+data will naturally generalize better. The processing of fighting overfitting this way is called *regularization.*
+#### Reducing the network's size
+The simplest way to prevent overfitting is to reduce the size of the model: the number of learnable parameters in the model, which is determined by the number of layers and
+the number of units per layer. In deep learning, the number of learnable parameters in a model is often referred to as the model's *capacity.*
