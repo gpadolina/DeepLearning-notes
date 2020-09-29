@@ -148,3 +148,7 @@ Your metric for success will guide the choice of a loss function: what your mode
 
 For balanced-classifcation problems, where every class is equally likely, accuracy and *area under the receiver operating characteristics curve* (ROC AUC) are common metrics.
 For class-imblanced problems, you can use precision and recall. For ranking problems or multilable classfication, you can use mean average precision.
+#### Deciding on an evaluation protocol
+* *Maintaining a hold-out validation set* - The way to go when you have plenty of ata
+* *Doing K-fold cross-validation* - The right choice when you have too few samples for hold-out validation to be reliable
+* *Doing iterated K-fold validation* - For performing highly accurate model evaluation when litte data is available
