@@ -133,3 +133,10 @@ First, you must define the problem at hand:
 * What type of problem are you facing? Is it binary classifications? Multiclass classification? Scalar regression? Vector regression? Multiclass, multilabel classification?
 Somehing else, like clustering, generation, or reinforcement learning?
 You can't move to the next stage until you know what your inputs and outputs are, and what data you'll use. Be aware of the hypotheses you make at this stage.
+
+Not all problems can be solved; just because you've assembled examples of inputs X and targets Y doesn't mean X contains enough information to predict Y. One class of
+unsolvable problems you should be aware of is *nonstationary problems.*
+
+What you're trying to model changes over time. In this case, the right move is to constantly retrain your model on data from the recent past, or gather data at a timescale
+where the problem is stationary. For a cyclical problem like clothes buying, a few years' worth of data will suffice to capture seasonal variation - but remember to make
+the time of the year an input of your model.
