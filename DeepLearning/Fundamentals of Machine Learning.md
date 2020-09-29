@@ -93,3 +93,11 @@ found between *too much capacity and not enough capacity.*
 
 The general workflow to find an appropriate model size is to start with relatively few layers and parameters, and increase the size of the layers or add new layers until you
 see diminishing returns with regard to validation loss.
+#### Adding weight regularization
+You may be familiar with the principle of *Occam's razor:* given two explanations for something, the explanation most likely to be correct is the simplest one - the one
+that makes fewer assumptions. This idea also applies to the models learned by neural networks: given some training data and a network architecture, multiple sets of weight
+values (multiple models) could explain the data. Simpler models are less likley to overfit than complex ones.
+
+A *simple model* in this context is a model where the distribution of parameter values has less entropy (or a model with fewer paramters). Thus a common way to mitigate
+overfitting is to put constaints on the complexity of a network by forcing its weights to take only small values, which makes the distribution of weight values more
+*regular.* This is called *weight regularization,* and it's done by adding to the loss function of the network a *cost* associated with having large weights.
