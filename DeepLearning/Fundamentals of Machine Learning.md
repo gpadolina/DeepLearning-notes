@@ -76,3 +76,7 @@ Overfitting happens in every machine-learning problem. The fundamental issue in 
 refers to the process of adjusting a model to get the best performance possible on the training data (the *learning* in *machine learning*), whereas *generalization*
 refers to how well the trained model performs on data it has never seen before. The goal of the game is to get good generalization, but you don't control generalization;
 you can only adjust the model based on its training data.
+
+At the beginning of training, optimization and generalization are correlated: the lower the loss on training data, the lower the loss on test data. While this is happening,
+your model is said to be *underfit.* But after a certain number of iterations on the training data, generalization stops improving, and validation metrics stall and then
+begin to degrade: the model is starting to overfit.
