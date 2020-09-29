@@ -140,3 +140,11 @@ unsolvable problems you should be aware of is *nonstationary problems.*
 What you're trying to model changes over time. In this case, the right move is to constantly retrain your model on data from the recent past, or gather data at a timescale
 where the problem is stationary. For a cyclical problem like clothes buying, a few years' worth of data will suffice to capture seasonal variation - but remember to make
 the time of the year an input of your model.
+
+Using machine learning trained on past data to predict the future is making the assumption that the future will behave like the past. That often isn't the case.
+#### Choosing a measure of success
+To control something, you need to be able to observe it. To achieve success, you must define what you mean by success - accuracy? Precion and recall? Customer-retention rate?
+Your metric for success will guide the choice of a loss function: what your model will optimize.
+
+For balanced-classifcation problems, where every class is equally likely, accuracy and *area under the receiver operating characteristics curve* (ROC AUC) are common metrics.
+For class-imblanced problems, you can use precision and recall. For ranking problems or multilable classfication, you can use mean average precision.
