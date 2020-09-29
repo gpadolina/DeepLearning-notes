@@ -152,3 +152,6 @@ For class-imblanced problems, you can use precision and recall. For ranking prob
 * *Maintaining a hold-out validation set* - The way to go when you have plenty of ata
 * *Doing K-fold cross-validation* - The right choice when you have too few samples for hold-out validation to be reliable
 * *Doing iterated K-fold validation* - For performing highly accurate model evaluation when litte data is available
+#### Preparing your data
+Once you know what you're training on, what you're optimizing for, and how to evaluate your approach, you're almost ready to begin training models. But first, you should
+format your data in a way that can be fed into a machine-learning model - here, we'll assume a deep neural network.
