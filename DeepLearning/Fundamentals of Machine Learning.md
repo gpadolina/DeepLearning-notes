@@ -111,3 +111,11 @@ In Keras, weight regularization is added by passing *weight regularizer instance
 input sample during training. After applying dropout, this vector will have a few zero entries distributed at random: for example, [0, 0.5, 1.3, 0, 1.1]. The *dropout
 rate* is the fraction of the features that are zeroed out; it's usually set between 0.2 and 0.5. At test time, no units are dropped out; instead, the layer's output values
 are scaled down by a factor equal to the dropout rate, to balance for the fact that more units are active than at training time.
+
+This technique may seem strange and arbitrary. Why would this help reduce overfitting? Hinton says he was inspired by a fraud-prevention mechanism used by banks. In his own
+words, "I went to my bank. The tellers kept changing and I asked one of them why. He said he didn't know but they got moved around a lot. I figured it must be because it
+would require cooperation between employees to successfully defraud the bank. This made me realize that randomly removing a different subset of neurons on each example would
+prevent conspiracies and thus reduce overfitting." The core idea is that introducing noise in the output values of layer can break up happenstance that aren't significant,
+which the network will start memorizing if no noise is present.
+
+In Keras, you can introduce dropout in a network via the *Dropout* layer, which is applied to the output of the layer right before it.
