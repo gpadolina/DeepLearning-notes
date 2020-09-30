@@ -199,3 +199,9 @@ it can get. These are some things you should try:
 * Add L1 and/or L2 regularization.
 * Try different hyperparameters to find the optimal configuration.
 * Optionally, iterate on feature engineering: add new features or remove features that don't seem to be informative.
+
+Be mindful of the following: every time you use feedback from your validation process to tune your model, you leak information about the validation process into the model.
+
+If it turns out that the performance on the test set is significantly worse than the performance measured on the validation data, this may mean either that your validation
+procedure wasn't reliable after all, or that you began overfitting to the validation data while tuning the parameters of the model. In this case, you may want to switch to
+a more reliable evaluation protocol such as iterated K-fold validation.
