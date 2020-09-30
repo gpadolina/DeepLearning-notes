@@ -32,3 +32,14 @@ Note that the output width and height may differ from the input width and height
 
 If you want to get an output feature map with the same spatial dimensions as the input, you can use *padding.* Padding consists of adding an appropriate number of rows and
 columns on each side of the input feature map so as to make it possible to fit center convolution windows around every input tile.
+
+The other factor that can influence output size is the notion of *strides.* The description of convolution so far has assumed that the center tiles of the convolution
+windows are all contiguous. But the distance between two successive windows is a parameter of the convolution, called its *stride*, which defaults to 1. It's possible to
+have *strided convolutions:* convolutions with a stride higher than 1.
+
+To downsample feature maps, instead of strides, we tend to use the *max-pooling* operation.
+#### The max-pooling operation
+The role of max pooling is to aggressively downsample feature maps, much like strided convolutions.
+
+In short, the reason to use downsampling is to reduce the number of feature-map coefficients to process, as well as to induce spatial-filter hierarchies by making successive
+convolution layers look at increasingly large windows in terms of the fraction of the original input they cover.
