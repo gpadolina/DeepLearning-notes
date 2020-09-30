@@ -48,3 +48,10 @@ Note that the max pooling isn't the only way you can achieve such downsampling. 
 average pooling instead of max pooling, where each local input patch is transformed by taking the average value of each channel over the patch, rather than the max. But max
 pooling tends to work better than these alternative solutions. In a nutshell, the reason is that features tend to encode the spatial presence of some pattern or concept over
 the different tiles of the feature map, and it's more informative to look at the *maximal presence* of different features than at their *average presence.*
+
+## Training a convnet from scratch on a small dataset
+As a practical example, we'll focus on classifying images as dogs or cats, in a dataset containing 4,000 pictures of cats and dogs (2,000 each). We'll use 2,000 pictures
+for training - 1,000 for validation, and 1,000 for testing.
+
+Then we'll introduce *data augmentation,* a powerful technique for mitigating overfitting in computer vision. By using data augmentation, you'll improve the netwrok to reach
+an accuracy of 82%.
