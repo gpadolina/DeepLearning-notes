@@ -43,3 +43,7 @@ The role of max pooling is to aggressively downsample feature maps, much like st
 
 In short, the reason to use downsampling is to reduce the number of feature-map coefficients to process, as well as to induce spatial-filter hierarchies by making successive
 convolution layers look at increasingly large windows in terms of the fraction of the original input they cover.
+
+Note that the max pooling isn't the only way you can achieve such downsampling. As you already know, you can also use strides in the prior convolution layer. And you can use
+average pooling instead of max pooling, where each local input patch is transformed by taking the average value of each channel over the patch, rather than the max. But max
+pooling tends to work better than these alternative solutions.
