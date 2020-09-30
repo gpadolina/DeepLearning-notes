@@ -15,3 +15,13 @@ made of the features of the first layers, and so on. This allows convnets to eff
 
 Convolutions operate over 3D tensors, called *feature maps,* with two spatial axes (*height* and *width*) as well as a *depth* axis (also called the *channels* axis). For an
 RBG image, the dimension of the depth axis is 3, because the image has three color channels: red, green, and blue. For a black-and-white picture, the depth is 1 levels of gray.
+
+Convolutoins are define by two key parameters:
+* *Size of the patches extracted from the inputs* - These are typically 3 x 3 or 5 x 5.
+* *Depth of the output feature map* - The number of filters computed by the convolution.
+
+In Keras Conv2D layers, these parameters are the first arguments passed to the layer: Conv2D(output_depth, (window_height, window_width)).
+
+A convolution works by *sliding* these windows of size 3 x 3 or 5 x 5 over the 3D input feature map, stopping at every possible location, and extracting the 3D patch of
+surrounding features. Each such 3D patch is then transformed via a tensor product with the same learned weight matrix, called the *convolution kernel* into a 1D vector of
+shape.
