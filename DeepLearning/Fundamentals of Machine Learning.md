@@ -173,3 +173,11 @@ crossentropy. In general, you can hppe that the lower the crossentropy gets, the
 | **Problem type** | **Last-layer activation** | **Loss function** |
 | --- | --- | --- |
 | Binary classfication | sigmoid | binary_crossentropy |
+| Multiclass, single-label classfication | softmax | categorical_crossentropy |
+| Multiclass, multilabel classification | sigmoid | binary_crossentropy |
+| Regression to arbitrary values | None | mse |
+| Regression to values between 0 and 1 | sigmoid | mse or binary_crossentropy |
+
+#### Scaling up: developing a model that overfits
+Once you've obtained a model that has statistical power, the question becomes, is your model sufficiently powerful? Does it have enough layers and parameters to properly
+model that problem at hand?
