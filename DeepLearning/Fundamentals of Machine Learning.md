@@ -180,4 +180,10 @@ crossentropy. In general, you can hppe that the lower the crossentropy gets, the
 
 #### Scaling up: developing a model that overfits
 Once you've obtained a model that has statistical power, the question becomes, is your model sufficiently powerful? Does it have enough layers and parameters to properly
-model that problem at hand?
+model that problem at hand? Remember that the universal tension in machine learning is between optimization and generalization; the ideal model is one that stands right at
+the border between underfitting and overfitting; between uncercapacity and overcapacity.
+
+To figure out how big a model you'll need, you must develop a model that overfits.
+* Add layers.
+* Mkae the layers bigger.
+* Train for more epochs.
