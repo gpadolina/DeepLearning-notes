@@ -61,3 +61,6 @@ get to an accuracy of 90% to 96%) and *fine-tuning a pretrained network* (this w
 #### The relevance of deep learning for small-data problems
 One fundamental characteristics of deep learning is that it can find interesting features in the training data on its own, without any need for manual feature engineering,
 and this can only achieved when lots of training examples are available.
+
+But what constitutes lots of samples is relative - relative to the size and depth of the network you're trying to train, for starters. It isn't possible to train a convnet
+to solve a complex problem with just a few tens of samples, but a few hundred can potentially suffice if the model is small and well regularized and the task is simple.
