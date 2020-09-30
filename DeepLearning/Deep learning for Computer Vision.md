@@ -55,3 +55,9 @@ for training - 1,000 for validation, and 1,000 for testing.
 
 Then we'll introduce *data augmentation,* a powerful technique for mitigating overfitting in computer vision. By using data augmentation, you'll improve the netwrok to reach
 an accuracy of 82%.
+
+In the next section, two more essential techniques for applying deep learning to small datasets will be covered: *feature extraction with a pretrained network* (which will
+get to an accuracy of 90% to 96%) and *fine-tuning a pretrained network* (this will get to a final accuracy of 97%).
+#### The relevance of deep learning for small-data problems
+One fundamental characteristics of deep learning is that it can find interesting features in the training data on its own, without any need for manual feature engineering,
+and this can only achieved when lots of training examples are available.
