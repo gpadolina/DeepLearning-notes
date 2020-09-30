@@ -191,3 +191,11 @@ To figure out how big a model you'll need, you must develop a model that overfit
 Always monitor the training loss and validation loss, as well as the training and validation values for any metrics you care about. When you see that the model's performance
 on the validation data begins to degrade, you've achieved overfitting. The next stage is to start regularizing and turning the model, to get as close as possible to the ideal
 model that neighter underfits nor overfits.
+#### Regularizing your model and tuning your hyperparameters
+This step will take the most time: you'll repeatedly modify your model, train it, evaluate on your validation data, modify it again, and repeat, until the model is as good as
+it can get. These are some things you should try:
+* Add dropout.
+* Try different architectures: add or remove layers.
+* Add L1 and/or L2 regularization.
+* Try different hyperparameters to find the optimal configuration.
+* Optionally, iterate on feature engineering: add new features or remove features that don't seem to be informative.
