@@ -185,5 +185,9 @@ the border between underfitting and overfitting; between uncercapacity and overc
 
 To figure out how big a model you'll need, you must develop a model that overfits.
 * Add layers.
-* Mkae the layers bigger.
+* Make the layers bigger.
 * Train for more epochs.
+
+Always monitor the training loss and validation loss, as well as the training and validation values for any metrics you care about. When you see that the model's performance
+on the validation data begins to degrade, you've achieved overfitting. The next stage is to start regularizing and turning the model, to get as close as possible to the ideal
+model that neighter underfits nor overfits.
