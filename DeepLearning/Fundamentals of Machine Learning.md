@@ -160,3 +160,16 @@ Your goal at this stage is to achieve *statistical power:* that is, to develop a
 hypotheses:
 * You hypothesize that your outputs can be predicted given your inputs.
 * You hypothesize that the available data is sufficiently informative to learn the relationship between inputs and outputs.
+You need to make three key choices to build your first working model:
+* *Last-layer activation* - This establishes useful constraints on the network's output.
+* *Loss function* - This should match the type of problem you're trying to solve.
+* *Optimization configuration* - What optimizer will you use? What will its learning rate be? In most cases, it's safe to go with *rmsprop* and its default learning rate.
+
+Regarding the choice of a loss function, note that it isn't always possible to directly optimize for the metric that measures success on problem. Sometimes there is no
+easy way to turn a metric into a loss function; loss functions, after all, need to be computable given only a mini-match of data and must be differentiable. For instance,
+the widely used classification metric ROC AUC can't be directly optimized. Hence, in classification tasks, it's common to optimize for a proxy metric of ROC AUC, such as
+crossentropy. In general, you can hppe that the lower the crossentropy gets, the higher the ROC AUC will be.
+
+| **Problem type** | **Last-layer activation** | **Loss function** |
+| --- | --- | --- |
+| Binary classfication | sigmoid | binary_crossentropy |
