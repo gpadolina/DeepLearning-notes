@@ -12,3 +12,6 @@ densely connected network would have to learn the pattern anew if it appeared at
 *visual world is fundamentally translation invariant):* they need fewer training samples to learn representations that have generalization power.
 * *They can learn spatial hierarchies of patterns.* A first convolution layer will learn small local patterns such as edges, a second convolutional layer will learn patterns
 made of the features of the first layers, and so on. This allows convnets to efficiently learn increasingly complex and abstract visual concepts.
+
+Convolutions operate over 3D tensors, called *feature maps,* with two spatial axes (*height* and *width*) as well as a *depth* axis (also called the *channels* axis). For an
+RBG image, the dimension of the depth axis is 3, because the image has three color channels: red, green, and blue. For a black-and-white picture, the depth is 1 levels of gray.
