@@ -46,4 +46,5 @@ convolution layers look at increasingly large windows in terms of the fraction o
 
 Note that the max pooling isn't the only way you can achieve such downsampling. As you already know, you can also use strides in the prior convolution layer. And you can use
 average pooling instead of max pooling, where each local input patch is transformed by taking the average value of each channel over the patch, rather than the max. But max
-pooling tends to work better than these alternative solutions.
+pooling tends to work better than these alternative solutions. In a nutshell, the reason is that features tend to encode the spatial presence of some pattern or concept over
+the different tiles of the feature map, and it's more informative to look at the *maximal presence* of different features than at their *average presence.*
