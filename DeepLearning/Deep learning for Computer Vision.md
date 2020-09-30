@@ -25,3 +25,10 @@ In Keras Conv2D layers, these parameters are the first arguments passed to the l
 A convolution works by *sliding* these windows of size 3 x 3 or 5 x 5 over the 3D input feature map, stopping at every possible location, and extracting the 3D patch of
 surrounding features. Each such 3D patch is then transformed via a tensor product with the same learned weight matrix, called the *convolution kernel* into a 1D vector of
 shape.
+
+Note that the output width and height may differ from the input width and height. They may differ for two reasons:
+* Border effects, which can be countered by padding the input feature map
+* The use of *strides*
+
+If you want to get an output feature map with the same spatial dimensions as the input, you can use *padding.* Padding consists of adding an appropriate number of rows and
+columns on each side of the input feature map so as to make it possible to fit center convolution windows around every input tile.
