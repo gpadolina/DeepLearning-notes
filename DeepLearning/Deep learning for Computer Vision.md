@@ -118,3 +118,8 @@ it makes deep learning very effective for small-data problems.
 You'll use the VGG16 architecture; it's a simple and widely used convnet architecture for ImageNet. There are two ways to use a pretrained network: *feature extraction* and
 *fine-tuning.*
 #### Feature extraction
+Feature extraction consists of using the representations learned by a previous network to extract interesting features from new samples. These features are then run through
+a new classifier, which is trained from scratch.
+
+As you previously, convnets used for image classfication comprise two parts: they start with a series of pooling and convolution layers, and they end with a densely connected
+classifier. The first part is called the *convolutional base* of the model.
