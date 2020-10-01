@@ -86,3 +86,6 @@ The steps for getting data formatted into appropriate format are as follows:
 It may seem a bit daunting, but fortunately Keras has utilities to take care of the steps automatically. Keras a module with image-processing helper tools, located at
 *keras.preprocessing.image.* In particular, it contains the class ImageDataGenerator, which lets you quickly set up Python generators that can automatically turn image files
 on disk into batches of preprocessed tensors.
+
+Note that the generator yields these batches indefinitely: it loops endlessly over the images in the target folder. For this reason, you need to break the iteration loop at
+some point.
