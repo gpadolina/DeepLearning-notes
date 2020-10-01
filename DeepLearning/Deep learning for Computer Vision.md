@@ -98,3 +98,8 @@ model needs to know how many samples to draw from the generator before declaring
 Overfitting is caused by having too few samples to learn from, rendering you unable to train a model that can generalize to new data. Given infinite data, your model would
 be exposed to every possible aspect of the data distribution at ahand: you would never overfit. Data augmentation takes the approach of generating more training data from
 existing training samples, by *augmenting* the samples via a number of random transformations that yield believable-looking images.
+
+If you train a new network using this data-augmentation configuration, the network will never see the same input twice. But the inputs it sees are still heavily
+intercorrelated, because they come from a small number of original images - you can't produce new information, you can only remix existing information. As such, this may
+not be enough to completely get rid of overfitting. To further fight overfitting, you'll also add a *Dropout* layer to your model, right before the densely connected
+classifier.
