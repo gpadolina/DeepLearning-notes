@@ -89,3 +89,8 @@ on disk into batches of preprocessed tensors.
 
 Note that the generator yields these batches indefinitely: it loops endlessly over the images in the target folder. For this reason, you need to break the iteration loop at
 some point.
+
+Let's fit the model to the data using the generator. You do so using the *fit_generator* method, the equivalent of *fit* for data generators like this one. It expects as its
+first argument a Python generator that will yield batches of inputs and targets indefinitely, like this one does. Because the data is being generated endlessly, the Keras
+model needs to know how many samples to draw from the generator before declaring an epoch over. This is the role of the *steps_per_epoch* argument: after having drawn
+*steps_per_epoch* batches from the generator - that is, after having f run for *steps_per_epoch* gradient descent steps - the fitting process will go to the next epoch.
