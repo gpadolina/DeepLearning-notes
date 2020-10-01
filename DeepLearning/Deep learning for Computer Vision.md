@@ -94,3 +94,7 @@ Let's fit the model to the data using the generator. You do so using the *fit_ge
 first argument a Python generator that will yield batches of inputs and targets indefinitely, like this one does. Because the data is being generated endlessly, the Keras
 model needs to know how many samples to draw from the generator before declaring an epoch over. This is the role of the *steps_per_epoch* argument: after having drawn
 *steps_per_epoch* batches from the generator - that is, after having f run for *steps_per_epoch* gradient descent steps - the fitting process will go to the next epoch.
+#### Using data augmentation
+Overfitting is caused by having too few samples to learn from, rendering you unable to train a model that can generalize to new data. Given infinite data, your model would
+be exposed to every possible aspect of the data distribution at ahand: you would never overfit. Data augmentation takes the approach of generating more training data from
+existing training samples, by *augmenting* the samples via a number of random transformations that yield believable-looking images.
