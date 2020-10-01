@@ -76,3 +76,13 @@ a single unit (a *Dense* layer of size 1) and a *sigmoid* activation. This unit 
 
 For the compilation step, you'll go with the *RMSprop* optimizer, as usual. Because you ended the network with a single sigmoid unit, you'll use binary crossentropy as the
 loss.
+#### Data preprocessing
+The steps for getting data formatted into appropriate format are as follows:
+1. Read the picture files.
+2. Decode the JPEG content to RGB grids of pixels.
+3. Convert these into floating-point tensors.
+4. Rescale the pixel values (between 0 and 255) to the [0, 1] interval.
+
+It may seem a bit daunting, but fortunately Keras has utilities to take care of the steps automatically. Keras a module with image-processing helper tools, located at
+*keras.preprocessing.image.* In particular, it contains the class ImageDataGenerator, which lets you quickly set up Python generators that can automatically turn image files
+on disk into batches of preprocessed tensors.
