@@ -123,3 +123,7 @@ a new classifier, which is trained from scratch.
 
 As you previously, convnets used for image classfication comprise two parts: they start with a series of pooling and convolution layers, and they end with a densely connected
 classifier. The first part is called the *convolutional base* of the model.
+
+Why only reuse the convolutional base? Could you resue the densely connected classifier as well? In general, doing so should be avoided. The reason is that the represenations
+learned by the convolutional base are likely to more generic and therefore more reusable: the feature maps of a convnet are presence maps of generic concepts over a picture,
+which is likely to be useful regardless of the computer-vision problem at hand.
