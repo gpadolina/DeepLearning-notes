@@ -138,3 +138,12 @@ Here's the list of image-classification models that are available as part of *ke
 * VGG16
 * VGG19
 * MobileNet
+
+#### Feature extraction with data augmentation
+Let's review the second technique for doing feature extraction, which is much slower and more expensive, but which allows you to use data augmentation during training:
+extending the *conv_base* model and running it end to end on the inputs.
+
+Because models behave just like layers, you can add a model like *conv_base* to a *Sequential* model just like you would add a layer.
+
+Before you compile and train the model, it's very important to freeze the convolutional base. *Freezing* a layer or set of layers means preventing their weights from being
+updated during trained. If you don't do this, then the representations that were previously learned by the convolutional base will be modified during training.
