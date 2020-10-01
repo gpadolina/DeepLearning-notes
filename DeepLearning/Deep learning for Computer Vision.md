@@ -103,3 +103,11 @@ If you train a new network using this data-augmentation configuration, the netwo
 intercorrelated, because they come from a small number of original images - you can't produce new information, you can only remix existing information. As such, this may
 not be enough to completely get rid of overfitting. To further fight overfitting, you'll also add a *Dropout* layer to your model, right before the densely connected
 classifier.
+
+By using regularization techniques even further, and by tuning the network's parameters such as the number of filters per convolution layer, or the number of layers in the
+network, you may be able to get an even better accuracy, likely up to 87%. But it would prove difficult to go any higher just by training your own convnet from scratch,
+because you have so little data to work with. As a next step to improve your accuracy on this problem, you'll have to use a pretrained model.
+
+## Using a pretrained convnet
+A common and highly effective approach to deep learning on small image datasets is to use a pretrained network. A *pretrained network* is a saved network that was previously
+trained on a large dataset, typically on a large-sclae image-classification task. If this original dataset is large enough and general enough, then the 
