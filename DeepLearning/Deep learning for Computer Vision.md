@@ -146,4 +146,8 @@ extending the *conv_base* model and running it end to end on the inputs.
 Because models behave just like layers, you can add a model like *conv_base* to a *Sequential* model just like you would add a layer.
 
 Before you compile and train the model, it's very important to freeze the convolutional base. *Freezing* a layer or set of layers means preventing their weights from being
-updated during trained. If you don't do this, then the representations that were previously learned by the convolutional base will be modified during training.
+updated during trained. If you don't do this, then the representations that were previously learned by the convolutional base will be modified during training. Because the
+*Dense* layers on top are randomly initialized, very large weight updates would be propagated through the network, effectively destroying the representations previously
+learned.
+
+In Keras, you freeze a network by setting its *trainable* attribute to *False.*
