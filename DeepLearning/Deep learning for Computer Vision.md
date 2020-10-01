@@ -110,4 +110,11 @@ because you have so little data to work with. As a next step to improve your acc
 
 ## Using a pretrained convnet
 A common and highly effective approach to deep learning on small image datasets is to use a pretrained network. A *pretrained network* is a saved network that was previously
-trained on a large dataset, typically on a large-sclae image-classification task. If this original dataset is large enough and general enough, then the 
+trained on a large dataset, typically on a large-sclae image-classification task. If this original dataset is large enough and general enough, then the spatial hierarchy of
+features learned by the pretrained network can effectively act as a generic model of the visual world, and hence its features can prove useufl for many different computer
+vision problems. Such portability of learned features across different problems is a key advantage of deep learning compared to many older, shallow-learning approaches, and
+it makes deep learning very effective for small-data problems.
+
+You'll use the VGG16 architecture; it's a simple and widely used convnet architecture for ImageNet. There are two ways to use a pretrained network: *feature extraction* and
+*fine-tuning.*
+#### Feature extraction
