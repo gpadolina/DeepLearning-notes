@@ -69,3 +69,10 @@ dataset will still yield reasonable results despite a relative lack of data, wit
 
 What's more, deep-learning models are by nature highly repurposable: you can take say an image-classification or speech-to-text model trained on a large-scale dataset and
 reuse it on a significantly different problem with only minor changes.
+#### Building your network
+You'll resue the same general structure: the convnet will be a stack of alternated Conv2D (with *relu* activation) and MaxPooling2D layers. But because you're dealing with
+bigger images and a more complex problem, you'll make your network larger, accordingly. Because you're attacking a binary-classification problem, you'll end the network with
+a single unit (a *Dense* layer of size 1) and a *sigmoid* activation. This unit will encode the probability that the network is looking at one class or the other.
+
+For the compilation step, you'll go with the *RMSprop* optimizer, as usual. Because you ended the network with a single sigmoid unit, you'll use binary crossentropy as the
+loss.
