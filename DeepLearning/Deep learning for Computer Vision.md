@@ -162,3 +162,11 @@ The steps for fine-tuning a network are as follows:
 3. Train the part you added.
 4. Unfreeze some layers in the base network.
 5. Jointly train both these layers and the part you added.
+
+You'll fine-tune the last three convolutional layers, which means all layers up to *block4_pool* should be frozen, and the layers *block5_conv1, block5_conv2,* and
+*block5_conv3* should be trainable.
+
+Why not fine-tune more layers? Why not fine-tune the entire convolutional base? You could. But you need to consider the following:
+* Earlier layers in the convolutional base encode more-generic, reusable features, whereas layers higher up encode more-specialized features. It's more useful to fine-tune
+the more specialized features, because these are the ones that need to be repurposed on your new problem.
+* The more parameters you're training, the more you're at risk at overfitting.
