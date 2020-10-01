@@ -126,4 +126,15 @@ classifier. The first part is called the *convolutional base* of the model.
 
 Why only reuse the convolutional base? Could you resue the densely connected classifier as well? In general, doing so should be avoided. The reason is that the represenations
 learned by the convolutional base are likely to more generic and therefore more reusable: the feature maps of a convnet are presence maps of generic concepts over a picture,
-which is likely to be useful regardless of the computer-vision problem at hand.
+which is likely to be useful regardless of the computer-vision problem at hand. For problems where object location matters, densely connected features are largely useless.
+
+Layers that come earlier in the model extract local, highly generic feature maps such as visual edges, colors, and textures, whereas layers that are higher up extract more
+abstract concepts.
+
+Here's the list of image-classification models that are available as part of *keras.applications:*
+* Xception
+* Inception V3
+* ResNet50
+* VGG16
+* VGG19
+* MobileNet
