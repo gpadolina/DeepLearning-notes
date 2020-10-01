@@ -170,3 +170,6 @@ Why not fine-tune more layers? Why not fine-tune the entire convolutional base? 
 * Earlier layers in the convolutional base encode more-generic, reusable features, whereas layers higher up encode more-specialized features. It's more useful to fine-tune
 the more specialized features, because these are the ones that need to be repurposed on your new problem.
 * The more parameters you're training, the more you're at risk at overfitting.
+
+Now you can begin fine-tuning the network. You'll do this with the RMSprop optimizer, using a very low learning rate. The reason for using a low learning rate is that you
+want to limit the magnitude of the modifications you make to the representations of the three layers you're fine-tuning.
