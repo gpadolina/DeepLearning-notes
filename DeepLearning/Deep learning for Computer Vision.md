@@ -64,3 +64,8 @@ and this can only achieved when lots of training examples are available.
 
 But what constitutes lots of samples is relative - relative to the size and depth of the network you're trying to train, for starters. It isn't possible to train a convnet
 to solve a complex problem with just a few tens of samples, but a few hundred can potentially suffice if the model is small and well regularized and the task is simple.
+Because convnets learn local, translation-invariant features, they're highly data efficient on perceptual problems. Training a convnet from scratch on a very small image
+dataset will still yield reasonable results despite a relative lack of data, without the need for any custom feature engineering.
+
+What's more, deep-learning models are by nature highly repurposable: you can take say an image-classification or speech-to-text model trained on a large-scale dataset and
+reuse it on a significantly different problem with only minor changes.
