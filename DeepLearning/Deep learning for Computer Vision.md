@@ -226,3 +226,10 @@ To implement gradient descent, you'll need the gradient of this loss with respec
 
 A non-obvious trick is to use to help the gradient-descent process go smoothly is to normalize the gradient tensor by dividing it by its L2 norm (the square root of the
 average of the square of the values in the tensor).
+#### Visualizing heatmaps of class activation
+One more visualization technique, one that is useful for understanding which parts of a given image led a convnet to its final classification decision. This is helpful for
+debugging the decision process of a convnet, particularly in the case of a classification mistake. It also allows you to locate specific objects in an image.
+
+This general category of techniques is called *class activation map* (CAM) visualization, and it consists of producing heatmaps of class activation over input images. A
+class activation heatmap is a 2D grid of scores associated with a specific output class, computed for every location in any input image, indicating how important each
+location is with respect to the class under consideration.
