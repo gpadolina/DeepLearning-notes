@@ -28,3 +28,7 @@ Collectively, the different units into which you can break down text (words, cha
 *tokenization.* All text-vectorization processes consist of applying some tokenization scheme and then associating numeric vectors with the generated networks. These vectors,
 packed into sequence tensors, are fed into deep neural networks. There are multiple ways to associate a vector with a token. In this section, two will be presented: *one-hot
 encoding* of tokens, and *token embedding* (typically used exclusively for words, and called *word embedding*).
+
+#### One-hot encoding of words and characters
+One-hot encoding is the most common, most basic way to turn a token into a vector. It consists of associating a unique integer index with every word and then turning this
+integer index *i* into a binary vector of size *N* (the size of the vocabulary); the vector is all zeros except for the *i*th entry, which is 1.
