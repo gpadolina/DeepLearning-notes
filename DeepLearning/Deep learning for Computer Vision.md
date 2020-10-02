@@ -233,3 +233,8 @@ debugging the decision process of a convnet, particularly in the case of a class
 This general category of techniques is called *class activation map* (CAM) visualization, and it consists of producing heatmaps of class activation over input images. A
 class activation heatmap is a 2D grid of scores associated with a specific output class, computed for every location in any input image, indicating how important each
 location is with respect to the class under consideration.
+
+The specific implementation you'll use is the one described in "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization." It's very simple: it
+consists of taking the output feature map of a convolution layer, given an input image, and weighing every channel in that feature map by the gradient of the class with
+respect to the channel. Intuitively, one way to understand this trick is that you're weighting a spatial map of "how intensely the input image activates different channels"
+by "how important each channel is with regard to the class," resulting in a spatial map of "how intensely the input image activates the class."
