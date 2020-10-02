@@ -189,3 +189,11 @@ first idea of the meaning of individual convnet filters.
 * *Visualizing convnets filters* - Useful for understanding precisely what visual pattern or concept each filters in a convnet is receptive to.
 * *Visualizing heatmaps of class activation in an image* - Useful for understanding which parts of an image were identified as belonging to a given class, thus allowing
 you to localize objects in images.
+
+#### Visualizing intermediate activations
+Visualizing intermediate activations consists of displaying the feature maps that are output by various convolution and pooling layers in a network, given a certain input
+(the output of a layer is often called its *activation,* the output of the activation function).
+
+In order to extract the feature maps you want to look at, you'll create a Keras model that takes batches of images as input, and outputs the activations of all convolution
+and pooling layers. To do this, you'll use the Keras class *Model.* A model is instantiated using two arguments: an input tensor (or list of input tensors) and an output
+tensor (or list of output tensors).
