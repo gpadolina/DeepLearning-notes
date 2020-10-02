@@ -184,3 +184,8 @@ It's often said that deep-leanring models are "black boxes": learning representa
 partially true for certain types of deep-learning models, it's definitely not true for convnets. The representations learned by convnets are highly amenable to visualization,
 in large part because they're *representations of visual concepts.* Since 2013, a wide array of techniques have been developed for visualizing and interpreting these
 representations.
+* *Visualizing intermediate convnet outputs (intermediate activations)* - Useful for understanding how successive convnet layers transform their input, and for getting a
+first idea of the meaning of individual convnet filters.
+* *Visualizing convnets filters* - Useful for understanding precisely what visual pattern or concept each filters in a convnet is receptive to.
+* *Visualizing heatmaps of class activation in an image* - Useful for understanding which parts of an image were identified as belonging to a given class, thus allowing
+you to localize objects in images.
