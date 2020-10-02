@@ -213,3 +213,10 @@ that irrelevant information is filter out (for example, the specific visual appe
 This is analogous to the way humans and animals perceive the world. After observing a scene for a few seconds, a human can remember which abstract objects were present in
 it (bicycle, tree) but can't remember the specific appearance of these objects. Your brain has learned to completely abstract its visual input - to transform it into
 high-level visual concepts while filtering out irrelevant visual details - making it tremendously difficult to remember how things around you look.
+#### Visualizing convnet filters
+Another easy way to inspect the filters learned by convnets is to display the visual pattern that each filter is meant to respond to. This can be done with *gradient ascent
+in input space:* applying *gradient descent* to the value of the input image of a convnet so as to *maximize* the response of a specific filter, starting from a blank
+input image.
+
+The process is simple: you'll build a loss function that maximizes the value of a given filter in a given convolution layer, and then you'll use stochastic gradient descent
+to adjust the values of the input image so as to maximize this activation value.
