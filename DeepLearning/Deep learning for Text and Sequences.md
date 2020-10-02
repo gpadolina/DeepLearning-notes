@@ -1,4 +1,4 @@
-## Deep learning for text and sequences
+# Deep learning for text and sequences
 This chapter explores deep-learning models that can process text (understood as sequences of word or sequences of characters), timeseries, and sequence of data in general.
 The two fundamental deep-learning algorithsm for sequence processing are *recurrent neural networks* and *1D convnets*, the one-dimensional version of the 2D convents that
 was covered previously.
@@ -23,3 +23,8 @@ text into numeric tensors. This can be done in multiple ways:
 * Segment text into words, and transform each word into a vector.
 * Segment text into characters, and transform each character into a vector.
 * Extract n-grams of words or characters, and transform each n-gram into a vector. *N-grams* are overlapping groups of multiple consecutive words or characters.
+
+Collectively, the different units into which you can break down text (words, characters, or n-grams) are called *tokens*, and breaking text into such tokens is called
+*tokenization.* All text-vectorization processes consist of applying some tokenization scheme and then associating numeric vectors with the generated networks. These vectors,
+packed into sequence tensors, are fed into deep neural networks. There are multiple ways to associate a vector with a token. In this section, two will be presented: *one-hot
+encoding* of tokens, and *token embedding* (typically used exclusively for words, and called *word embedding*).
