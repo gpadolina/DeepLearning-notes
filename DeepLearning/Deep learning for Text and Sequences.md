@@ -32,3 +32,10 @@ encoding* of tokens, and *token embedding* (typically used exclusively for words
 #### One-hot encoding of words and characters
 One-hot encoding is the most common, most basic way to turn a token into a vector. It consists of associating a unique integer index with every word and then turning this
 integer index *i* into a binary vector of size *N* (the size of the vocabulary); the vector is all zeros except for the *i*th entry, which is 1.
+
+Note that Keras has built-in utilities for doing one-hot encoding of text at the word level or character level, starting from raw text data. You should use these utilities,
+because they take care of a number of important features such as stripping special characters from strings and only taking into account the *N* most common words in your
+dataset.
+
+A variant of one-hot encoding is the so-called *one-hot hashing trick*, which you can use when the number of unique tokens in your vocabulary is too large to handle
+explicitly.
