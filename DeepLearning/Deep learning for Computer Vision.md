@@ -179,3 +179,8 @@ Here's what you should take away from the last two sections:
 * On a small dataset, overfitting will be the main issue. Data augmentation is a powerful way to fight overfitting when you're working image data.
 * It's easy to reuse an existing convnet on a new dataset via feature extraction. This is a valuable technique for working with small image datasets.
 * As a complement to feature extraction, you can use fine-tuning, which adats to a new problem some of the representations previously learned by an existing model.
+## Visualizing what convnets learn
+It's often said that deep-leanring models are "black boxes": learning representations that are difficult to extract and present in a human-readable form. Although this is
+partially true for certain types of deep-learning models, it's definitely not true for convnets. The representations learned by convnets are highly amenable to visualization,
+in large part because they're *representations of visual concepts.* Since 2013, a wide array of techniques have been developed for visualizing and interpreting these
+representations.
