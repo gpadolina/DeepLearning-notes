@@ -206,3 +206,10 @@ There are a few things to note here:
 Higher presentations carry increasingly less information about the visual contents of the image, and increasingly more information related to the class of the image.
 * The sparsity of the activations increases with the depth of the layer: in the first layer, all filters are activated by the input image; but in the following layers, more
 and more filters are blank.
+
+A deep neural network effectivvely acts as an *information distillation pipeline,* with raw data going in (in this case, RGB pictures) and being repeatedly transformed so
+that irrelevant information is filter out (for example, the specific visual appearance of the image), and useful information is magnified and refined.
+
+This is analogous to the way humans and animals perceive the world. After observing a scene for a few seconds, a human can remember which abstract objects were present in
+it (bicycle, tree) but can't remember the specific appearance of these objects. Your brain has learned to completely abstract its visual input - to transform it into
+high-level visual concepts while filtering out irrelevant visual details - making it tremendously difficult to remember how things around you look.
