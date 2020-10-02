@@ -220,3 +220,9 @@ input image.
 
 The process is simple: you'll build a loss function that maximizes the value of a given filter in a given convolution layer, and then you'll use stochastic gradient descent
 to adjust the values of the input image so as to maximize this activation value.
+
+To implement gradient descent, you'll need the gradient of this loss with respect to the model's input. To do this, you'll use the *gradients* function packaged with the
+*backend* module of Keras.
+
+A non-obvious trick is to use to help the gradient-descent process go smoothly is to normalize the gradient tensor by dividing it by its L2 norm (the square root of the
+average of the square of the values in the tensor).
