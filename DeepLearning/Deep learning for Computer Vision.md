@@ -196,4 +196,13 @@ Visualizing intermediate activations consists of displaying the feature maps tha
 
 In order to extract the feature maps you want to look at, you'll create a Keras model that takes batches of images as input, and outputs the activations of all convolution
 and pooling layers. To do this, you'll use the Keras class *Model.* A model is instantiated using two arguments: an input tensor (or list of input tensors) and an output
-tensor (or list of output tensors).
+tensor (or list of output tensors). What sets the *Model* class apart is that it allows for models with multiple outputs, unlike *Sequential.*
+
+In the general case, a model can have any number of inputs and outputs. This one has one input and eight outputs: one output per layer activation.
+
+There are a few things to note here:
+* The first layer acts as a collection of various edge detectors. At that stage, the activations retain almost all of the information present in the initial picture.
+* As you go higher, the activations become increasingly abstract and less visually interpretable. They begin to encode higher-level concepts such as "cat ear" and "cat eye."
+Higher presentations carry increasingly less information about the visual contents of the image, and increasingly more information related to the class of the image.
+* The sparsity of the activations increases with the depth of the layer: in the first layer, all filters are activated by the input image; but in the following layers, more
+and more filters are blank.
