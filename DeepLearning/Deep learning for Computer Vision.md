@@ -173,3 +173,9 @@ the more specialized features, because these are the ones that need to be repurp
 
 Now you can begin fine-tuning the network. You'll do this with the RMSprop optimizer, using a very low learning rate. The reason for using a low learning rate is that you
 want to limit the magnitude of the modifications you make to the representations of the three layers you're fine-tuning.
+#### Wrapping up
+Here's what you should take away from the last two sections:
+* Convnets are the best type of machine-learning models for computer-vision tasks. It's possible to train one from scratch even on a very small datasetm with decent results.
+* On a small dataset, overfitting will be the main issue. Data augmentation is a powerful way to fight overfitting when you're working image data.
+* It's easy to reuse an existing convnet on a new dataset via feature extraction. This is a valuable technique for working with small image datasets.
+* As a complement to feature extraction, you can use fine-tuning, which adats to a new problem some of the representations previously learned by an existing model.
