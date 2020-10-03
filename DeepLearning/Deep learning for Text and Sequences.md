@@ -57,3 +57,10 @@ There are two ways to obtain word embeddings:
 word embeddings.*
 
 #### Learning word embeddings with the embedding layer
+The simplest way to associate a dense vector with a word is to choose the vector at random. The problem with this approach is that the resulting embedding space has no
+structure: for instance, the words *accurate* and *exact* may end up with completely different embeddings, even though they're interchangeable in most sentences.
+
+To get a bit more abstract, the geometric relationships between word vectors should reflect the semantic relationships between these words. Word embeddings are meant to map
+human language into a geometric space. For instance, in a reasonable embedding space, you would expect synonyms to be embedded into similar word vectors; and in general,
+you would expect the geometric distance (such as L2 distance) between any word vectors to relate the semantic distance between the associated words (words meaning different
+things are embedded at points far away from each other, whereas realted words are closer).
