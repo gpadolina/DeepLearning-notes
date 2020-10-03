@@ -64,3 +64,7 @@ To get a bit more abstract, the geometric relationships between word vectors sho
 human language into a geometric space. For instance, in a reasonable embedding space, you would expect synonyms to be embedded into similar word vectors; and in general,
 you would expect the geometric distance (such as L2 distance) between any word vectors to relate the semantic distance between the associated words (words meaning different
 things are embedded at points far away from each other, whereas realted words are closer).
+
+With the vector representations we chose here, some semantic relationships between these words can be encoded as geometric transformations. For instance, the same vector
+allows us to go from *cat* to *tiger* and from *dog* to *wolf*: this vector could be interpreted as the "from pet to wild animal" vector. Similarly, another vector let us
+go from *dog* to *cat* and from *wolf* to *tiger*, which could be interpreted as a "from caline to feline" vector.
