@@ -105,3 +105,11 @@ A major characteristics of all neural networks you've seen so far, such as dense
 In contrast, as you're readint the present sentence, you're processing it word by word - or rather, eye saccade by eye saccade - while keeping memories of what came before;
 this gives you a fluid representation of the meaning conveyed by this sentence. Biological intelligence processes information incrementally while maintaining an internal
 model of what it's processing, built from past information and constantly updated as new information comes in.
+
+A *recurrent neural network* (RNN) adopts the same principle, albeit in an extremely simplified version: it processes sequences by iterating through the sequence elements
+and maintaning a *state* containing information relative to what it has seen so far. In effect, an RNN is a type of neural network that has an internal loop.
+
+To make these notions of *loop* and *state* clear, let's' implement the forward pass of a toy RNN in Numpy. This RNN takes as input a sequence of vectors, which you'll
+encode as a 2D tensor of size *(timesteps, input_features).* It loops over timesteps, and at each timestep, it considers its current state at *t* and the input at *t* (of
+shape *(input_features, )*, and combines them to obtain the output at t. For the first timestep, the previous output isn't defined; hence, there is no current state. So,
+you'll initialize the state as an all-zero vector called the *initial state* of the network.
