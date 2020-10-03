@@ -74,3 +74,8 @@ vector to the vector "king," we obtain the vector "queen." By adding a "plural" 
 
 There is no such a thing as *human language* - there are many different languages, and they aren't isomorphic, because a language is the reflection of a specific culture and
 a specific context.
+#### Using pretrained word embeddings
+Instead of learning word embeddings jointly with the problem you want to solve, you can load embedding vectors from a precomputed embedding space that you know is highly
+structured and exhibits useful properties - that captures generic aspects of language structure. The rationale behind using pretrained word embeddings in natural-language
+processing is much the same as for using pretrained convnents in image classification: you don't have enough data available to learn truly powerful features on your own,
+but you expect the features that you need to be fairly generic - that is, common visual features or semantic features.
