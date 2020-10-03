@@ -39,3 +39,7 @@ dataset.
 
 A variant of one-hot encoding is the so-called *one-hot hashing trick*, which you can use when the number of unique tokens in your vocabulary is too large to handle
 explicitly.
+
+The main advantage of this method is that it does away with maintaning an explicit word index, which saves memory and allows online encoding of the data (you can generate
+token vectors right away, before you've seen all of the available data). The one drawback of this approach is that it's susceptible to *hash collisions*: two different words
+may end up with the same hash, and subsequently any machine-learning model looking at these hashes won't be able to tell the difference between these words.
