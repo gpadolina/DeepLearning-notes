@@ -79,3 +79,7 @@ Instead of learning word embeddings jointly with the problem you want to solve, 
 structured and exhibits useful properties - that captures generic aspects of language structure. The rationale behind using pretrained word embeddings in natural-language
 processing is much the same as for using pretrained convnents in image classification: you don't have enough data available to learn truly powerful features on your own,
 but you expect the features that you need to be fairly generic - that is, common visual features or semantic features.
+
+There are various precomputed databases of word embeddings that you can download and use in a Keras *Embedding* layer. Word2vec is one of them. This embedding technique is
+based on factorizing a matrix of word co-occurence statistics. Its developers have made available precomputed embeddings for millions of English tokens, obtained from
+Wikipedia data and Common Crawl data.
