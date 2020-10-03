@@ -98,3 +98,10 @@ parts shouldn't be updated during training, to avoid forgetting what they alread
 
 You can also train the same model without loading the pretrained word embeddings and without freezing the embedding layer. In that case, you'll learn a task-specific
 embedding of the input tokens, which is generally more powerful than pretrained word embeddings when lots of data is available.
+## Understanding recurrent neural networks
+A major characteristics of all neural networks you've seen so far, such as densely connected networks and convents, is that they have no memory. Such networks are called
+*feedforward networks.*
+
+In contrast, as you're readint the present sentence, you're processing it word by word - or rather, eye saccade by eye saccade - while keeping memories of what came before;
+this gives you a fluid representation of the meaning conveyed by this sentence. Biological intelligence processes information incrementally while maintaining an internal
+model of what it's processing, built from past information and constantly updated as new information comes in.
