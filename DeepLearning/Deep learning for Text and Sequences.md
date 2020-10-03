@@ -87,3 +87,11 @@ Wikipedia data and Common Crawl data.
 #### Putting it all together: from raw text to word embeddings
 You'll use a model similar to the one we just went over: embedding sentences in sequences of vectors, flattening them, and training a *Dense* layer on top. But you'll do so
 using pretrained word embeddings; and instead of using the pretokenized IMDB data packaged in Keras, you'll start from scratch by downloading the original text data.
+
+#### Preprocessing the embeddings
+You'll build an embedding matrix that you can load into an *Embedding* layer. It must be a matrix of shape *(max_words, embedding_dim)*, where each entry *i* contains the
+*embedding_dim*-dimensional vector for the word of index *i* in the reference word index built during tokenization.
+
+Additionally, you'll freeze the *Embedding* layer (set its *trainable* attribute to *False*), following the same rationale you're already familiar with in the context of
+pretrained convnet features: when parts of a model are pretrained (like your *Embedding* layer) and parts are randomly initialized (like your classifier), the pretrained
+parts shouldn't be updated during training, to avoid forgetting what they already know.
