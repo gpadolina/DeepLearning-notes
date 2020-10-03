@@ -68,3 +68,6 @@ things are embedded at points far away from each other, whereas realted words ar
 With the vector representations we chose here, some semantic relationships between these words can be encoded as geometric transformations. For instance, the same vector
 allows us to go from *cat* to *tiger* and from *dog* to *wolf*: this vector could be interpreted as the "from pet to wild animal" vector. Similarly, another vector let us
 go from *dog* to *cat* and from *wolf* to *tiger*, which could be interpreted as a "from caline to feline" vector.
+
+In real-world word-embedding spaces, common examples of meaningful geometric transformations are "gender" vectors and "plural" vectors. For instance, by adding a "female"
+vector to the vector "king," we obtain the vector "queen." By adding a "plural" vector, we obtain "kings."
