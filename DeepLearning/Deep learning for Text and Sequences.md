@@ -48,4 +48,12 @@ may end up with the same hash, and subsequently any machine-learning model looki
 Another popular and powerful way to associate a vector with a word is the use of dence *word vectors*, also called *word embeddings*. Whereas the vectors obtained through
 one-hot encoding are binary, sparse (mostly made of zeros), and very high-dimensional (same dimensionality as the number of words in the vocabulary), word embeddings are
 low-dimensional floating point vectors (that is, dense vectors, as opposed to sparse vectors). Unlike the word vectors obtained via one-hot encoding, word embeddings are
-learned from data. It's common to see word embeddings that are 256-dimensional, 512-dimensional, or 1,024-dimensional when dealing with very large vocabularies.
+learned from data. It's common to see word embeddings that are 256-dimensional, 512-dimensional, or 1,024-dimensional when dealing with very large vocabularies. Word
+embeddings pack more information into far fewer dimensions.
+
+There are two ways to obtain word embeddings:
+* Learn word embeddings jointly with the main task you care about (such as document classification or sentiment predictions).
+* Load into your model word embeddings that were precomputed using a different machine-learning task than the one you're trying to solve. These are called *pretrained
+word embeddings.*
+
+#### Learning word embeddings with the embedding layer
