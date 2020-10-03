@@ -71,3 +71,6 @@ go from *dog* to *cat* and from *wolf* to *tiger*, which could be interpreted as
 
 In real-world word-embedding spaces, common examples of meaningful geometric transformations are "gender" vectors and "plural" vectors. For instance, by adding a "female"
 vector to the vector "king," we obtain the vector "queen." By adding a "plural" vector, we obtain "kings."
+
+There is no such a thing as *human language* - there are many different languages, and they aren't isomorphic, because a language is the reflection of a specific culture and
+a specific context.
