@@ -113,3 +113,9 @@ To make these notions of *loop* and *state* clear, let's' implement the forward 
 encode as a 2D tensor of size *(timesteps, input_features).* It loops over timesteps, and at each timestep, it considers its current state at *t* and the input at *t* (of
 shape *(input_features, )*, and combines them to obtain the output at t. For the first timestep, the previous output isn't defined; hence, there is no current state. So,
 you'll initialize the state as an all-zero vector called the *initial state* of the network.
+
+In summary, an RNN is a *for* loop that reuses quantities computed during the previous iteration of the loop, nothing more.
+
+#### A recurrent layer in Keras
+*SimpleRNN* processes batches of sequences, like all other Keras layers, not a single sequences as in the Numpy example. This means it takes inputs of shape *(batch_size,
+timesteps, input_features),* rather than *(timesteps, input_features).*
