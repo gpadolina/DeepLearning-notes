@@ -95,3 +95,6 @@ You'll build an embedding matrix that you can load into an *Embedding* layer. It
 Additionally, you'll freeze the *Embedding* layer (set its *trainable* attribute to *False*), following the same rationale you're already familiar with in the context of
 pretrained convnet features: when parts of a model are pretrained (like your *Embedding* layer) and parts are randomly initialized (like your classifier), the pretrained
 parts shouldn't be updated during training, to avoid forgetting what they already know.
+
+You can also train the same model without loading the pretrained word embeddings and without freezing the embedding layer. In that case, you'll learn a task-specific
+embedding of the input tokens, which is generally more powerful than pretrained word embeddings when lots of data is available.
