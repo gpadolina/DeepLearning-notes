@@ -83,3 +83,7 @@ but you expect the features that you need to be fairly generic - that is, common
 There are various precomputed databases of word embeddings that you can download and use in a Keras *Embedding* layer. Word2vec is one of them. This embedding technique is
 based on factorizing a matrix of word co-occurence statistics. Its developers have made available precomputed embeddings for millions of English tokens, obtained from
 Wikipedia data and Common Crawl data.
+
+#### Putting it all together: from raw text to word embeddings
+You'll use a model similar to the one we just went over: embedding sentences in sequences of vectors, flattening them, and training a *Dense* layer on top. But you'll do so
+using pretrained word embeddings; and instead of using the pretokenized IMDB data packaged in Keras, you'll start from scratch by downloading the original text data.
