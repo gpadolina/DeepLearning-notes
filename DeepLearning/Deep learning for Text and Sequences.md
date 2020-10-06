@@ -143,3 +143,6 @@ vanishing during processing.
 The specification of an RNN cell determines your hypothesis space - the space in which you'll search for a good model configuration during training - but it doesn't
 determine what the cell does; that is up to the cell weights. The same cell with different weights can be doing very different things. So the combination of operations
 making up an RNN cell is better interpreted as a set of *constraints* on your search, not as a *design* in an engineering sense.
+
+In summary: you don't need to understand anything about the specific architecture of an *LSTM* cell; as a human, it shouldn't be your job to understand it. Just keep in mind
+what the *LSTM* cell is meant to do: allow past information to be reinjected at a later time, thus fighting the vanishing-gradient problem.
