@@ -173,3 +173,6 @@ everywhere in machine learning.
 #### Using recurrent dropout to fight overfitting
 You're already familiar with a classic technique for fighting this phenomenon: dropout, which randomly zeros out input units of a layer in order to break happenstance
 correlations in the training data that the layer is exposed to. But how to correctly apply dropout in recurrent networks isn't a trivial question.
+
+It has long been known that applying dropout before a recurrent layer hinders learning rather than helping with regularization. The same dropout mask (the same pattern of
+dropped units) should be applied at every timestep, instead of a dropout mask that varies randomly from timestep to timestep.
