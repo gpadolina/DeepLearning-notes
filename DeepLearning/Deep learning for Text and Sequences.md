@@ -153,3 +153,10 @@ will almost always "just work" without having to spend time tuning parameters by
 Analyzing the global, long-term structure of the reviews (what LSTM is good at) isn't helpful for a sentiment-analysis problem. Such a basic problem is well solved by looking
 at what words occur in each review, and at what frequency. That's what the first fully connected approach looked at. But there are far more difficult natural
 language-processing problems out there, where the strength of LSTM will become apprarent: in particular, question-answering and machine translation.
+
+## Advanced use of recurrent neural networks
+We'll review three advanced techniques for improving the performance and generalization power of recurrent neural networks. By the end of the section, you'll know most of
+what there is to know about using recurrent networks with Keras. We'll cover the following techniques:
+* *Recurrent dropout* - This is a specific, built-in way to use dropout to fight overfitting in recurrent layers.
+* *Stacking recurrent layers* - This increases the representational power of the network (at the cost of higher computational loads).
+* *Bidirectional recurrent layers* - These present the same information to a recurrent network in different ways, increasing accuracy and mitigating forgetting issues.
