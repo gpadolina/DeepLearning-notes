@@ -119,3 +119,7 @@ In summary, an RNN is a *for* loop that reuses quantities computed during the pr
 #### A recurrent layer in Keras
 *SimpleRNN* processes batches of sequences, like all other Keras layers, not a single sequences as in the Numpy example. This means it takes inputs of shape *(batch_size,
 timesteps, input_features),* rather than *(timesteps, input_features).*
+
+Like all recurrent layers in Keras, *SimpleRNN* can be run in two different modes: it can return either the full sequences of successive outputs for each timestep (a 3D
+tensor of shape *(batch_size, timesteps, output_features)*) or only the last output for each input sequence (a 2D tesnor of shape *(batch_size, output_features)*). These
+two modes are controlled by the *return_sequences* constructor argument.
