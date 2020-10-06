@@ -160,3 +160,9 @@ what there is to know about using recurrent networks with Keras. We'll cover the
 * *Recurrent dropout* - This is a specific, built-in way to use dropout to fight overfitting in recurrent layers.
 * *Stacking recurrent layers* - This increases the representational power of the network (at the cost of higher computational loads).
 * *Bidirectional recurrent layers* - These present the same information to a recurrent network in different ways, increasing accuracy and mitigating forgetting issues.
+#### A basic machine-learning approach
+In the same way that it's useful to establish a common-sense baseline before trying machine-learning approaches, it's useful to try simple, cheap machine-learning models
+such as small, densely connected networks before looking into complicated and computationally expensive models such as RNNs. 
+#### A first recurrent baseline
+Let's instead look at the data as what it is: a sequence, where causality and order matter. You'll try a recurrent-sequence processing model - it should be the perfect fit
+for such sequence data, precisely because it exploits the temportal ordering of data points.
