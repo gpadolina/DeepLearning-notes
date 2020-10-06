@@ -123,3 +123,10 @@ timesteps, input_features),* rather than *(timesteps, input_features).*
 Like all recurrent layers in Keras, *SimpleRNN* can be run in two different modes: it can return either the full sequences of successive outputs for each timestep (a 3D
 tensor of shape *(batch_size, timesteps, output_features)*) or only the last output for each input sequence (a 2D tesnor of shape *(batch_size, output_features)*). These
 two modes are controlled by the *return_sequences* constructor argument.
+
+It's sometimes useful to stack several recurrent layers one after the other in order to increase the representational power of a network. In such a setup, you have to get
+all of the intermediate layers to return full sequence of outputs.
+#### Understanding the LSTM and GRU layers
+*SimpleRNN* isn't the only recurrent layer available in Keras. There are two others: *LSTM* and *GRU.* In practice, you'll always use one of these, because *SimpleRNN* is
+generally too simplistic to be of real use. *SimpleRNN* has a major issue: although it should theoretically be able to retain at time t information about inputs seen many
+timesteps before, in practice, such long-term dependencies are impossible to learn.
