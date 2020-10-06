@@ -146,3 +146,10 @@ making up an RNN cell is better interpreted as a set of *constraints* on your se
 
 In summary: you don't need to understand anything about the specific architecture of an *LSTM* cell; as a human, it shouldn't be your job to understand it. Just keep in mind
 what the *LSTM* cell is meant to do: allow past information to be reinjected at a later time, thus fighting the vanishing-gradient problem.
+#### A concreate LSTM example in Keras
+You only specific the output dimensionality of the *LSTM* layer; leave every other argument (there are many) at the Keras defaults. Keras has good defaults, and things
+will almost always "just work" without having to spend time tuning parameters by hand.
+
+Analyzing the global, long-term structure of the reviews (what LSTM is good at) isn't helpful for a sentiment-analysis problem. Such a basic problem is well solved by looking
+at what words occur in each review, and at what frequency. That's what the first fully connected approach looked at. But there are far more difficult natural
+language-processing problems out there, where the strength of LSTM will become apprarent: in particular, question-answering and machine translation.
