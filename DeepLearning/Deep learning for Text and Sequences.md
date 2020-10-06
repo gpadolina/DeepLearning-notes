@@ -166,3 +166,10 @@ such as small, densely connected networks before looking into complicated and co
 #### A first recurrent baseline
 Let's instead look at the data as what it is: a sequence, where causality and order matter. You'll try a recurrent-sequence processing model - it should be the perfect fit
 for such sequence data, precisely because it exploits the temportal ordering of data points.
+
+You'll use the *GRU* layer, developed by Chung et al. Gated recurrent unit (GRU) layers work using the same principle as LSTM, but they're somewhat streamlined and thus
+cheaper to run although they may not has as much as representation power as LSTM. This trade-off between computation expensiveness and representational power is seen
+everywhere in machine learning.
+#### Using recurrent dropout to fight overfitting
+You're already familiar with a classic technique for fighting this phenomenon: dropout, which randomly zeros out input units of a layer in order to break happenstance
+correlations in the training data that the layer is exposed to. But how to correctly apply dropout in recurrent networks isn't a trivial question.
