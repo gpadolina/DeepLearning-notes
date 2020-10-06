@@ -178,3 +178,6 @@ It has long been known that applying dropout before a recurrent layer hinders le
 dropped units) should be applied at every timestep, instead of a dropout mask that varies randomly from timestep to timestep. Using the same droput mask at every timestep
 allows the network to properly propagate its learning error through time; a temporally random dropout mask would disrupt this error signal and be harmful to the learning
 process.
+
+Every recurrent layer in Keras has two dropout-related  arguments: *dropout*, a float specifying the dropout rate for input units of the layer, and *recurrent_dropout,*
+specifying the dropout rate of the recurrent units.
