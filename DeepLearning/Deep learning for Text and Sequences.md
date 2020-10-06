@@ -132,3 +132,10 @@ generally too simplistic to be of real use. *SimpleRNN* has a major issue: altho
 timesteps before, in practice, such long-term dependencies are impossible to learn. This is due to the *vanishing gradient problem,* an effect that is similar to what is
 observed with non-recurrent networks (feedforward networks) that are many layers deep: as you keep adding layers to a network, the network eventually becomes untrainable.
 The *LSTM* and *GRU* layers are designed to solve this problem.
+
+Let's consider  the *LSTM* layer. The underlying Long Short-Term Memory (LSTM) algorithm was developed by Hochreiter and Schmidhuber in 1997; it was the culmination of their
+research on the vanishing gradient problem.
+
+Imagine a conveyor belt running parallel to the sequence you're processing. Information from the sequence can jump onto the conveyor belt at any point, be transported to a
+later timestep, and jump off, intact, when you need it. This is essentially what LSTM does: it saves information for later, thus preventing older signal from gradually
+vanishing during processing.
