@@ -129,4 +129,6 @@ all of the intermediate layers to return full sequence of outputs.
 #### Understanding the LSTM and GRU layers
 *SimpleRNN* isn't the only recurrent layer available in Keras. There are two others: *LSTM* and *GRU.* In practice, you'll always use one of these, because *SimpleRNN* is
 generally too simplistic to be of real use. *SimpleRNN* has a major issue: although it should theoretically be able to retain at time t information about inputs seen many
-timesteps before, in practice, such long-term dependencies are impossible to learn.
+timesteps before, in practice, such long-term dependencies are impossible to learn. This is due to the *vanishing gradient problem,* an effect that is similar to what is
+observed with non-recurrent networks (feedforward networks) that are many layers deep: as you keep adding layers to a network, the network eventually becomes untrainable.
+The *LSTM* and *GRU* layers are designed to solve this problem.
