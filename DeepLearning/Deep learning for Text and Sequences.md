@@ -175,4 +175,6 @@ You're already familiar with a classic technique for fighting this phenomenon: d
 correlations in the training data that the layer is exposed to. But how to correctly apply dropout in recurrent networks isn't a trivial question.
 
 It has long been known that applying dropout before a recurrent layer hinders learning rather than helping with regularization. The same dropout mask (the same pattern of
-dropped units) should be applied at every timestep, instead of a dropout mask that varies randomly from timestep to timestep.
+dropped units) should be applied at every timestep, instead of a dropout mask that varies randomly from timestep to timestep. Using the same droput mask at every timestep
+allows the network to properly propagate its learning error through time; a temporally random dropout mask would disrupt this error signal and be harmful to the learning
+process.
