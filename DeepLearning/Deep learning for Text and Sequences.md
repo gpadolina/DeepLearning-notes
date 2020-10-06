@@ -139,3 +139,7 @@ research on the vanishing gradient problem.
 Imagine a conveyor belt running parallel to the sequence you're processing. Information from the sequence can jump onto the conveyor belt at any point, be transported to a
 later timestep, and jump off, intact, when you need it. This is essentially what LSTM does: it saves information for later, thus preventing older signal from gradually
 vanishing during processing.
+
+The specification of an RNN cell determines your hypothesis space - the space in which you'll search for a good model configuration during training - but it doesn't
+determine what the cell does; that is up to the cell weights. The same cell with different weights can be doing very different things. So the combination of operations
+making up an RNN cell is better interpreted as a set of *constraints* on your search, not as a *design* in an engineering sense.
