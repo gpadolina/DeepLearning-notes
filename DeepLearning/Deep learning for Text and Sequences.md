@@ -213,3 +213,9 @@ the antichronological half is known to be severely underperforming on this task.
 As always, deep learning is more an art than a science. We can provide guidelines that suggest what is likely to work or not work on a given problem, but, ultimately, every
 problem is unique; you'll have to evaluate different strategies empirically. There is currently no theory that will tell you in advance precisely what you should do to
 optimally solved a problem. You must iterate.
+## Sequence processing with convnets
+Convnets perform particularly well on computer vision problems, due to their ability to operate *convolutionally,* extracting features from local input patches and allowing
+for representation modularity and data efficiency. The same properties that make convnets excel at computer vision also make them highly relevant to sequence processing.
+
+Such 1D convnets can be competitive with RNNs on certain sequence-processing problems, usually at a considerably cheaper computational cost. In addition to these specific
+success, it has long been known that small 1D convnets can offer a fast alternative to RNNs for simple tasks such as text classification and timeseries forecasting.
