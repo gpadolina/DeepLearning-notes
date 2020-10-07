@@ -237,3 +237,5 @@ of size 7 or 9.
 alternative to RNNs on some problems, in particular natural-language processing tasks.
 * Typically, 1D convnets are structured much like their 2D equivalents from the world of computer vision: they consist of stacks of *Conv1D* layers and *MaxPooling1D* layers,
 ending in a global pooling operation or flattening operation.
+* Because RNNs are extremely expensive for processing very long sequences, but 1D convnens are cheap, it can be a good idea to use a 1D convnets as a preprocessing step
+before an RNN, shortening the sequence and extracting useful representations for the RNN to process.
