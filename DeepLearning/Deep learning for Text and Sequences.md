@@ -181,3 +181,17 @@ process.
 
 Every recurrent layer in Keras has two dropout-related  arguments: *dropout*, a float specifying the dropout rate for input units of the layer, and *recurrent_dropout,*
 specifying the dropout rate of the recurrent units.
+#### Stacking recurrent layers
+Reccurrent layer stacking is a classic way to build more-powerful recurrent networks: for instance, what currently powers the Google Translate algorithm is a stack of seven
+large *LSTM* layers.
+
+To stack recurrent layers on top of each other in Keras, all intermediate layers should return their full sequence of output (a 3D tensor) rather than their input at the
+last timestep. This is done by specifying *return_sequences=True.*
+#### Using bidirectional RNNs
+The last technique introduced in this section is called *bidirectional RNNs.* A bidirectional RNN is a common RNN variant that can offer greater performance than a regular
+RNN on certain tasks. It's frequently used in natural-language processing - you could call it the Swiss Army knife of deep learning for natural-language processing.
+
+RNNs are notably order dependent, or time dependent: they process the timesteps of their input sequences in order, and shuffling or reversing the timesteps can completely
+change the representations the RNN extracts from the sequence. This is precisely the reason they perform well on problems where order is meaningful. A bidirectional RNN
+exploits the order sensitivity of RNNs: it consists of using two regular RNNs, such as the *GRU* and *LSTM* layers. By processing a sequence both ways, a bidirectional RNN
+can catch patterns that may be overlooked by a unidirectional RNN.
