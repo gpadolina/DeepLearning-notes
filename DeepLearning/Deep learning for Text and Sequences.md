@@ -232,3 +232,8 @@ or a *Flatten* layer, that turn the 3D outputs into 2D outputs, allowing you to 
 One difference, though, is the fact that you can afford to use large convolution windows with 1D convnets. With a 2D convolution layer, a 3 x 3 convolutoin window contains
 3 x 3 = 9 feature vectors; but with a 1D convolution layer, a convolution window of size 3 contains only 3 feature vectors. You can thus easily afford 1D convolution windows
 of size 7 or 9.
+#### Wrapping up
+* In the same way that 2D convnets perform well for processing visual patterns in 2D space, 1D convnets perform well for processing temporal patterns. They offer a faster
+alternative to RNNs on some problems, in particular natural-language processing tasks.
+* Typically, 1D convnets are structured much like their 2D equivalents from the world of computer vision: they consist of stacks of *Conv1D* layers and *MaxPooling1D* layers,
+ending in a global pooling operation or flattening operation.
