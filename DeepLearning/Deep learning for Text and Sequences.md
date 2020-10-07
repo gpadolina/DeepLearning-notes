@@ -206,3 +206,10 @@ look at your data, capturing aspects of the data that were missed by other appro
 To instantiate a bidirectional RNN in Keras, you use the *Bidirectional* layer, which takes as its first argument a recurrent layer instance. *Bidirectional* creates a
 second, separate instance of this recurrent layer and uses one instance for processing the input sequences in chronological order and the other instance for processing the
 input sequences in reversed order.
+
+This performs about as well as the regular GRU layer. It's easy to understand why: all the predictive capacity must come from the chronological haf of the network, because
+the antichronological half is known to be severely underperforming on this task.
+
+As always, deep learning is more an art than a science. We can provide guidelines that suggest what is likely to work or not work on a given problem, but, ultimately, every
+problem is unique; you'll have to evaluate different strategies empirically. There is currently no theory that will tell you in advance precisely what you should do to
+optimally solved a problem. You must iterate.
