@@ -14,3 +14,7 @@ layers. Imagine a deep-learning model trying to predict the most likely market p
 a user-provided text description, and a picture of item. A naive approach would be to train three separate models and then do a weighted average of their predictions. But
 this may be suboptimal, because the information extracted by the models may be redundant. A better way is to *jointly* learn a more accurate model of the data by using a
 model that can see all available input modalities simultaneously: a model with three input branches.
+
+Additionally, many recently developed neural architectures require nonlinear network topology: networks structured as directed acyclic graphis. The Inception family of
+networks for instance, relies on *Inception modules,* where the input is processed by several parallel convolutoinal branches whose outputs are then merge back into a single
+tensor.
