@@ -202,3 +202,7 @@ approach.
 In machine learning, representations that are *different yet useful* are always worth exploiting, and the more they differ, the better: they offer a new angle from which to
 look at your data, capturing aspects of the data that were missed by other approaches, and thus they can help boost performance on a task. This is the intuition behind
 *ensembling.*
+
+To instantiate a bidirectional RNN in Keras, you use the *Bidirectional* layer, which takes as its first argument a recurrent layer instance. *Bidirectional* creates a
+second, separate instance of this recurrent layer and uses one instance for processing the input sequences in chronological order and the other instance for processing the
+input sequences in reversed order.
