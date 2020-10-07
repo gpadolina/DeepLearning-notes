@@ -219,3 +219,9 @@ for representation modularity and data efficiency. The same properties that make
 
 Such 1D convnets can be competitive with RNNs on certain sequence-processing problems, usually at a considerably cheaper computational cost. In addition to these specific
 success, it has long been known that small 1D convnets can offer a fast alternative to RNNs for simple tasks such as text classification and timeseries forecasting.
+#### 1D pooling for sequence data
+The 2D pooling operation has a 1D equivalent: extracting 1D patches (subsequences) from an input and outputting the maximum value (max pooling) or average value (average
+pooling) Just as with 2D convnets, this is used for reducing the length of 1D inputs (*subsampling*).
+#### Implementing a 1D convnet
+In keras, you use a 1D convnet via the *Conv1D* layer, which has an interface similar to *Conv2D.* It takes as input 3D tensors with shape *(samples, time, features)* and
+returns similarly shaped 3D tensors. The convolution window is a 1D window on the temporal axis: axis 1 in the input tensor.
