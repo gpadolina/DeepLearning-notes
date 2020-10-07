@@ -228,3 +228,7 @@ returns similarly shaped 3D tensors. The convolution window is a 1D window on th
 
 1D convnets are structured in the same way as their 2D counterparts: they consist of a stack of *Conv1D* and *MaxPooling1D* layers, ending in either global pooling layer
 or a *Flatten* layer, that turn the 3D outputs into 2D outputs, allowing you to add one or more *Dense* layers to the model for classification or regression.
+
+One difference, though, is the fact that you can afford to use large convolution windows with 1D convnets. With a 2D convolution layer, a 3 x 3 convolutoin window contains
+3 x 3 = 9 feature vectors; but with a 1D convolution layer, a convolution window of size 3 contains only 3 feature vectors. You can thus easily afford 1D convolution windows
+of size 7 or 9.
