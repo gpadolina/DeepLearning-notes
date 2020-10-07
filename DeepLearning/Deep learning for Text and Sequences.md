@@ -195,3 +195,10 @@ RNNs are notably order dependent, or time dependent: they process the timesteps 
 change the representations the RNN extracts from the sequence. This is precisely the reason they perform well on problems where order is meaningful. A bidirectional RNN
 exploits the order sensitivity of RNNs: it consists of using two regular RNNs, such as the *GRU* and *LSTM* layers. By processing a sequence both ways, a bidirectional RNN
 can catch patterns that may be overlooked by a unidirectional RNN.
+
+The reversed-order GRU strongly underperforms even the common-sense baseline, indicating that in this case, chronological processing is important to the success of your
+approach.
+
+In machine learning, representations that are *different yet useful* are always worth exploiting, and the more they differ, the better: they offer a new angle from which to
+look at your data, capturing aspects of the data that were missed by other approaches, and thus they can help boost performance on a task. This is the intuition behind
+*ensembling.*
