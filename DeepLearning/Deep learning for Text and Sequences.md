@@ -225,3 +225,6 @@ pooling) Just as with 2D convnets, this is used for reducing the length of 1D in
 #### Implementing a 1D convnet
 In keras, you use a 1D convnet via the *Conv1D* layer, which has an interface similar to *Conv2D.* It takes as input 3D tensors with shape *(samples, time, features)* and
 returns similarly shaped 3D tensors. The convolution window is a 1D window on the temporal axis: axis 1 in the input tensor.
+
+1D convnets are structured in the same way as their 2D counterparts: they consist of a stack of *Conv1D* and *MaxPooling1D* layers, ending in either global pooling layer
+or a *Flatten* layer, that turn the 3D outputs into 2D outputs, allowing you to add one or more *Dense* layers to the model for classification or regression.
