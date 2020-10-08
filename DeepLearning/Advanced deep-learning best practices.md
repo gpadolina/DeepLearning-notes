@@ -33,3 +33,12 @@ When it comes to compiling, training, or evaluating such an instance of *Model,*
 The functional API can be used to build models that have multiple inputs. Typically, such models at some point merge their different input branches using a layer that can
 combine several tensors: by adding them, concatenating them, and so on. This is usually done via a Keras merge operation such as *keras.layers.add, keras.layers.concatenate,*
 and so on.
+
+How do you train two-input model? There are two possible APIs: you can feed the model a list of Numpy arrays as inputs, or you can feed it a dictionary that maps input names
+to Numpy arrays. Naturally, the latter option is available only if you give names to your inputs.
+#### Multi-output models
+Importantly, training such a model requires the ability to specify different loss functions for different heads of the network: for instance, age prediction is a scalar
+regression task, but gender prediction is a binary classification task, requiring a different training procedure. But because gradient descent requires you to minimize a
+*scalar,* you must combine these losses into a single value in order to train the model. The simplest way to combine different losses is to sum them all. In Keras, you can
+use either a list or a dictionary of losses in *compile* to specify different objects for different outputs; the resulting loss values are summed into a global loss, which
+is minimized during training.
