@@ -48,3 +48,5 @@ expense of the other tasks. To remedy this, you can assign different levels of i
 particular if the losses' values use different scales.
 #### Directed acyclic graphs of layers
 With the functional API, not only you can build models with multiple inputs and multiple outputs, but you can also implement networks with a complex internal topology.
+Neural networks in Keras are allowed to be arbitrary *directed acyclic graphs* of layers. The qualifier *acyclic* is important: these graphs can't have cycles. It's impossible
+for a tensor x to become the input of one of the layers that generated x. The only processing *loops* that are allowed are those internal to recurrent layers.
