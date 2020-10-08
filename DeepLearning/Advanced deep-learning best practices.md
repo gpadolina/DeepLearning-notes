@@ -42,3 +42,9 @@ regression task, but gender prediction is a binary classification task, requirin
 *scalar,* you must combine these losses into a single value in order to train the model. The simplest way to combine different losses is to sum them all. In Keras, you can
 use either a list or a dictionary of losses in *compile* to specify different objects for different outputs; the resulting loss values are summed into a global loss, which
 is minimized during training.
+
+Note that every imbalanced loss contributions will cause the model representations to be optimized preferentially for the task with the largest individual loss, at the
+expense of the other tasks. To remedy this, you can assign different levels of importance to the loss values in their contribution to the final loss. This is useful in
+particular if the losses' values use different scales.
+#### Directed acyclic graphs of layers
+With the functional API, not only you can build models with multiple inputs and multiple outputs, but you can also implement networks with a complex internal topology.
