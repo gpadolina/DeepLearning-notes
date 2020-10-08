@@ -20,3 +20,7 @@ networks for instance, relies on *Inception modules,* where the input is process
 tensor. There's also the recent trend of adding *residual connections* to a model, which started with the ResNet family of networks. A residual connection consists of
 reinjecting previous representations into the downstream flow of data by adding a past output tensor to a later output tensor, which helps prevent information loss along
 the data data-processing flow.
+
+These three important use cases - multi-input models, multi-output models, and graph-like models - aren't possible when using only the *Sequential* model class in Keras.
+But there's another far more general and flexible way to use Keras: the *functional API.*
+#### Introduction to the functional API
