@@ -72,3 +72,6 @@ knowledge and perform the same operations.
 In this setup, the two input sentences are interchangeable, because semantic similarity is a symmetrical relationship: the similarity of A to B is identical to the similarity
 of B to A. For this reason, it wouldn't make sense to learn two independent models for processing each input sentence. Rather, you want to process both with a single *LSTM*
 layer. The representations of this *LSTM* layer (its weights) are learned based on both inputs simultaneously. This is what we call a *Siamese LSTM* model or a *shared LSTM.*
+
+Naturally, a layer instance may be used more than once - it can be called arbitrarily many times, reusing the same set of weights every time.
+## Inspecting and monitoring deep-learning models using Keras callbacks and TensorBoard
