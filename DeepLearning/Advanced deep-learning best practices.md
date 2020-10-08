@@ -75,3 +75,6 @@ layer. The representations of this *LSTM* layer (its weights) are learned based 
 
 Naturally, a layer instance may be used more than once - it can be called arbitrarily many times, reusing the same set of weights every time.
 ## Inspecting and monitoring deep-learning models using Keras callbacks and TensorBoard
+Launching a training run on a large dataset for tens of epochs using *model.fit( )* or *model.fit_generator( )* can be a bit like launching a paper airplane: past the initial
+impulse, you don't have any control over its tracjectory or its landing spot. The techniques presented here will transform the call to *model.fit( )* from a paper airplane
+into a smart, autonomous drone that can self instrospect and dynamically take action.
