@@ -60,3 +60,7 @@ Another closely related model available as part of the Keras applications module
 loosely inspired by Inception.It takes the idea of separating the learning of channel-wise and space-wise features ot its logical extreme, and replaces Inception modules
 with depth-wise separable convolutions consisting of a depthwise convolution (a spatial convolution where every input channel is handled separately) followed by a pointwise
 convolution (a 1x1 convolution) - effectively, an extreme form of an Inception module, where spatial features and channel-wise features are fully separated.
+#### Residual connections
+*Residual connections* are a common graph-like network component found in many post-2015 network architectures, including Xception. They tackle two common problems that
+plague any large-scale deep-learning model: vanishing gradients and representational bottlenecks. In general, adding residual connections to any model that has more than
+10 layers is likely to be beneficial.
