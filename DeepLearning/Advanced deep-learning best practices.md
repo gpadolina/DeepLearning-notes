@@ -24,3 +24,12 @@ the data data-processing flow.
 These three important use cases - multi-input models, multi-output models, and graph-like models - aren't possible when using only the *Sequential* model class in Keras.
 But there's another far more general and flexible way to use Keras: the *functional API.*
 #### Introduction to the functional API
+In the functional API, you directly manipulate tensors, and you use layers as *functions* that take tensors and return tensors.
+
+Behind the scenes, Keras retrieves every layer involved in going from *input_tensor* to *output_tensor,* bringing them together into a graph-like data structure - a *Model.*
+
+When it comes to compiling, training, or evaluating such an instance of *Model,* the API is the same as that of *Sequential.*
+#### Multi-input models
+The functional API can be used to build models that have multiple inputs. Typically, such models at some point merge their different input branches using a layer that can
+combine several tensors: by adding them, concatenating them, and so on. This is usually done via a Keras merge operation such as *keras.layers.add, keras.layers.concatenate,*
+and so on.
