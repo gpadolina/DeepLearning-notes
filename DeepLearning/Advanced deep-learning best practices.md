@@ -78,3 +78,8 @@ Naturally, a layer instance may be used more than once - it can be called arbitr
 Launching a training run on a large dataset for tens of epochs using *model.fit( )* or *model.fit_generator( )* can be a bit like launching a paper airplane: past the initial
 impulse, you don't have any control over its tracjectory or its landing spot. The techniques presented here will transform the call to *model.fit( )* from a paper airplane
 into a smart, autonomous drone that can self instrospect and dynamically take action.
+#### Using callbacks to act on a model during training
+A much better way to handle this is to stop training when you measure tha tthe validation loss is no longer improving. This can be achieved using a Keras callback. A
+*callback* is an object (a class instance implementing specific methods) that is passed to the model in the call to *fit* and that is called by the model at various points
+during training. It has access to all the available data about the state of the model and its performance, and it can take action: interrupt training, save a model, load a
+different weight set, or otherwise alter the state of the model.
