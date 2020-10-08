@@ -68,3 +68,7 @@ plague any large-scale deep-learning model: vanishing gradients and representati
 One more important feature of the functional API is the ability to reuse a layer instance several times. When you call a layer instance twice, instead of instantiating a
 new layer for each call, you reuse the same weights with every call. This allows you to build models that have shared branches - several branches that all share the same
 knowledge and perform the same operations.
+
+In this setup, the two input sentences are interchangeable, because semantic similarity is a symmetrical relationship: the similarity of A to B is identical to the similarity
+of B to A. For this reason, it wouldn't make sense to learn two independent models for processing each input sentence. Rather, you want to process both with a single *LSTM*
+layer. The representations of this *LSTM* layer (its weights) are learned based on both inputs simultaneously. This is what we call a *Siamese LSTM* model or a *shared LSTM.*
