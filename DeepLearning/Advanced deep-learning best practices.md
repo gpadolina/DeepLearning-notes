@@ -64,3 +64,7 @@ convolution (a 1x1 convolution) - effectively, an extreme form of an Inception m
 *Residual connections* are a common graph-like network component found in many post-2015 network architectures, including Xception. They tackle two common problems that
 plague any large-scale deep-learning model: vanishing gradients and representational bottlenecks. In general, adding residual connections to any model that has more than
 10 layers is likely to be beneficial.
+#### Layer weight sharing
+One more important feature of the functional API is the ability to reuse a layer instance several times. When you call a layer instance twice, instead of instantiating a
+new layer for each call, you reuse the same weights with every call. This allows you to build models that have shared branches - several branches that all share the same
+knowledge and perform the same operations.
