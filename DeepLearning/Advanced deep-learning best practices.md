@@ -50,3 +50,13 @@ particular if the losses' values use different scales.
 With the functional API, not only you can build models with multiple inputs and multiple outputs, but you can also implement networks with a complex internal topology.
 Neural networks in Keras are allowed to be arbitrary *directed acyclic graphs* of layers. The qualifier *acyclic* is important: these graphs can't have cycles. It's impossible
 for a tensor x to become the input of one of the layers that generated x. The only processing *loops* that are allowed are those internal to recurrent layers.
+
+Several common neural-network components are implemented as graphs. Two notable ones are Inception modules and residual connections.
+#### Inception modules
+*Inception* is a popular type of network architecture for convolutional neural networks inspired by the earlier *network-in-network* architecture. It consists of a stack of
+modules that themselves look like small independent networks, split into several parallel branches.
+
+Another closely related model available as part of the Keras applications module is *Xception.* Xception, which stands for *extreme inception,* is a convnet architecture
+loosely inspired by Inception.It takes the idea of separating the learning of channel-wise and space-wise features ot its logical extreme, and replaces Inception modules
+with depth-wise separable convolutions consisting of a depthwise convolution (a spatial convolution where every input channel is handled separately) followed by a pointwise
+convolution (a 1x1 convolution) - effectively, an extreme form of an Inception module, where spatial features and channel-wise features are fully separated.
