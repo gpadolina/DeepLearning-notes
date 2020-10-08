@@ -17,4 +17,6 @@ model that can see all available input modalities simultaneously: a model with t
 
 Additionally, many recently developed neural architectures require nonlinear network topology: networks structured as directed acyclic graphis. The Inception family of
 networks for instance, relies on *Inception modules,* where the input is processed by several parallel convolutoinal branches whose outputs are then merge back into a single
-tensor.
+tensor. There's also the recent trend of adding *residual connections* to a model, which started with the ResNet family of networks. A residual connection consists of
+reinjecting previous representations into the downstream flow of data by adding a past output tensor to a later output tensor, which helps prevent information loss along
+the data data-processing flow.
