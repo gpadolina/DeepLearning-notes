@@ -112,3 +112,10 @@ Keras with the TensorFlow backend. TensorBoard gives you access to several neat 
 * Visualizing your model architecture
 * Visualizing histograms of activations and gradients
 * Exploring embeddings in 3D
+Before you start using TensorBoard, you need to create a directory where you'll store the log files it generates.
+
+At this point, you can launch the TensorBoard server from the command line, instructing it to read the logs the callback is currently writing. The *tensorboard* utility
+should have been automatically installed on your machine the moment you installed TensorFlow.
+
+In addition to live graphs of the trianing and validation metrics, you get access to the Histograms tab, where you can find pretty visualizations of histograms of activation
+values taken by your layers.
