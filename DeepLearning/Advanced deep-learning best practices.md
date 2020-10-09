@@ -148,3 +148,8 @@ The *BatchNormalization* layer takes an axis argument, which specifies the featu
 tensor. This is the correct value when using *Dense* layers, *Conv1D* layers, RNN layers, and *Conv2D* layers with *data_format* set to *"channels_last".* But in the niche
 use case of *Conv2D* layers with *data_format* set to *"channels_first"*, the features axis is axis 1; the *axis* argument in *BatchNormalization* should accordingly be
 set to 1.
+
+#### Depthwise separable convolution
+There's a layer you can use as a drop-in replacement for *Conv2D* that will make your model lighter (fewer trainable weight parameters) and faster (fewer floating-point
+operations) and cause it to perform a few percentage points better on its task. That is precisely what the *depthwise separable convolution* layer does (*SeparableConv2D*).
+This layer performs a spatial convolution on each channel of its input, independently, before mixing output channels via a pointwise convolution.
