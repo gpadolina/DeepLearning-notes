@@ -153,3 +153,12 @@ set to 1.
 There's a layer you can use as a drop-in replacement for *Conv2D* that will make your model lighter (fewer trainable weight parameters) and faster (fewer floating-point
 operations) and cause it to perform a few percentage points better on its task. That is precisely what the *depthwise separable convolution* layer does (*SeparableConv2D*).
 This layer performs a spatial convolution on each channel of its input, independently, before mixing output channels via a pointwise convolution.
+
+These advantages become especially important when you're training small models from scratch on limited data. For instance, here's how you can build a lightweight, depthwise
+separable convnet for an image-classification task (softmax categorical classification).
+
+When it comes to large-scale models, depthwise separable convolutions are the basis of Xception architecture, a high-performing convnet that comes packaged with Keras.
+#### Hyperparameter optimization
+When building a deep-learning model, you have to make many seemingly arbitrary decisions: How many layers should you stack? How many units or filters should go in each layer?
+Should you use *relu* as activation, or a different function? Should you use *BatchNormalization* after a given layer? How much dropout should you use? And so on. These
+architecture-level parameters are called *hyperparameters* to distinguish them from the parameters of model, which are trained via backpropagation.
