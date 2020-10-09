@@ -162,3 +162,8 @@ When it comes to large-scale models, depthwise separable convolutions are the ba
 When building a deep-learning model, you have to make many seemingly arbitrary decisions: How many layers should you stack? How many units or filters should go in each layer?
 Should you use *relu* as activation, or a different function? Should you use *BatchNormalization* after a given layer? How much dropout should you use? And so on. These
 architecture-level parameters are called *hyperparameters* to distinguish them from the parameters of model, which are trained via backpropagation.
+
+In practice, experience machine-learning engineers and researchers build intuition over time as to what works and what doesn't when it comes to these choices - they develop
+hyperparameters-tuning skills. You initial decisions are almost always suboptimal, even if you have good intuition. You can refine your choices by tweaking them by hand
+and retraining the model repeatedly - that's what machine-learning engineers and researchers spend most of their time doing. But it shouldn't be your job as a human to
+fiddle with hyperparameters all day - that is better left to a machine.
