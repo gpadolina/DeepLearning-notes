@@ -98,3 +98,7 @@ the version of the model that achieved the best performance at the end of an epo
 #### The reduceLRonplateau callback
 You can use this callback to reduce the learning rate when the validation loss has stopped improving. Reducing or increasing the learning rate in case of a *loss plateau* is
 an effective strategy to get out of local minima during training.
+#### Introduction to TensorBoard: the TensorFlow visualization framework
+To do good research or develop good models, you need rich, frequent feedback about what's going on inside your models during your experiments. That's the point of running
+experiments: to get information about how well a model performs - as much as information as possible. Making progress is an iterative process or loop: you start with an
+idea and express it as an experiment, attempting to validate or invalidate your idea.
