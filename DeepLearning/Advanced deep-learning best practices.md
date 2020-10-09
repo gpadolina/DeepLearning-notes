@@ -83,3 +83,10 @@ A much better way to handle this is to stop training when you measure tha tthe v
 *callback* is an object (a class instance implementing specific methods) that is passed to the model in the call to *fit* and that is called by the model at various points
 during training. It has access to all the available data about the state of the model and its performance, and it can take action: interrupt training, save a model, load a
 different weight set, or otherwise alter the state of the model.
+
+Here are some examples of ways you can use callbacks:
+* *Model checkpointing* - Saving the current weights of the model at different points during training.
+* *Early stopping* - Interrupting training when the validation loss is no longer improving and saving the best model obtained during training.
+* *Dynamically adjusting the value of certain parameters during training* - Such as the learning rate of the optimizer.
+* *Logging training and validation metrics during training, or visualizing the representations learned by the models as they're updated* - The Keras progress bar that
+you're familiar with is a callback!
