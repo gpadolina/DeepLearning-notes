@@ -127,3 +127,13 @@ Using it requires that you've installed the Python *pydot* and *pydot-ng* librar
 #### Wrapping up
 * Keras callbacks provide a simple way to monitor models during training and automatically take action based on the state of the model.
 * When you're using TensorFlow, TensorBoard is a great way to visualize model activity in your browser. You can use it in Keras models via the *TensorBoard* callback.
+## Getting the most out of your models
+In this section, we'll go beyond "works okay" to "works great and wins machine-learning competitions" by offering you a quick guide to a set of must-know techniques for
+building state-of-the-art deep-learning models.
+#### Advanced architecture patterns
+We covered one important design pattern in detail in the previous section: residual conenctions. There are two more design patterns you should know about: normalization
+and depthwise separable convolution.
+#### Batch normalization
+*Normalization* is a broad category of methods that seek to make different samples seen by a machine-learning model more similar to each other, which helps the model learn
+and generalize well to new data. The most common form of data normalization is one you've seen several times in this book already: centering the data on 0 by subtracting
+the mean from the data, and giving the data a unit standard deviation by dividing the data by its standard deviation.
