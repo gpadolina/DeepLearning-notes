@@ -137,3 +137,14 @@ and depthwise separable convolution.
 *Normalization* is a broad category of methods that seek to make different samples seen by a machine-learning model more similar to each other, which helps the model learn
 and generalize well to new data. The most common form of data normalization is one you've seen several times in this book already: centering the data on 0 by subtracting
 the mean from the data, and giving the data a unit standard deviation by dividing the data by its standard deviation.
+
+Batch normalization is a type of layer (*BatchNormalization* in Keras) introduced in 2015; it can adaptively normalize data even as the mean and variance change over time
+during training. For instance, *BatchNormalization* is used liberally in many of the advanced convnet architectures that come packaged with Keras, such as ResNet50,
+Inception, V3, and Xception.
+
+The *BatchNormalization* layer is typically used after a convolutional or densely connected layer.
+
+The *BatchNormalization* layer takes an axis argument, which specifies the feature axis that should be normalized. This argument defaults to -1, the last axis in the input
+tensor. This is the correct value when using *Dense* layers, *Conv1D* layers, RNN layers, and *Conv2D* layers with *data_format* set to *"channels_last".* But in the niche
+use case of *Conv2D* layers with *data_format* set to *"channels_first"*, the features axis is axis 1; the *axis* argument in *BatchNormalization* should accordingly be
+set to 1.
