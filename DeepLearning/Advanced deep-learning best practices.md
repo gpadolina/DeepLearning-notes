@@ -95,3 +95,6 @@ You can use the *EarlyStopping* callback to interrupt training once a target met
 callback allows you to interrupt training as soonas you start overfitting, thus avoiding having to retrain your model for a smaller number of epochs. This callback is
 typically used in combination with *ModelCheckpoint,* which lets you continually save the model during training (and, optionally, save only the current best model so far:
 the version of the model that achieved the best performance at the end of an epoch).
+#### The reduceLRonplateau callback
+You can use this callback to reduce the learning rate when the validation loss has stopped improving. Reducing or increasing the learning rate in case of a *loss plateau* is
+an effective strategy to get out of local minima during training.
