@@ -119,3 +119,11 @@ should have been automatically installed on your machine the moment you installe
 
 In addition to live graphs of the trianing and validation metrics, you get access to the Histograms tab, where you can find pretty visualizations of histograms of activation
 values taken by your layers.
+
+The Graphs tab shows an interactive visualization of the graph of low-level TensorFlow operations underlying your Keras model.
+
+Note that Keras also provides another, cleaner way to plot models as graphs of layers rather than graphs of TensorFlow operations: the utility *keras.utils.plot_model.*
+Using it requires that you've installed the Python *pydot* and *pydot-ng* libraries as well as the *graphviz* library.
+#### Wrapping up
+* Keras callbacks provide a simple way to monitor models during training and automatically take action based on the state of the model.
+* When you're using TensorFlow, TensorBoard is a great way to visualize model activity in your browser. You can use it in Keras models via the *TensorBoard* callback.
