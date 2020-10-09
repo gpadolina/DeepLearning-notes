@@ -178,3 +178,12 @@ The process of optimizing hyperparameters typically looks like this:
 4. Choose the next set of hyperparameters to try automatically.
 5. Repeat.
 6. Eventually, measure performance on your test data.
+
+Training the weights of a model is relatively easy: you compute a loss function on a mini-batch of data and then use the Backpropagation algorithm to move the weights in
+the right decision. Updating hyperparameters, on the other hand, is extremely challenging.
+
+Becase these challenges are difficult and the field is still young, we currently only have access to very limited tools to optimize models. Often, it turns out that random
+search (choosing hyperparameters to evaluate at random, repeatedly) is the best solution, despite being the most naive one.
+
+Overall, hyperparameter optimization is a powerful technique that is an absolute requirement to get to state-of-the-art models on any task or to win machine-learning
+competitions.
