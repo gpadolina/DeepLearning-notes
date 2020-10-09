@@ -90,3 +90,8 @@ Here are some examples of ways you can use callbacks:
 * *Dynamically adjusting the value of certain parameters during training* - Such as the learning rate of the optimizer.
 * *Logging training and validation metrics during training, or visualizing the representations learned by the models as they're updated* - The Keras progress bar that
 you're familiar with is a callback!
+#### The modelcheckpoint and earlystopping callbacks
+You can use the *EarlyStopping* callback to interrupt training once a target metric being monitored has stopped improving for a fixed number of epochs. For instance, this
+callback allows you to interrupt training as soonas you start overfitting, thus avoiding having to retrain your model for a smaller number of epochs. This callback is
+typically used in combination with *ModelCheckpoint,* which lets you continually save the model during training (and, optionally, save only the current best model so far:
+the version of the model that achieved the best performance at the end of an epoch).
