@@ -102,3 +102,13 @@ an effective strategy to get out of local minima during training.
 To do good research or develop good models, you need rich, frequent feedback about what's going on inside your models during your experiments. That's the point of running
 experiments: to get information about how well a model performs - as much as information as possible. Making progress is an iterative process or loop: you start with an
 idea and express it as an experiment, attempting to validate or invalidate your idea.
+
+Keras helps you go from idea to experiment in the least possible time, and fast GPUs can help you get from experiment to result as quickly as possible. But what about
+processing the experiment results? That's where TensorBoard comes in.
+
+This section introduces TensorBoard, a browser-based visualization tool that comes packaged with TensorFlow. Note that it's only available for Keras models when you're using
+Keras with the TensorFlow backend. TensorBoard gives you access to several neat features, all in your browser:
+* Visually monitoring metrics during training
+* Visualizing your model architecture
+* Visualizing histograms of activations and gradients
+* Exploring embeddings in 3D
