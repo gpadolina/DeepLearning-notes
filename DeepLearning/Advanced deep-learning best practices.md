@@ -167,3 +167,14 @@ In practice, experience machine-learning engineers and researchers build intuiti
 hyperparameters-tuning skills. You initial decisions are almost always suboptimal, even if you have good intuition. You can refine your choices by tweaking them by hand
 and retraining the model repeatedly - that's what machine-learning engineers and researchers spend most of their time doing. But it shouldn't be your job as a human to
 fiddle with hyperparameters all day - that is better left to a machine.
+
+You need to search the architecture space and find the best-performing ones empirically. That's what the field of automatic hyperparameter optimization is about: it's an
+entire field of research and an important one.
+
+The process of optimizing hyperparameters typically looks like this:
+1. Choose a set of hyperparameters automatically.
+2. Build the corresponding model.
+3. Fit it to your training data, and measure the final performance on the validation data.
+4. Choose the next set of hyperparameters to try automatically.
+5. Repeat.
+6. Eventually, measure performance on your test data.
