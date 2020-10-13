@@ -187,3 +187,13 @@ search (choosing hyperparameters to evaluate at random, repeatedly) is the best 
 
 Overall, hyperparameter optimization is a powerful technique that is an absolute requirement to get to state-of-the-art models on any task or to win machine-learning
 competitions.
+#### Model ensembling
+Another powerful technique for obtaining the best possible results on a task is *model ensembling.* Ensembling consists of pooling together the predictions of a set of
+different models, to produce better options.
+
+Ensembling relies on the assumption that different good models trained independently are likely to be good for *different reasons:* each model looks at slightly different
+aspects of the data to make its predictions, getting part of the "truth" but not all of it. The easiest way to pool the predictions of a set of classifiers (to *ensemble
+the classifiers*) is to average their predictions at inference time.
+
+This will work only if the classifiers are more or less equally good. If one of them is significantly worse than the others, the final predictions may not be as good as
+the best classifier of the group.
