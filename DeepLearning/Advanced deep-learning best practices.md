@@ -205,3 +205,12 @@ algorithm such as Nelder-Mead.
 The key to making ensembling work is the *diversity* of the set of classifiers. Diversity is strength. Diversity is what makes ensembling work. In machine-learning terms,
 if all of your models are biased in the same way, then your ensemble will retain this same bias. If your models are *biased in different ways,* the biases will cancel
 each other out, and the ensemble will be more robust and more accurate.
+
+For this reason, you should ensemble models that are *as good as possible* while being *as different as possible.* This typically means using very different architectures
+or even different brans of machine-learning approaches.
+
+One thing that is found to work well in practice - but that doesn't generalize to every problem domain - is the use of an ensemble of tree-based methods (such as random
+forests or gradient-boosted trees) and deep neural networks.
+
+In recent times, one style of basic ensemble that has been very successful in practice is the *wide and deep* category of models, blending deep learning with shallow
+learning. Such models consist of jointly training a deep neural network with a large linear model.
