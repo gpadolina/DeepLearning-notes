@@ -13,3 +13,6 @@ similar to those the model has seen in its training data.
 #### How do you generate sequence data?
 The universal way to generate sequence data in deep learning is to train a network (usu- ally an RNN or a convnet) to predict the next token or next few tokens in a sequence,
 using the previous tokens as input. For instance, given the input “the cat is on the ma,” the network is trained to predict the target *t*, the next character. 
+
+As usual when working with text data, *tokens* are typically words or characters, and any network that can model the probability of the next token given the previous ones is
+called a *language model.* A language model captures the *latent space* of language: its statistical structure.
