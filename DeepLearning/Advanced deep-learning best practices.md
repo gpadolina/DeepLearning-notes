@@ -214,3 +214,9 @@ forests or gradient-boosted trees) and deep neural networks.
 
 In recent times, one style of basic ensemble that has been very successful in practice is the *wide and deep* category of models, blending deep learning with shallow
 learning. Such models consist of jointly training a deep neural network with a large linear model.
+#### Wrapping up
+* When building high-performing deep convnets, you'll need to use residual connections, batch normalization, and depthwise separable convolutions.
+* Building deep networks requires making many small hyperparameter and architecture choices, which together define how good your model will be. Rather than basing these
+choices on intuition or random chance, it's better to systematically search hyperparameter space to find optimal choices.
+* Winning machine-learning competitions or otherwise obtaining the best possible results on a task can only be done with large ensembles of models. Ensembling via a
+well-optimized weighted average is usually good enough. Remember: diversity is strength.
