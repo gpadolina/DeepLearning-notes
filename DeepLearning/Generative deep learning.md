@@ -16,3 +16,6 @@ using the previous tokens as input. For instance, given the input “the cat is 
 
 As usual when working with text data, *tokens* are typically words or characters, and any network that can model the probability of the next token given the previous ones is
 called a *language model.* A language model captures the *latent space* of language: its statistical structure.
+
+Once you have such a trained language model, you can *sample* from it (generate new sequences): you feed it an initial string of text (called *conditioning data*), ask it to
+generate the next character or the next word (you can even generate several tokens at once), add the generated output back to the input data, and repeat the process many times.
