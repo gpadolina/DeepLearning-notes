@@ -19,3 +19,7 @@ called a *language model.* A language model captures the *latent space* of langu
 
 Once you have such a trained language model, you can *sample* from it (generate new sequences): you feed it an initial string of text (called *conditioning data*), ask it to
 generate the next character or the next word (you can even generate several tokens at once), add the generated output back to the input data, and repeat the process many times.
+
+In the example we present in this section, you’ll take a LSTM layer, feed it strings of N characters extracted from a text corpus, and train it to predict character N + 1. 
+The output of the model will be a softmax over all possible characters: a probability distribution for the next character. This LSTM is called a *character-level neural 
+language model.*
