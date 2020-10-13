@@ -201,3 +201,7 @@ the best classifier of the group.
 A smarter way to ensemble classifiers is to do a weighted average, where the weights are learned on the validation data - typically, the better classifiers are given a
 higher weight, and the worse classifiers are given a lower weight. TO search for a good set of ensembling weights, you can use random search or a simple optimization
 algorithm such as Nelder-Mead.
+
+The key to making ensembling work is the *diversity* of the set of classifiers. Diversity is strength. Diversity is what makes ensembling work. In machine-learning terms,
+if all of your models are biased in the same way, then your ensemble will retain this same bias. If your models are *biased in different ways,* the biases will cancel
+each other out, and the ensemble will be more robust and more accurate.
