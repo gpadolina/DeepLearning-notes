@@ -197,3 +197,7 @@ the classifiers*) is to average their predictions at inference time.
 
 This will work only if the classifiers are more or less equally good. If one of them is significantly worse than the others, the final predictions may not be as good as
 the best classifier of the group.
+
+A smarter way to ensemble classifiers is to do a weighted average, where the weights are learned on the validation data - typically, the better classifiers are given a
+higher weight, and the worse classifiers are given a lower weight. TO search for a good set of ensembling weights, you can use random search or a simple optimization
+algorithm such as Nelder-Mead.
