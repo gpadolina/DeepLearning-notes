@@ -56,3 +56,9 @@ Given a trained model and a seed text snippet, you can generate new text by doin
 * In the case of text, such a model is called a *language model.* It can be based on either words or characters.
 * Sampling the next token requires balance between adhering to what the model judges likely, and introducing randomness.
 * One way to handle this is the notion of softmax temperature. Always experiment with different temperatures to find the right one.
+## DeepDream
+*DeepDream* is an artistic image-modification technique that uses the representations learned by convolutional neural networks. It was first released by Google in the
+summer of 2015, as an implementation written using the Caffe deep-learning library (this was several months before the first public release of TensorFlow).
+
+The DeepDream algorithm is almost identical to the convnet filter-visualization technique introduced in Deep Learning for Computer Vision, consisting of running a convnet
+in reverse:
