@@ -28,3 +28,7 @@ When generating text, the way you choose the next character is crucially importa
 character. But such an approach results in repetitive, predictable strings that don't look like coherent language. A more interesting approach makes slightly more suprising
 choices: it introduces randomness in the sampling process, by sampling from the probability distribution for the next character. This is called *stochastic sampling* (recall
 that *stochasticity* is what we call *randomness* in this field).
+
+Sampling probabilistically from the softmax output of the model is neat:  it allows even unlikely characters to be sampled some of the time, generating more interesting
+looking sentences and sometimes showing creativity by coming up with new, realistic sounding words that didn't occur in the training data. But there's one issue with this
+strategy: it doesn't offer a way to *control the amount of randomness* in the sampling process.
