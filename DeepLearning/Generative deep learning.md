@@ -43,3 +43,8 @@ In order to control the amount of stochasticity in the sampling process, we'll i
 probability distribution used for sampling: it characterizes how suprising or predictable the choice of the next character will be.
 #### Implementing character-level LSTM text generation
 Note that recurrent neural networks aren't the only way to do sequence data generation; 1D convnets also have proven extremely successful at this task in recent times.
+
+Because your targets are one-hot encoded, you'll use *categorical_crossentropy* as the loss to train the model.
+#### Training the language model and sampling from it
+Given a trained model and a seed text snippet, you can generate new text by doing the following repeatedly:
+1. Draw from the model a probability distribution for the next character, given the generated text available so far.
