@@ -70,4 +70,10 @@ of the image in a somewhat artistic fashion.
 * The input images are processed at different scales (called *octaves*), which improves the quality of the visualization.
 #### Implementing DeepDream in Keras
 You'll start from a convnet pretrained on ImageNet. In Keras, many such convnets are available: VGG16, VGG19, Xception, ResNet50, and so on. You can implement DeepDream
-with any of them, but your convnet of choice will naturally affect your visualizations, because different convnet architectures result in different learned features.
+with any of them, but your convnet of choice will naturally affect your visualizations, because different convnet architectures result in different learned features. The 
+convnet used in the original DeepDream release was an Inception model, and in practice Inception is known to produce nice-looking DeepDreams, so you'll use the Inception V3
+model that comes with Keras.
+
+Next, you'll compute the *loss:* the quantity you'll seek to maximize during the gradient-ascent process. In Deep Learning for Computer Vision, you tried to maximize the
+value of a specific filter in a specific layer. Here, you'll simultaneously maximize the activation of all filters in a number of layers. Specifically, you'll maximize a
+weighted sum of the L2 norm of the activations of a set of high-level layers.
