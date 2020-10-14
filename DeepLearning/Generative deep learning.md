@@ -32,3 +32,9 @@ that *stochasticity* is what we call *randomness* in this field).
 Sampling probabilistically from the softmax output of the model is neat:  it allows even unlikely characters to be sampled some of the time, generating more interesting
 looking sentences and sometimes showing creativity by coming up with new, realistic sounding words that didn't occur in the training data. But there's one issue with this
 strategy: it doesn't offer a way to *control the amount of randomness* in the sampling process.
+
+Why would you want more or less randomness? Consider an extreme case: pure random sampling, where you draw the next character from a uniform probability distribution, and
+every character is equally likely. This scheme has maximum randomness; in other words, this probability distribution has maximum entropy.
+
+Less entropy will give the generated sequences a more predictable structure (and thus they will potentially be more realistic looking), whereas more entropy will result
+in more suprising and creative sequences.
