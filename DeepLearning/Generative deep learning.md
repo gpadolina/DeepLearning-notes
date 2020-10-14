@@ -38,3 +38,8 @@ every character is equally likely. This scheme has maximum randomness; in other 
 
 Less entropy will give the generated sequences a more predictable structure (and thus they will potentially be more realistic looking), whereas more entropy will result
 in more suprising and creative sequences.
+
+In order to control the amount of stochasticity in the sampling process, we'll introduce a parameter called the *softmax temperature* that characterizes the entropy of the
+probability distribution used for sampling: it characterizes how suprising or predictable the choice of the next character will be.
+#### Implementing character-level LSTM text generation
+Note that recurrent neural networks aren't the only way to do sequence data generation; 1D convnets also have proven extremely successful at this task in recent times.
