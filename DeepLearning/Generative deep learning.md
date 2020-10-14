@@ -81,4 +81,8 @@ weighted sum of the L2 norm of the activations of a set of high-level layers.
 Lower layers reult in geometric patterns, whereas higher layers result in visual in which you can recognize some classes from ImageNet. You'll start from a somewhat arbitrary
 configuration involving four layers - but you'll definitely want to explore many different configurations later.
 
-Finally: the actual DeepDream algorithm.
+Finally: the actual DeepDream algorithm. First, you define a list of *scales* (also called *octaves*) at which to process the images. Each successive scale is large than
+previous one by a factor of 1.4: you start by processing a small image and then increasingly scale it up.
+
+For each successive scale, from the smallest to the largest, you run gradient ascent to maximize the loss you previously defined, at that scale. After each gradient ascent
+run, you upscale the resulting image by 40%.
