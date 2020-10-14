@@ -68,3 +68,6 @@ at once.
 * You start not from blank, slightly noisy input, but rather from an existing image - thus the resulting effects latch on to preexisting visual patterns, distorting elements
 of the image in a somewhat artistic fashion.
 * The input images are processed at different scales (called *octaves*), which improves the quality of the visualization.
+#### Implementing DeepDream in Keras
+You'll start from a convnet pretrained on ImageNet. In Keras, many such convnets are available: VGG16, VGG19, Xception, ResNet50, and so on. You can implement DeepDream
+with any of them, but your convnet of choice will naturally affect your visualizations, because different convnet architectures result in different learned features.
