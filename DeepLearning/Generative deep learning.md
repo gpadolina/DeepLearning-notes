@@ -52,3 +52,7 @@ Given a trained model and a seed text snippet, you can generate new text by doin
 3. Sample the next character at random according to the reweighted distribution.
 4. Add the next character at the end of the available text.
 #### Wrapping up
+* You can generate discrete sequence data by training a model to predict the next token(s), given previous tokens.
+* In the case of text, such a model is called a *language model.* It can be based on either words or characters.
+* Sampling the next token requires balance between adhering to what the model judges likely, and introducing randomness.
+* One way to handle this is the notion of softmax temperature. Always experiment with different temperatures to find the right one.
