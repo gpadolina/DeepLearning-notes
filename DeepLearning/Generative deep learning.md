@@ -61,4 +61,10 @@ Given a trained model and a seed text snippet, you can generate new text by doin
 summer of 2015, as an implementation written using the Caffe deep-learning library (this was several months before the first public release of TensorFlow).
 
 The DeepDream algorithm is almost identical to the convnet filter-visualization technique introduced in Deep Learning for Computer Vision, consisting of running a convnet
-in reverse:
+in reverse: doing gradient ascent on the input to the convnet in order to maximize the activation of a specific filter in an upper layer of the convnet. DeepDream uses this
+same idea, with a few simple differences:
+* With DeepDream, you try to maximize the activation of entire layers rather than that of a specific filter, thus mixing together visualization of large numbers of features
+at once.
+* You start not from blank, slightly noisy input, but rather from an existing image - thus the resulting effects latch on to preexisting visual patterns, distorting elements
+of the image in a somewhat artistic fashion.
+* The input images are processed at different scales (called *octaves*), which improves the quality of the visualization.
