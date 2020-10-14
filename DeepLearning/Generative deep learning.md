@@ -23,3 +23,8 @@ generate the next character or the next word (you can even generate several toke
 In the example we present in this section, you’ll take a LSTM layer, feed it strings of N characters extracted from a text corpus, and train it to predict character N + 1. 
 The output of the model will be a softmax over all possible characters: a probability distribution for the next character. This LSTM is called a *character-level neural 
 language model.*
+#### The importance of the sampling strategy
+When generating text, the way you choose the next character is crucially important. A naive approach is *greedy sampling,* consisting of always choosing the most likely next
+character. But such an approach results in repetitive, predictable strings that don't look like coherent language. A more interesting approach makes slightly more suprising
+choices: it introduces randomness in the sampling process, by sampling from the probability distribution for the next character. This is called *stochastic sampling* (recall
+that *stochasticity* is what we call *randomness* in this field).
