@@ -86,3 +86,8 @@ previous one by a factor of 1.4: you start by processing a small image and then 
 
 For each successive scale, from the smallest to the largest, you run gradient ascent to maximize the loss you previously defined, at that scale. After each gradient ascent
 run, you upscale the resulting image by 40%.
+
+To avoid losing a lot of image detail after each successive scale-up (resulting in increasingly blurry or pixelated images), you can use a simple trick: after each scale-up,
+you'll reinject the lost details back into the image, which is possible because you know what the original image should look like at the larger scale. Given a small image
+size S and a large image size L, you can compute the difference between the original image resized to size L and the original resized to size S - this difference quantifies
+the details lost when going from S to L.
