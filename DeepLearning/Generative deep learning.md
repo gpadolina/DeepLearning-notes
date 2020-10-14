@@ -48,3 +48,7 @@ Because your targets are one-hot encoded, you'll use *categorical_crossentropy* 
 #### Training the language model and sampling from it
 Given a trained model and a seed text snippet, you can generate new text by doing the following repeatedly:
 1. Draw from the model a probability distribution for the next character, given the generated text available so far.
+2. Reweight the distribution to a certain temperature.
+3. Sample the next character at random according to the reweighted distribution.
+4. Add the next character at the end of the available text.
+#### Wrapping up
