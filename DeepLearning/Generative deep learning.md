@@ -77,3 +77,8 @@ model that comes with Keras.
 Next, you'll compute the *loss:* the quantity you'll seek to maximize during the gradient-ascent process. In Deep Learning for Computer Vision, you tried to maximize the
 value of a specific filter in a specific layer. Here, you'll simultaneously maximize the activation of all filters in a number of layers. Specifically, you'll maximize a
 weighted sum of the L2 norm of the activations of a set of high-level layers.
+
+Lower layers reult in geometric patterns, whereas higher layers result in visual in which you can recognize some classes from ImageNet. You'll start from a somewhat arbitrary
+configuration involving four layers - but you'll definitely want to explore many different configurations later.
+
+Finally: the actual DeepDream algorithm.
