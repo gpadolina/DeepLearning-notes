@@ -155,3 +155,7 @@ feats such as tranferring the style of one portrait to another. The algorithm is
 * Style can be captured by the internal correlations of the activations of different layers of a convnet.
 * Hence, deep learning allows style transfer to be formulated as an optimization process using a loss defined with a pretrained convnet.
 * Starting from this basic idea, many variants and refinements are possible.
+## Generating images with variational autoencoders
+Sampling from a latent space of images to create entirely new images or edit existing ones is currently the most popular and successful application of creative AI. In this
+section and the next, we'll review some high-level concepts pertaining to image generation, alongside implementations details relative to the two main techniques in this
+domain: *variational autoencoders* (VAEs) and *generative adversarial networks* (GANs).
