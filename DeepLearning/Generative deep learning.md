@@ -134,3 +134,11 @@ This is the general process:
 1. Set up a network that computes VGG19 layer activations for the style-reference image, the target image, and the generated image at the same time.
 2. Use the layer activations computed over these three images to define the loss function described ealier, which you'll minimize in order to achieve style transfer.
 3. Set up a gradient-descent process to minimize this loss function.
+
+Let's set up the VGG19 network. It takes as input a batch of three images: the style-reference image, the target image, and a placeholder that will contain the generated
+image. A placeholder is a symbolic tensor, the values of which are provided externally via Numpy arrays.
+
+In the original Gatys paper, optimization is performed using the L-BFGS algorithm, so that's what you'll use. This is a key difference from the DeepDream example. The
+L-BFGS algorithm comes packaged with SciPy, but there are two slight limitations with the SciPy implementation:
+* It requires that you pass the value of the loss function and the value of the gradients as two two separate functions.
+* It can only be applied to flat vectors, whereas you have a 3D image array.
