@@ -126,3 +126,8 @@ In short, you can use a pretrained convnet to define a loss that will do the fol
 image and the generated image as containing the same things.
 * Preserve style by maintaning similar *correlations* within activations for both low-level layers and high-level layers. Feature correlations capture *textures:* the
 generated image and the style-reference image should share the same textures at different spatial scales.
+#### Neural style transfer in Keras
+Neural style transfer can be implemented using any pretrained convnet. Here, you'll use the VGG19 network used by Gatys. VGG19 is a simple variant of the VGG16 network,
+with three more convolutional layers.
+
+This is the general process:
