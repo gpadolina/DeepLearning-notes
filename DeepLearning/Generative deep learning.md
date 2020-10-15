@@ -142,3 +142,6 @@ In the original Gatys paper, optimization is performed using the L-BFGS algorith
 L-BFGS algorithm comes packaged with SciPy, but there are two slight limitations with the SciPy implementation:
 * It requires that you pass the value of the loss function and the value of the gradients as two two separate functions.
 * It can only be applied to flat vectors, whereas you have a 3D image array.
+
+Finally, you can run the gradient-ascent process using SciPy's L-BFGS algorith, saving the current generated image at each iteration of the algorithm (here, a single
+iteration represents 20 steps of gradient ascent).
