@@ -91,3 +91,7 @@ To avoid losing a lot of image detail after each successive scale-up (resulting 
 you'll reinject the lost details back into the image, which is possible because you know what the original image should look like at the larger scale. Given a small image
 size S and a large image size L, you can compute the difference between the original image resized to size L and the original resized to size S - this difference quantifies
 the details lost when going from S to L.
+
+Layers that are lower in the network contain more-local, less-abstract representations and lead to dream patterns that look more geometric. Layers that are higher up lead
+to more-recognizable visual patterns based on the most common objects found in ImageNet, such as dog eyes, bird feathers, and so on.
+#### Wrapping up
