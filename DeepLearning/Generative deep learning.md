@@ -145,3 +145,7 @@ L-BFGS algorithm comes packaged with SciPy, but there are two slight limitations
 
 Finally, you can run the gradient-ascent process using SciPy's L-BFGS algorith, saving the current generated image at each iteration of the algorithm (here, a single
 iteration represents 20 steps of gradient ascent).
+
+Keep in mind that what this technique achieves is merely a form of image retexturing, or texture transfer. It works best with style-reference images that are strongly
+textured and highly self-similar, and with content targets that don't require high levels of detail in order to be recognizable. It typically can't achieve fairly abstract
+feats such as tranferring the style of one portrait to another. The algorithm is close to classical signal processing than to AI, so don't expect it to work like magic.
