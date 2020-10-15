@@ -107,4 +107,9 @@ Neural style transfer consists of applying the style of a reference image to a t
 essentially means textures, colors, and visual patterns in the image, at various spatial scales; and the *context* is the higher-level macrostructure of the image.
 
 The key notion behind implementing style transfer is the same idea that's central to all deep-learning algorithms: you define a loss function to specify what you want to
-achieve, and you minimize this loss.
+achieve, and you minimize this loss. You kno what you want to achieve: conserving the content of the original image while adopting the style of the reference image. If we
+were able to mathematically define *content* and *style,* then an appropriate loss function to minimize would be the following.
+
+#### The content loss
+As you already know, activations from earlier layers in a network contain *local* information about the image, whereas activations from higher layers contain increasingly
+*global, abstract* information.
