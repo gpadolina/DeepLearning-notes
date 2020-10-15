@@ -131,3 +131,6 @@ Neural style transfer can be implemented using any pretrained convnet. Here, you
 with three more convolutional layers.
 
 This is the general process:
+1. Set up a network that computes VGG19 layer activations for the style-reference image, the target image, and the generated image at the same time.
+2. Use the layer activations computed over these three images to define the loss function described ealier, which you'll minimize in order to achieve style transfer.
+3. Set up a gradient-descent process to minimize this loss function.
