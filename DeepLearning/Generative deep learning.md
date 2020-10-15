@@ -113,3 +113,9 @@ were able to mathematically define *content* and *style,* then an appropriate lo
 #### The content loss
 As you already know, activations from earlier layers in a network contain *local* information about the image, whereas activations from higher layers contain increasingly
 *global, abstract* information.
+
+A good candidate for content loss is thus the L2 norm between the activations of an upper layer in a pretrained convnent, computed over the target image, and the activatoins
+of the same layer computed over the generated image.
+#### The style loss
+The content loss only uses a single upper layer, but the style loss as defined by Gatys uses multiple layers of a covnent: you try to capture the appearance of the style
+reference image at all spatial scales extracted by the convnet, not just a single scale.
