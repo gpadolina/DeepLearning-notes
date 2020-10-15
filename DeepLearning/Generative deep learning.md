@@ -149,3 +149,9 @@ iteration represents 20 steps of gradient ascent).
 Keep in mind that what this technique achieves is merely a form of image retexturing, or texture transfer. It works best with style-reference images that are strongly
 textured and highly self-similar, and with content targets that don't require high levels of detail in order to be recognizable. It typically can't achieve fairly abstract
 feats such as tranferring the style of one portrait to another. The algorithm is close to classical signal processing than to AI, so don't expect it to work like magic.
+#### Wrapping up
+* Style transfer consists of creating a new image that preserves the contents of a target image while also capturing the style of a reference image.
+* Content can be captured by the high-level activations of a convnet.
+* Style can be captured by the internal correlations of the activations of different layers of a convnet.
+* Hence, deep learning allows style transfer to be formulated as an optimization process using a loss defined with a pretrained convnet.
+* Starting from this basic idea, many variants and refinements are possible.
