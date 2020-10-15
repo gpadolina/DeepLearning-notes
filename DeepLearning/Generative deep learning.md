@@ -118,4 +118,7 @@ A good candidate for content loss is thus the L2 norm between the activations of
 of the same layer computed over the generated image.
 #### The style loss
 The content loss only uses a single upper layer, but the style loss as defined by Gatys uses multiple layers of a covnent: you try to capture the appearance of the style
-reference image at all spatial scales extracted by the convnet, not just a single scale.
+reference image at all spatial scales extracted by the convnet, not just a single scale. For the style loss, Gatys use the *Gram matrix* of a layer's activations: the inner
+produce of the feature maps of a given layer. This inner product can be understood as representing a map of the correlations between the layer's features.
+
+In short, you can use a pretrained convnet to define a loss that will do the following:
