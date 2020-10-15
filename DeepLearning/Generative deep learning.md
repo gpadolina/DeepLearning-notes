@@ -98,3 +98,7 @@ to more-recognizable visual patterns based on the most common objects found in I
 * DeepDream consists of running a convnet in reverse to generate inputs based on the representations learned by the network.
 * The results produced are fun and somewhat similar to the visual artifacts induced in humans by the disruption of the visual cortex via psychedelics.
 * Note that the process isn't specific to image models or even to convnets. It can be done for speech, music, and more.
+## Neural style transfer
+In addition to DeepDream, another major development in deep-learning-driven image modification is *neural style transfer,* introduced by Leon Gatys et al. in the summer of
+2015. The neural style transfer algorithm has undergone many refinements and spawned many variations since its original introduction, and it has made its way into many
+smartphone photo apps.
