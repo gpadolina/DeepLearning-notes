@@ -159,3 +159,7 @@ feats such as tranferring the style of one portrait to another. The algorithm is
 Sampling from a latent space of images to create entirely new images or edit existing ones is currently the most popular and successful application of creative AI. In this
 section and the next, we'll review some high-level concepts pertaining to image generation, alongside implementations details relative to the two main techniques in this
 domain: *variational autoencoders* (VAEs) and *generative adversarial networks* (GANs).
+#### Sampling from latent spaces of images
+The key idea of image generation is to develop a low-dimensional *latent space* of representations (which naturally is a vector space) where any point can be mapped to a
+realistic-looking image. The module capable of realizing this mapping, taking as input a latent point and outputting an image (a grid of pixels), is called a *generator*
+(in the case of GANs) or a *decoder* (in the case of VAEs).
