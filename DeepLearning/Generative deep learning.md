@@ -122,3 +122,7 @@ reference image at all spatial scales extracted by the convnet, not just a singl
 produce of the feature maps of a given layer. This inner product can be understood as representing a map of the correlations between the layer's features.
 
 In short, you can use a pretrained convnet to define a loss that will do the following:
+* Preserve content by maintaining similar high-level layer activations between the targent content image and the generated image. The convnet should "see" both the target
+image and the generated image as containing the same things.
+* Preserve style by maintaning similar *correlations* within activations for both low-level layers and high-level layers. Feature correlations capture *textures:* the
+generated image and the style-reference image should share the same textures at different spatial scales.
