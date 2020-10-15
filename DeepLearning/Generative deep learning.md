@@ -102,3 +102,9 @@ to more-recognizable visual patterns based on the most common objects found in I
 In addition to DeepDream, another major development in deep-learning-driven image modification is *neural style transfer,* introduced by Leon Gatys et al. in the summer of
 2015. The neural style transfer algorithm has undergone many refinements and spawned many variations since its original introduction, and it has made its way into many
 smartphone photo apps.
+
+Neural style transfer consists of applying the style of a reference image to a target image while conserving the content of the target image. In this context, *style*
+essentially means textures, colors, and visual patterns in the image, at various spatial scales; and the *context* is the higher-level macrostructure of the image.
+
+The key notion behind implementing style transfer is the same idea that's central to all deep-learning algorithms: you define a loss function to specify what you want to
+achieve, and you minimize this loss.
