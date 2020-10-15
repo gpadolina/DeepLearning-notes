@@ -95,3 +95,6 @@ the details lost when going from S to L.
 Layers that are lower in the network contain more-local, less-abstract representations and lead to dream patterns that look more geometric. Layers that are higher up lead
 to more-recognizable visual patterns based on the most common objects found in ImageNet, such as dog eyes, bird feathers, and so on.
 #### Wrapping up
+* DeepDream consists of running a convnet in reverse to generate inputs based on the representations learned by the network.
+* The results produced are fun and somewhat similar to the visual artifacts induced in humans by the disruption of the visual cortex via psychedelics.
+* Note that the process isn't specific to image models or even to convnets. It can be done for speech, music, and more.
