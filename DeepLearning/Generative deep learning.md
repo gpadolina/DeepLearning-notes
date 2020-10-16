@@ -188,3 +188,9 @@ In technical terms, here's how a VAE works:
 
 The paraameters of a VAE are trained via two loss functions: a *reconstruction loss* that forces the decoded samples to match the intial inputs, and a *regularization loss*
 that helps learn well-formed latent spaces and reduce overfitting to the training data.
+#### Wrapping up
+* Image generation with deep learning is done by learning latent spaces that capture statistical information about a dataset of images. By sampling and decoding points
+from the latent space, you can generate never-before-seen images. There are two major tools to do this: VAEs and GANs.
+* VAEs result in highly structured, continuous latent representations. For this reason, they work well for doing all sorts of image editing in latent space: face swapping,
+turning a frowning smiling face, and so on. They also work nicely for doing latent-space-based animations, such as animating a walk along a cross section of the latent space,
+showing a starting image slowly morphing into different images in a continous way.
