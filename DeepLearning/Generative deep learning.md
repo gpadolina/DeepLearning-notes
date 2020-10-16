@@ -237,3 +237,9 @@ operations and *ReLU* activations. Instead of max pooling, we recomment using st
 *ReLU* activation.
 * In generated images, it's common to see checkerboard artifacts caused by unequal coverage of the pixel space in the generator. To fix this, we use a kernel size that's
 divisible by the stride size whenever we use a strided *Conv2DTranspose* or *Conv2D* in both the generator and the discriminator.
+#### The generator
+One of the many issues that commonly arise with GANs is that the generator gets struck with generated images that look like noise. A possible solution is to use dropout on
+both the discriminator and the generator.
+#### The disciminator
+Next, you'll develop a *discriminator* model that takes as input a candidate image (real or synthetic) and classifies it into one of the two classes: "generated image" or
+"real image that comes from the training set."
