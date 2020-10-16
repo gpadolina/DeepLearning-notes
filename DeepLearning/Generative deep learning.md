@@ -171,3 +171,7 @@ but the latent space they come from may not have as much structure and continuit
 Variational autoencoders, simultaneously discovered by Kingma and Welling in December 2013 and Rezende, Mohamed, and Wierstra in January 2014, are a kind of generative model
 that's especially appropriate for the task of image editing via concept vectors. They're a modern take on autoencoders - a type of network that aims to encode an input to
 a low-dimensional latent space and then decode it back - that mixes ideas from deep learning with Bayesian inference.
+
+In practice, such classical autoencoders don't lead to particularly useful or nicely structured latent spaces. They're not much good at compression, either. For these reasons,
+they have largely fallen out of fashion. VAEs, however, augment autoencoders with a little bit of statistical magic that forces them to learn continuous, highly structured
+latent spaces. They have turned out to be a powerful tool for image generation.
