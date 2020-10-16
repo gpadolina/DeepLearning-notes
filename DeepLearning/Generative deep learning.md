@@ -163,3 +163,7 @@ domain: *variational autoencoders* (VAEs) and *generative adversarial networks* 
 The key idea of image generation is to develop a low-dimensional *latent space* of representations (which naturally is a vector space) where any point can be mapped to a
 realistic-looking image. The module capable of realizing this mapping, taking as input a latent point and outputting an image (a grid of pixels), is called a *generator*
 (in the case of GANs) or a *decoder* (in the case of VAEs).
+
+GANs and VAEs are two different strategies for learning such talent spaces of image representations, each with its own characteristics. VAEs are great for learning latent
+spaces that are well structured, where specific directions encode a meaningful axis of variation in the data. GANs generate images that can potentially be highly realistic,
+but the latent space they come from may not have as much structure and continuity.
