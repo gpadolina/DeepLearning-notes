@@ -185,3 +185,6 @@ In technical terms, here's how a VAE works:
 2. You randomly sample a point *z* from the latent normal distribution that's assumed to generate the input image, via *z = z_mean + exp(z_log_variance) * epsilon,* where
 *epsilon* is a random tensor of small values.
 3. A decoder module maps this point in the latent space back to the original input image.
+
+The paraameters of a VAE are trained via two loss functions: a *reconstruction loss* that forces the decoded samples to match the intial inputs, and a *regularization loss*
+that helps learn well-formed latent spaces and reduce overfitting to the training data.
