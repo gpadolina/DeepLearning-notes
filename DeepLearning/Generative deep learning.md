@@ -217,3 +217,7 @@ Remarkably, a GAN is a system where the optimization minimum isn't fixed, unlike
 consists of rolling down hills in a static loss landscape. But with a GAN, every step taken down the hill changes the entire landscape a little. It's a dynamic system
 where the optimization process is seeking not a minimum, but an equilibrium between two forces. For this reason, GANs are notoriously difficult to train - getting a GAN to
 work requires lots of careful tuning of the model architecture and training parameters.
+#### A schematic GAN implementation
+In this section, we'll explain how to implement a GAN in Keras, in its barest form - because GANs are advanced, diving deeply into the technical details would be out of
+scope for this book. The specific implementation is a *deep convolutional GAN* (DCGAN): a GAN where the generator and discriminator are deep convnets. In particular, it uses
+a *Conv2DTranspose* layer for image upsampling in the generator.
