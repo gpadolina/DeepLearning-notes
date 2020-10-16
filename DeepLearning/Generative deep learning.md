@@ -221,3 +221,7 @@ work requires lots of careful tuning of the model architecture and training para
 In this section, we'll explain how to implement a GAN in Keras, in its barest form - because GANs are advanced, diving deeply into the technical details would be out of
 scope for this book. The specific implementation is a *deep convolutional GAN* (DCGAN): a GAN where the generator and discriminator are deep convnets. In particular, it uses
 a *Conv2DTranspose* layer for image upsampling in the generator.
+#### A bag of tricks
+The process of training GANs and tuning GAN implementations is notoriously difficult. There are a number of known tricks you should keep in mind. Like most things in deep
+learning, it's more alchemy than science: these tricks are heuristics, not theory-based guidelines. They're supported by a level of intuitive understanding of the phenomenon
+at hand, and they're known to work well empirically, although not necessarily in every context.
