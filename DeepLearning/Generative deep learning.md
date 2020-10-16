@@ -167,3 +167,7 @@ realistic-looking image. The module capable of realizing this mapping, taking as
 GANs and VAEs are two different strategies for learning such talent spaces of image representations, each with its own characteristics. VAEs are great for learning latent
 spaces that are well structured, where specific directions encode a meaningful axis of variation in the data. GANs generate images that can potentially be highly realistic,
 but the latent space they come from may not have as much structure and continuity.
+#### Variational autoencoders
+Variational autoencoders, simultaneously discovered by Kingma and Welling in December 2013 and Rezende, Mohamed, and Wierstra in January 2014, are a kind of generative model
+that's especially appropriate for the task of image editing via concept vectors. They're a modern take on autoencoders - a type of network that aims to encode an input to
+a low-dimensional latent space and then decode it back - that mixes ideas from deep learning with Bayesian inference.
