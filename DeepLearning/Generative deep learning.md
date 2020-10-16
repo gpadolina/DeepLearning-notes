@@ -225,3 +225,13 @@ a *Conv2DTranspose* layer for image upsampling in the generator.
 The process of training GANs and tuning GAN implementations is notoriously difficult. There are a number of known tricks you should keep in mind. Like most things in deep
 learning, it's more alchemy than science: these tricks are heuristics, not theory-based guidelines. They're supported by a level of intuitive understanding of the phenomenon
 at hand, and they're known to work well empirically, although not necessarily in every context.
+
+Here are a few of the tricks used in the implementation of the GAN generator and discriminator in this section. It isn't an exhaustive list of GAN-related tips; you'll find
+many more across the GAN literature.
+* We use *tanh* as the last activation in the generator, instead of *sigmoid,* which is more commonly found in other types of models.
+* We sample points from the latent space using a *normal distribution* (Gaussian distribution), not a uniform distribution.
+* Stochasticity is good to induce robustness. Because GAN training results in a dynamic equilibrium, GANs are likely to get struck in all sorts of ways. Introducing
+randomness during training helps prevent this.
+* Sparse gradients can hinder GAN training. In deep learning, sparsity is often desirable property, but not in GANs. Two things can induce gradient sparsity: max pooling
+operations and *ReLU* activations. Instead of max pooling, we recomment using strided convolutions for downsampling, and we recommend using a *LeakyReLU* layer instead of a
+*ReLU* activation.
