@@ -201,4 +201,7 @@ of fairly realistic synthetic images by forcing the generated iamges to be stati
 
 An intuitive way to understand GANs is to imagine a forger trying to create a fake Picasso painting. At first, the forger is pretty bad at the task. He mixes some of his
 fakes with authentic Picassos and shows them all to an art dealer. The art dealer makes an authenticity assessment for each painting and gives the forger feedback about what
-makes a Picasso look like a Picasso.
+makes a Picasso look like a Picasso. The forger goes back to his studio to prepare some new fakes. As time goes on, the forger becomes increasingly competent at imitating
+the style of Picasso, and the art dealer becomes increasingly expert at spotting fakes. In the end, they have on their hands some excellent fake Picassos.
+
+That's what a GAN is: a forger network and an expert network, each being trained to best the other. As such, a GAN is made of two parts:
