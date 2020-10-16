@@ -210,4 +210,10 @@ That's what a GAN is: a forger network and an expert network, each being trained
 generator network.
 
 The generator network is trained to be able to fool the discriminator networks, and thus ir evolves toward generating increasingly realistic images as training goes on:
-artificial images that look indistinguishable from real ones, to the extent that it's impossible for the discriminator network to tell the two apart.
+artificial images that look indistinguishable from real ones, to the extent that it's impossible for the discriminator network to tell the two apart. Unlike VAEs, this
+latent space has fewer explicit guarantees of meaningful structure; in particular, it isn't continuous.
+
+Remarkably, a GAN is a system where the optimization minimum isn't fixed, unlike any other training setup you've encountered in this book. Normally, gradient descent
+consists of rolling down hills in a static loss landscape. But with a GAN, every step taken down the hill changes the entire landscape a little. It's a dynamic system
+where the optimization process is seeking not a minimum, but an equilibrium between two forces. For this reason, GANs are notoriously difficult to train - getting a GAN to
+work requires lots of careful tuning of the model architecture and training parameters.
