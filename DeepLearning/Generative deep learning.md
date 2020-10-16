@@ -195,3 +195,10 @@ from the latent space, you can generate never-before-seen images. There are two 
 turning a frowning smiling face, and so on. They also work nicely for doing latent-space-based animations, such as animating a walk along a cross section of the latent space,
 showing a starting image slowly morphing into different images in a continous way.
 * GANs enable the generation of realistic single-frame images but may not induce latent spaces with solid structure and high continuity.
+## Introduction to generative adversarial networks
+Generative adversarial networks (GANs), introduced in 2014 by Goodfellow et al are an alternative to VAEs for learning latent spaces for images. They enable the generation
+of fairly realistic synthetic images by forcing the generated iamges to be statistically almost indistinguishable from real ones.
+
+An intuitive way to understand GANs is to imagine a forger trying to create a fake Picasso painting. At first, the forger is pretty bad at the task. He mixes some of his
+fakes with authentic Picassos and shows them all to an art dealer. The art dealer makes an authenticity assessment for each painting and gives the forger feedback about what
+makes a Picasso look like a Picasso.
