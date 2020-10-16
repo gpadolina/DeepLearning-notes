@@ -194,3 +194,4 @@ from the latent space, you can generate never-before-seen images. There are two 
 * VAEs result in highly structured, continuous latent representations. For this reason, they work well for doing all sorts of image editing in latent space: face swapping,
 turning a frowning smiling face, and so on. They also work nicely for doing latent-space-based animations, such as animating a walk along a cross section of the latent space,
 showing a starting image slowly morphing into different images in a continous way.
+* GANs enable the generation of realistic single-frame images but may not induce latent spaces with solid structure and high continuity.
