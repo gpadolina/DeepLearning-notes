@@ -235,3 +235,5 @@ randomness during training helps prevent this.
 * Sparse gradients can hinder GAN training. In deep learning, sparsity is often desirable property, but not in GANs. Two things can induce gradient sparsity: max pooling
 operations and *ReLU* activations. Instead of max pooling, we recomment using strided convolutions for downsampling, and we recommend using a *LeakyReLU* layer instead of a
 *ReLU* activation.
+* In generated images, it's common to see checkerboard artifacts caused by unequal coverage of the pixel space in the generator. To fix this, we use a kernel size that's
+divisible by the stride size whenever we use a strided *Conv2DTranspose* or *Conv2D* in both the generator and the discriminator.
