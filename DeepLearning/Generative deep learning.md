@@ -243,3 +243,7 @@ both the discriminator and the generator.
 #### The disciminator
 Next, you'll develop a *discriminator* model that takes as input a candidate image (real or synthetic) and classifies it into one of the two classes: "generated image" or
 "real image that comes from the training set."
+#### The adversarial network
+You'll set up the GAN, which chains the generator and the discriminator. When trained, this model will move the generator in a direction that improves its ability to fool
+the discriminator. This model turns latent-space points into a classification decision - "fake" or "real" - and it's meant to be trained with labels that are always "these
+are real images." It's very important to note that you set the discriminator to be frozen during training(non-trainable): its weights won't be updated when training *gan.*
