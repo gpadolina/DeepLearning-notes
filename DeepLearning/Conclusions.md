@@ -6,3 +6,12 @@ attempts to automate cognitive processes" - in other words, the automation of th
 
 *Machine learning* is a specific subfield of AI that aims at automatically developing programs (called *models*) purely from exposure to training data. This process of turning
 data into a program is called *learning.*
+#### What makes deep learning special within the field of machine learning
+Given training data (in particular, training data appropriately labeled by humans), it's possible to extradct from perceptual data almost anything that a human could extract.
+Hence, it's sometimes said that deep learning has *solved perception,* although that's true only for a fairly narrow definition of *perception.*
+
+Due to its unprecedented technical successes, deep learning has singlehandedly brought about the third and by far the largest *AI summer:* a period of intense interested,
+investment, and hype in the field of AI.
+
+The hype may recede, but the sustained economic and technological impact of deep learning will remain. In that sense, deep learning could be analogous to the internet: it may
+overly hypes up for a few years, but in the longer term it will still be a major revolution that will transform our economy and our lives.
