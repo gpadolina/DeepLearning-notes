@@ -28,3 +28,9 @@ of high-dimensional data.
 
 That's the magic of deep learning: turning meaning into vectors, into geometric spaces, and then incrementally learning complex geometric transformations that map one space
 to another.
+
+Neural networks initially emerged from the idea of using graphs as a way to encode meaning, which is why they're named *neural networks;* the surrounding field of research
+used to be called *connectionism.* Nowadays the name *neural network* exists purely for historical reasons - it's an extremely misleading name because they're neither neural
+nor networks. In particular, neural networks have hardly anything to do with the brain. A more appropriate name would have been *layered representations learning* or
+*hiearchical representations learning,* or maybe even *deep differentiable models* or *chained geometric transforms,* to emphasize the fact that continuous geometric space
+manipulation is at their core.
