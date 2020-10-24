@@ -15,3 +15,8 @@ investment, and hype in the field of AI.
 
 The hype may recede, but the sustained economic and technological impact of deep learning will remain. In that sense, deep learning could be analogous to the internet: it may
 overly hypes up for a few years, but in the longer term it will still be a major revolution that will transform our economy and our lives.
+#### How to think about deep learning
+The most surprising thing about deep learning is how simple it is. As Feynman once said about the universe, "It's not complicated, it's just a lot of it."
+
+In deep learning, everything is a vector: everything is a *point* in a *geometric space.* Model inputs (text, images, and so on) and targets are first *vectorized:* turned
+into an initial input vector space and target vector space. Each layer in a deep-learning model operates one simple geometric transformation on the data that goes through it.
