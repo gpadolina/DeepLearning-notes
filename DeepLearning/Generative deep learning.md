@@ -247,3 +247,6 @@ Next, you'll develop a *discriminator* model that takes as input a candidate ima
 You'll set up the GAN, which chains the generator and the discriminator. When trained, this model will move the generator in a direction that improves its ability to fool
 the discriminator. This model turns latent-space points into a classification decision - "fake" or "real" - and it's meant to be trained with labels that are always "these
 are real images." It's very important to note that you set the discriminator to be frozen during training(non-trainable): its weights won't be updated when training *gan.*
+
+When training, you may see the adversarial loss begin to increase considerably, while the discriminative loss tends to zero - the discriminator may end up dominating the
+generator. If that's the case, try reducing the discriminator learning rate, and increase the dropout rate of the discriminator.
