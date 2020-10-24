@@ -34,3 +34,9 @@ used to be called *connectionism.* Nowadays the name *neural network* exists pur
 nor networks. In particular, neural networks have hardly anything to do with the brain. A more appropriate name would have been *layered representations learning* or
 *hiearchical representations learning,* or maybe even *deep differentiable models* or *chained geometric transforms,* to emphasize the fact that continuous geometric space
 manipulation is at their core.
+#### Key enabling technologies
+In the case of deep learning, we can point out the following key factors:
+* Incremental algorithmic innovations, first spread over two decades (starting with backpropagation) and then happening increasingly faster as more research effort was poured
+into deep learning after 2012.
+* The availability of large amounts of perceptual data, which is a requirement in order to realize that sufficiently large models trained on sufficiently large data are all
+we need. This is in turn a byproduct of the rise of the consumer internet and Moore's law applied to storage media.
