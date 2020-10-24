@@ -250,3 +250,7 @@ are real images." It's very important to note that you set the discriminator to 
 
 When training, you may see the adversarial loss begin to increase considerably, while the discriminative loss tends to zero - the discriminator may end up dominating the
 generator. If that's the case, try reducing the discriminator learning rate, and increase the dropout rate of the discriminator.
+#### Wrapping up
+* A GAN consists of a generator network coupled with a discriminator network. The discriminator is trained to differentiate between the output of the generator and real images
+from a training dataset, and the generator is trained to fool the discriminator. Remarkably, the generator nevers sees images from the training set directly; the information
+it has about the data comes from the discriminator.
