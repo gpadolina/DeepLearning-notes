@@ -254,3 +254,5 @@ generator. If that's the case, try reducing the discriminator learning rate, and
 * A GAN consists of a generator network coupled with a discriminator network. The discriminator is trained to differentiate between the output of the generator and real images
 from a training dataset, and the generator is trained to fool the discriminator. Remarkably, the generator nevers sees images from the training set directly; the information
 it has about the data comes from the discriminator.
+* GANs are difficult to train, because training a GAN is a dynamic process rather than a simple gradient descent process with a fixed loss landscape. Getting a GAN to train
+correctly requires using a number of heuristic tricks, as well as extensive tuning.
