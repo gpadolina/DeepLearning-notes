@@ -44,3 +44,7 @@ we need. This is in turn a byproduct of the rise of the consumer internet and Mo
 ground up for deep learning. Early on, NVIDIA CEO Jensen Huang took note of the deep-learning boom and decided to bet the company's future on it.
 * A complex stack of software layers that makes this computational power available to humans: the CUDA language, frameworks like TensorFlow that do automatic differentiation,
 and Keras, which makes deep learning accessible to most people.
+#### The universal machine-learning workflow
+Having access to an extremely powerful tool for creating models that map any input space to any target space is great, but the difficult part of the machine-learning workflow
+is often everything that comes before designing and training such models (and, for production models, what comes after, as well). Understanding the problem domain so as to be
+able to determine what to attempt to predict, given what data, and how to measure success, is a prerequisite for any successful application of machine learning,
