@@ -52,3 +52,7 @@ something that advanced tools like Keras and TensorFlow can help you with. As a 
 1. Define the problem: What data is available, and what are you trying to predict? Will you need to collect more data or hire people to manually label a dataset?
 2. Identify a way to reliably measure sucess on your goal. For simple tasks, this may be prediction accuracy, but in many cases it will require sophisticated domain-specific
 metrics.
+3. Prepare the validation process that you'll use to evaluate your models. In particular, you should define a training set, a validation set, and a test set. The validation-
+and test-set labels shouldn't leak into the training data: for instance, with temporal prediction, the validation and test data should be posterior to the training data.
+4. Vectorize the data by turning it into vectors and preprocessing it in a way that makes it more easily approachable by a neural network (normalization, and so on).
+5. Develop a first model that beats a trivial common-sense baseline, thus demonstrating that machine learning can work on your problem. This may not always be the case!
