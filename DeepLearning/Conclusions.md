@@ -47,4 +47,8 @@ and Keras, which makes deep learning accessible to most people.
 #### The universal machine-learning workflow
 Having access to an extremely powerful tool for creating models that map any input space to any target space is great, but the difficult part of the machine-learning workflow
 is often everything that comes before designing and training such models (and, for production models, what comes after, as well). Understanding the problem domain so as to be
-able to determine what to attempt to predict, given what data, and how to measure success, is a prerequisite for any successful application of machine learning,
+able to determine what to attempt to predict, given what data, and how to measure success, is a prerequisite for any successful application of machine learning, and it isn't
+something that advanced tools like Keras and TensorFlow can help you with. As a reminder, here's a quick summary of the typical machine-learning workflow:
+1. Define the problem: What data is available, and what are you trying to predict? Will you need to collect more data or hire people to manually label a dataset?
+2. Identify a way to reliably measure sucess on your goal. For simple tasks, this may be prediction accuracy, but in many cases it will require sophisticated domain-specific
+metrics.
