@@ -87,3 +87,7 @@ number of classes, and a *softmax* activation. If your targets are one-hot encod
 
 To perform *multilabel categorical classification* (where each sample can have several classes), end your stack of layers with a *Dense* layer with a number of units equal
 to the number of classes and a *sigmoid* activation, and use *binary_crossentropy* as the loss. Your targets should be k-hot encoded.
+
+To perform *regression* toward a vector of continuous values, end your stack of layers with a *Dense* layer with a number of units equal to the number of values you're trying
+to predict (often a single one, such as the price of a house), and no activation. Several losses can used for regression, most commonly *mean_squared_error* (MSE) and
+*mean_absolute_error* (MAE).
