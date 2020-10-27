@@ -105,3 +105,6 @@ separable convolutions is definitely the way to go.
 #### RNNs
 *Recurrent neural networks* (RNNs) work by processing sequences of inputs one timestep at a time and maintaining a *state* throughout (a state is typically a vector or set
 of vectors: a point in a geometric space of states).
+
+Three RNN layers are available in Keras: *SimpleRNN, GRU,* and *LSTM.* For most practical purposes, you should use either *GRU* or *LSTM. LSTM* is the more powerful of the
+two but is also more expensive; you can think of *GRU* as a simpler, cheaper alternative to it.
