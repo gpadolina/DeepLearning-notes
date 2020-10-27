@@ -80,3 +80,7 @@ they're called *densely connected* because the units of a *Dense* layer are conn
 
 Remember: to perform *binary classification,* end your stack of layers with a *Dense* layer with a single unit and a *sigmoid* activation, and use *binary_crossentropy* as
 the loss. Your targets should be either 0 or 1.
+
+To perform *single-label classification* (where each sample has exactly one class, no more), end your stack of layers with a *Dense* layer with a number of units equal to the
+number of classes, and a *softmax* activation. If your targets are one-hot encoded, use *categorical_crossentropy* as the loss; if they're integers, use
+*sparse_categorical_crossentropy.*
