@@ -74,3 +74,9 @@ Here's a quick overview of the mapping between input modalities and appropriate 
 * *Video data* - Either 3D convnets (if you need to capture motion effects) or a combination of a frame-level 2D convnet for feature extraction followed by either an RNN or
 a 1D convnet to process the resulting sequences.
 * *Volumetric data* - 3D convnets.
+#### Densely connected networks
+A densely connected network is a stack of *Dense* layers, meant to process vector data (batches of vectors). Such networks assume no specific structure in the input features:
+they're called *densely connected* because the units of a *Dense* layer are connected to every other unit.
+
+Remember: to perform *binary classification,* end your stack of layers with a *Dense* layer with a single unit and a *sigmoid* activation, and use *binary_crossentropy* as
+the loss. Your targets should be either 0 or 1.
