@@ -65,3 +65,12 @@ network is meant for a specific input modality: a network architecture (dense, c
 space* within which the search for a good model will proceed.
 
 Here's a quick overview of the mapping between input modalities and appropriate network architectures:
+* *Vector data* - Densely connected network (*Dense* layers).
+* *Image data* - 2D convnets.
+* *Sound data (for example, waveform)* - Either 1D convnets (preferred) or RNNs.
+* *Text data* - Either 1D convnets (preferred) or RNNs.
+* *Timeseries data* - Either RNNs (preferred) or 1D convnets.
+* *Other types of sequence data* - Either RNNs or 1D convnets. Prefer RNNs if data ordering is strongly meaningful (for example, for timeseries, but not for text).
+* *Video data* - Either 3D convnets (if you need to capture motion effects) or a combination of a frame-level 2D convnet for feature extraction followed by either an RNN or
+a 1D convnet to process the resulting sequences.
+* *Volumetric data* - 3D convnets.
