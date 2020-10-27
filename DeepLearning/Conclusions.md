@@ -91,3 +91,7 @@ to the number of classes and a *sigmoid* activation, and use *binary_crossentrop
 To perform *regression* toward a vector of continuous values, end your stack of layers with a *Dense* layer with a number of units equal to the number of values you're trying
 to predict (often a single one, such as the price of a house), and no activation. Several losses can used for regression, most commonly *mean_squared_error* (MSE) and
 *mean_absolute_error* (MAE).
+#### Convnets
+Convolution layers look at spatially local patterns by applying the same geometric transformation to different spatial locations *(patches)* in an input tensor. You can use
+the *Conv1D* layer to process sequences (especially text - it doesn't work as well on timeseries, which often don't follow the translation-invariance assumption), the
+*Conv2D* layer to process images, and the *Conv3D* layers to process volumes.
