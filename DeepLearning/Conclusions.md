@@ -59,3 +59,9 @@ and test-set labels shouldn't leak into the training data: for instance, with te
 6. Gradually refine your model architecture by tuning hyperparameters and adding regularization. Make changes based on performance on the validation data only, not the test
 data or the training data. Remember that you should get your model to overfit (thus identifying a model capacity level that's greater than you need) and only then begin to
 add regularization or downsize your model.
+#### Key network architectures
+The three families of network architectures that you should be familiar with are *densely connected networks, convolutional networks,* and *recurrent networks.* Each type of
+network is meant for a specific input modality: a network architecture (dense, convolutional, recurrent) encodes *assumptions* about the structure of the data: a *hypothesis
+space* within which the search for a good model will proceed.
+
+Here's a quick overview of the mapping between input modalities and appropriate network architectures:
