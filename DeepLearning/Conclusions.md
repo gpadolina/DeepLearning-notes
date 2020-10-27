@@ -95,3 +95,10 @@ to predict (often a single one, such as the price of a house), and no activation
 Convolution layers look at spatially local patterns by applying the same geometric transformation to different spatial locations *(patches)* in an input tensor. You can use
 the *Conv1D* layer to process sequences (especially text - it doesn't work as well on timeseries, which often don't follow the translation-invariance assumption), the
 *Conv2D* layer to process images, and the *Conv3D* layers to process volumes.
+
+Convnets are often ended with either a *Flatten* operation or a global pooling layer, turning spatial feature maps into vectors, followed by *Dense* layers to achieve
+classification or regression.
+
+Note that it's highly likely that regular convolutions will soon be mostly (or completely) replaced by an equivalent but faster and representationally efficient alternative:
+the *depthwise separable convolution* (*SeparableConv2D* layer). This is true for 3D, 2D, and 1D inputs. When you're building a new network from scratch, using depthwise
+separable convolutions is definitely the way to go.
