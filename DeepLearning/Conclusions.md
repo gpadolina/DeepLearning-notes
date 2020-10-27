@@ -102,3 +102,6 @@ classification or regression.
 Note that it's highly likely that regular convolutions will soon be mostly (or completely) replaced by an equivalent but faster and representationally efficient alternative:
 the *depthwise separable convolution* (*SeparableConv2D* layer). This is true for 3D, 2D, and 1D inputs. When you're building a new network from scratch, using depthwise
 separable convolutions is definitely the way to go.
+#### RNNs
+*Recurrent neural networks* (RNNs) work by processing sequences of inputs one timestep at a time and maintaining a *state* throughout (a state is typically a vector or set
+of vectors: a point in a geometric space of states).
