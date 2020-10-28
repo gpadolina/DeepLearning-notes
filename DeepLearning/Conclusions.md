@@ -147,3 +147,7 @@ The space of applications that can be implemented with deep learning is nearly i
 techniques - even given vast amounts of human-annotated data. In general, anything that requires reasoning - like programming or applying the scientific method - long-term
 planning, and algorithmic data manipulation is out of reach for deep-learning models, no matter how much data you throw at them. Even learning a sorting algorithm with a
 deep neural network is tremendously difficult.
+
+This is because a deep-learning model is just a *chain of simple, continuous geometric transformations* mapping one vector space into another. All it can do is map one data
+manifold X into another manifold Y, assuming the existence of a learnable continuous transform from X to Y. A deep-learning model can be interpreted as a kind of program;
+but, inversely, *most programs can't be expressed as deep-learning models.*
