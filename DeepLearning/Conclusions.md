@@ -165,3 +165,6 @@ in our sensorimotor experience as humans. Machine-learning models have no access
 As a machine-learning practitioner, always be mindful of this, and never fall into the trap of believing that neural networks understand the task they perform - they don't,
 at least not in a way that would make sense to us.
 #### Local generalization vs. extreme generalization
+Humans are capable of far more than mapping immediate stimuli to immediate responses, as a deep network, or maybe an insect, would. We can merge together known concepts to
+represent something we've never experienced before. This ability to handle hypotheticals, to expand our mental model space far beyond what we can experience directly - to
+perform *abstraction* and *reasoning* - is arguably the defining chracteristic of human recognition.
