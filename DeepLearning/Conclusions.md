@@ -155,3 +155,6 @@ but, inversely, *most programs can't be expressed as deep-learning models.*
 Scaling up current deep-learning techniques by stacking more layers and using more training data can only superficially palliate some of these issues. It won't solve the more
 fundamental problems that deep-learning models are limited in what they can represent and that most of the programs you may wish to learn can't be expressed as a continuous
 geometric morphing of a data manifold.
+#### The risk of anthropomorphizing machine-learning models
+One real risk with contemporary AI is misinterpreting what deep-learning models do and overestimating their abilities. A fundamental feature of humans is our *theory of mind:*
+our tendency to project intentions, beliefs, and knowledge on the things around us.
