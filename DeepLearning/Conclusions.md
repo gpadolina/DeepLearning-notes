@@ -131,3 +131,8 @@ Mapping text to text
 * *Summarization* - Mapping a long article to a short summary of the article
 Mapping images to text
 * *Captioning* - Mapping images to short captions describing the contents of the images
+Mapping text to images
+* *Conditioned image generation* - Mapping a short text description to images matching the description
+* *Logo generation/selection* - Mapping the name and description of a company to the company's logo
+Mapping images to images
+* *Super-resolution* - Mapping downsized images to higher-resolution versions of the same images
