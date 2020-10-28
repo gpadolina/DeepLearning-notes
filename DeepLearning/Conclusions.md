@@ -141,3 +141,9 @@ Mapping images and text to text
 * *Visual QA* - Mapping images and natural-language questions about the contents of images to natural-languages answers
 Mapping video and text to text
 * *Video QA* - Mapping short videos and natural-language questions about the contents of videos to natural-language answers
+
+## The limitations of deep learning
+The space of applications that can be implemented with deep learning is nearly infinite. And yet, many applications are completely out of reach for current deep-learning
+techniques - even given vast amounts of human-annotated data. In general, anything that requires reasoning - like programming or applying the scientific method - long-term
+planning, and algorithmic data manipulation is out of reach for deep-learning models, no matter how much data you throw at them. Even learning a sorting algorithm with a
+deep neural network is tremendously difficult.
