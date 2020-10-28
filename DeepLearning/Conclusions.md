@@ -125,3 +125,9 @@ Mapping timeseries data to vector data
 * *Weather prediction* - Mapping timeseries of weather data in a grid of locations of weather data the following week at a specific location
 * *Brain-computer interfaces* - Mapping timeseries of magnetoencephalogram (MEG) data to computer commands
 * *Behavioral targeting* - Mapping timeseries of user interactions on a website to the probability that a user will buy something
+Mapping text to text
+* *Smart reply* - Mapping emails to possible one-line replies
+* *Answering questions* - Mapping general-knowledge questions to answers
+* *Summarization* - Mapping a long article to a short summary of the article
+Mapping images to text
+* *Captioning* - Mapping images to short captions describing the contents of the images
