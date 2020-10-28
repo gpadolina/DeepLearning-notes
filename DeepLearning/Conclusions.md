@@ -158,3 +158,6 @@ geometric morphing of a data manifold.
 #### The risk of anthropomorphizing machine-learning models
 One real risk with contemporary AI is misinterpreting what deep-learning models do and overestimating their abilities. A fundamental feature of humans is our *theory of mind:*
 our tendency to project intentions, beliefs, and knowledge on the things around us.
+
+In short, deep-learning models don't have any understanding of their input - at least, not in a human sense. Our own understanding of images, sounds, and language is grounded
+in our sensorimotor experience as humans. Machine-learning models have no access to such experiences and thus can't understand their inputs in a human relatable way.
