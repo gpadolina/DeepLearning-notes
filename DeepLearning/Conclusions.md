@@ -151,3 +151,7 @@ deep neural network is tremendously difficult.
 This is because a deep-learning model is just a *chain of simple, continuous geometric transformations* mapping one vector space into another. All it can do is map one data
 manifold X into another manifold Y, assuming the existence of a learnable continuous transform from X to Y. A deep-learning model can be interpreted as a kind of program;
 but, inversely, *most programs can't be expressed as deep-learning models.*
+
+Scaling up current deep-learning techniques by stacking more layers and using more training data can only superficially palliate some of these issues. It won't solve the more
+fundamental problems that deep-learning models are limited in what they can represent and that most of the programs you may wish to learn can't be expressed as a continuous
+geometric morphing of a data manifold.
