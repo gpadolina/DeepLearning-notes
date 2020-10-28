@@ -167,4 +167,12 @@ at least not in a way that would make sense to us.
 #### Local generalization vs. extreme generalization
 Humans are capable of far more than mapping immediate stimuli to immediate responses, as a deep network, or maybe an insect, would. We can merge together known concepts to
 represent something we've never experienced before. This ability to handle hypotheticals, to expand our mental model space far beyond what we can experience directly - to
-perform *abstraction* and *reasoning* - is arguably the defining chracteristic of human recognition.
+perform *abstraction* and *reasoning* - is arguably the defining chracteristic of human recognition. *Extreme generalization:* an ability to adapt to novel,
+never-before-experienced situations using lilttle data or even no new data at all.
+
+This stands in sharp contrast with what deep nets do, which is *local generalization.* On the other hand, humans are able to learn safe behaviors without having to die even
+once - again, thanks to our power of abstract modeling of hypothetical situations.
+
+In short, despite our progress on machine perception, we're still far from human-level AI. Our models can only perform local generalization, adapting to new situations that
+must be similar to past data, whereas human cognition is capable of extreme generalization, quickly adapting to radically novel situations and planning for long-term future
+situations.
