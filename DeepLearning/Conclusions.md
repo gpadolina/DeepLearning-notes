@@ -108,3 +108,10 @@ of vectors: a point in a geometric space of states).
 
 Three RNN layers are available in Keras: *SimpleRNN, GRU,* and *LSTM.* For most practical purposes, you should use either *GRU* or *LSTM. LSTM* is the more powerful of the
 two but is also more expensive; you can think of *GRU* as a simpler, cheaper alternative to it.
+
+If you aren't stacking any further RNN layers, then it's common to return only the last output, which contains information about the entire sequence.
+#### The space of possibilities
+Mapping vector data to vector data
+* *Predictive healthcare* - Mapping patient medical records to predictions of patient outcomes
+* *Behavioral targeting* - Mapping a set of website attributes with data on how long a user will spend on the website
+* *Product quality control* - Mapping a set of attributes relative to an instance of a manufactured product with the probability that the product will fail by next year
