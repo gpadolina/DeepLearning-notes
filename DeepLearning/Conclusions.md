@@ -121,3 +121,7 @@ Mapping image data to vector data
 * *Board game AI* - Mapping GO and chess boards to the next player move
 * *Diet helper* - Mapping pictures of a dish to its calorie count
 * *Age prediction* - Mapping selfies to the age of the person
+Mapping timeseries data to vector data
+* *Weather prediction* - Mapping timeseries of weather data in a grid of locations of weather data the following week at a specific location
+* *Brain-computer interfaces* - Mapping timeseries of magnetoencephalogram (MEG) data to computer commands
+* *Behavioral targeting* - Mapping timeseries of user interactions on a website to the probability that a user will buy something
