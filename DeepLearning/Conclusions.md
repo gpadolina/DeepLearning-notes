@@ -179,3 +179,8 @@ situations.
 #### Wrapping up
 Here's what you should remember: the only real success of deep learning so far has been the ability to map space X to space Y using a continuous geometric transform, given
 large amounts of human-annotated data. Doing this well is a game-changer for essentially every industry, but it's still a long way from human-level AI.
+
+## The future of deep learning
+At a high level, these are the main directions where deep learning is heading:
+* *Models closer to general-purpose computer programs,* built on top of far richer primitives than the current differentiable layers. This is how we'll get to *reasoning*
+and *abstraction,* the lack of which is the fundamental weakness of current models.
