@@ -115,3 +115,9 @@ Mapping vector data to vector data
 * *Predictive healthcare* - Mapping patient medical records to predictions of patient outcomes
 * *Behavioral targeting* - Mapping a set of website attributes with data on how long a user will spend on the website
 * *Product quality control* - Mapping a set of attributes relative to an instance of a manufactured product with the probability that the product will fail by next year
+Mapping image data to vector data
+* *Doctor assistant* - Mapping slides of medical images with a prediction about the presence of a tumor
+* *Self-driving vehicle* - Mapping car dash-cam video frames to steering wheel angle commands
+* *Board game AI* - Mapping GO and chess boards to the next player move
+* *Diet helper* - Mapping pictures of a dish to its calorie count
+* *Age prediction* - Mapping selfies to the age of the person
