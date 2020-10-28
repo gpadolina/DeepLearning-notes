@@ -176,3 +176,6 @@ once - again, thanks to our power of abstract modeling of hypothetical situation
 In short, despite our progress on machine perception, we're still far from human-level AI. Our models can only perform local generalization, adapting to new situations that
 must be similar to past data, whereas human cognition is capable of extreme generalization, quickly adapting to radically novel situations and planning for long-term future
 situations.
+#### Wrapping up
+Here's what you should remember: the only real success of deep learning so far has been the ability to map space X to space Y using a continuous geometric transform, given
+large amounts of human-annotated data. Doing this well is a game-changer for essentially every industry, but it's still a long way from human-level AI.
