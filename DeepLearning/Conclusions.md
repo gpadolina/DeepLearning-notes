@@ -136,3 +136,8 @@ Mapping text to images
 * *Logo generation/selection* - Mapping the name and description of a company to the company's logo
 Mapping images to images
 * *Super-resolution* - Mapping downsized images to higher-resolution versions of the same images
+* *Visual depth sensing* - Mapping images of indoor environments to maps of depth predictions
+Mapping images and text to text
+* *Visual QA* - Mapping images and natural-language questions about the contents of images to natural-languages answers
+Mapping video and text to text
+* *Video QA* - Mapping short videos and natural-language questions about the contents of videos to natural-language answers
