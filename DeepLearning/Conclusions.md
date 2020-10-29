@@ -209,3 +209,8 @@ about each individual task than a model on that specific task only.
 
 When the system finds itself developing similar program subroutines for several different tasks, it can come up with an abstract, reusable version of the subroutine and store
 it in the global library. Such a process will implement *abstraction:* a necessary component for achieving extreme generalization.
+#### The long-term vision
+In short, here's a long-term vision for machine learning:
+* Models will be more like programs and will have capabilities that go far beyong the continuous geometric transformations of the input data we currently work with. These
+programs will arguably be much closer to the abstract mental models that humans maintain about their surroundings and themselves, and they will be capable of stronger
+generalization due to their rich algorithmic nature.
