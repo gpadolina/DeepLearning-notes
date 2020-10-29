@@ -195,4 +195,11 @@ It's important to note that RNNs have slightly fewer limitations than feedforwar
 geometric transformations *repeatedly applied inside a for loop.* The temporal for loop is itself hardcoded by human developers: it's a built-in assumption of the network.
 
 A realted subfield of AI that I think may be about to take off in a big way is *program synthesis,* in particular neural program systhesis. Program synthesis consists of
-automatically generating simple programs by using a search algorithm (possibly genetic search, as in genetic programming) to explore a large space of possible programs.
+automatically generating simple programs by using a search algorithm (possibly genetic search, as in genetic programming) to explore a large space of possible programs. The
+search stops when a program is found that matches the required specifications, often provided as a set of input-output pairs.
+#### Automated machine learning
+Currently, most of the job of a deep-learning engineer consists of munging data with Python scripts and then tuning the architecture and hyperparameters of a deep network
+at length to get a working model - or even to get a state-of-the-art model, if the engineer is that ambitious. Needless to say, that isn't an optimal setup.
+#### Lifelong learning and modular subroutine reuse
+A remarkable observation has been made repeatedly in recent years: training the *same* model to do several loosely connected tasks at the same time results in a model that's
+*better at each task.*
