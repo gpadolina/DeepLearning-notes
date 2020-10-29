@@ -214,3 +214,6 @@ In short, here's a long-term vision for machine learning:
 * Models will be more like programs and will have capabilities that go far beyong the continuous geometric transformations of the input data we currently work with. These
 programs will arguably be much closer to the abstract mental models that humans maintain about their surroundings and themselves, and they will be capable of stronger
 generalization due to their rich algorithmic nature.
+* In particular, models will blend *algorithmic modules* providing formal reasoning, search, and abstraction capabilities with *geometric modules* providing informal intuition
+and pattern-recognition capabilities. AlphaGo (a system that required a lot of manual software engineering and human-made design decisions) provides an early example of
+what such a blend of symbolic and geometric AI could look like.
