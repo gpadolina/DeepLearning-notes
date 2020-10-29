@@ -226,3 +226,6 @@ experience with similar tasks. In the same way, humans can quickly learn to play
 derived from this previous experience are abstract and program-like, rather than a basic mapping between stimuli and action.
 * As such, this perpetually learning model-growing system can be interpreted as an *artificial general intelligence* (AGI). But don't expect any singularitarian robot
 apocalypse to ensue: that's pure fantasy, coming from a long series of profound misunderstanding of both intelligence and technology.
+## Staying up to date in a fast-moving field
+With an exponential increase in financial resources and research headcount since 2013, the field as a whole is now moving at a frenetic pace. What you've learned here won't
+stay relevant forever, and it isn't all you need for the rest of your career.
