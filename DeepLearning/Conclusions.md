@@ -220,3 +220,7 @@ what such a blend of symbolic and geometric AI could look like.
 * Such models will be *grown* automatically rather than hardcoded by human engineers, using modular parts store in a global library of reusable subroutines - a library evolved
 by learning high-performing models on thousands of previous tasks and datasets. As frequent problem-solving patterns are identified by the meta-learning system, they will
 be turned into reusable subroutines - much like functions and classes in software engineering - and added to the global libary. This will achieve *abstraction.*
+* This global library and associated model-growing system will be able to achieve some form of human-like extreme generalization: given a new task or situation, the system
+will be able to assemble a new working model appropriate for the task using very little data, thanks to rich program-like primitives that generalize well, and extensive
+experience with similar tasks. In the same way, humans can quickly learn to play a complex new video game if they have experience with many previous games, because the models
+derived from this previous experience are abstract and program-like, rather than a basic mapping between stimuli and action.
