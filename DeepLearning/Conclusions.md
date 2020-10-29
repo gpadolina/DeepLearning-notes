@@ -203,3 +203,9 @@ at length to get a working model - or even to get a state-of-the-art model, if t
 #### Lifelong learning and modular subroutine reuse
 A remarkable observation has been made repeatedly in recent years: training the *same* model to do several loosely connected tasks at the same time results in a model that's
 *better at each task.*
+
+This is fairly intuitive: there's always *some* information overlap between seemingly disconnected tasks, and a joint model has access to a greater amount of information
+about each individual task than a model on that specific task only.
+
+When the system finds itself developing similar program subroutines for several different tasks, it can come up with an abstract, reusable version of the subroutine and store
+it in the global library. Such a process will implement *abstraction:* a necessary component for achieving extreme generalization.
