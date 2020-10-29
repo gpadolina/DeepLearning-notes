@@ -229,3 +229,7 @@ apocalypse to ensue: that's pure fantasy, coming from a long series of profound 
 ## Staying up to date in a fast-moving field
 With an exponential increase in financial resources and research headcount since 2013, the field as a whole is now moving at a frenetic pace. What you've learned here won't
 stay relevant forever, and it isn't all you need for the rest of your career.
+#### Practice on real-world problems using Kaggle
+One effective way to acquire real-world experience is to try your hand at machine learning competitions on Kaggle.
+
+Most competitions are won using either the XGBoost library for shallow machine learning or Keras for deep learning.
