@@ -240,3 +240,5 @@ extremely fast: all new findings are immediately available for all to see and to
 
 An important downside is that the sheer quatity of new papers posted every day on arXiv makes it impossible to even skim them all; and the fact that they aren't peer reviewed
 makes it difficult to identify those that are both important and high quality.
+#### Final words
+Given the progress made so far, most of the fundamental questions in AI remain unanswered. Many haven't even been properly asked yet.
