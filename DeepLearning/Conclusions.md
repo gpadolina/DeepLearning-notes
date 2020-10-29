@@ -233,3 +233,7 @@ stay relevant forever, and it isn't all you need for the rest of your career.
 One effective way to acquire real-world experience is to try your hand at machine learning competitions on Kaggle.
 
 Most competitions are won using either the XGBoost library for shallow machine learning or Keras for deep learning.
+#### Read about the latest developments on arXiv
+The large majority of deep-learning researches upload any paper they write to arXiv shortly after completion. This allows them to plant a flag and claim a specific finding
+without waiting for a conference acceptance, which is necessary given the fast pace of research and the intense competition in the field. It also allows the field to move
+extremely fast: all new findings are immediately available for all to see and to build on.
