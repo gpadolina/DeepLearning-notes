@@ -224,3 +224,5 @@ be turned into reusable subroutines - much like functions and classes in softwar
 will be able to assemble a new working model appropriate for the task using very little data, thanks to rich program-like primitives that generalize well, and extensive
 experience with similar tasks. In the same way, humans can quickly learn to play a complex new video game if they have experience with many previous games, because the models
 derived from this previous experience are abstract and program-like, rather than a basic mapping between stimuli and action.
+* As such, this perpetually learning model-growing system can be interpreted as an *artificial general intelligence* (AGI). But don't expect any singularitarian robot
+apocalypse to ensue: that's pure fantasy, coming from a long series of profound misunderstanding of both intelligence and technology.
