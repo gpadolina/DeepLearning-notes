@@ -217,3 +217,6 @@ generalization due to their rich algorithmic nature.
 * In particular, models will blend *algorithmic modules* providing formal reasoning, search, and abstraction capabilities with *geometric modules* providing informal intuition
 and pattern-recognition capabilities. AlphaGo (a system that required a lot of manual software engineering and human-made design decisions) provides an early example of
 what such a blend of symbolic and geometric AI could look like.
+* Such models will be *grown* automatically rather than hardcoded by human engineers, using modular parts store in a global library of reusable subroutines - a library evolved
+by learning high-performing models on thousands of previous tasks and datasets. As frequent problem-solving patterns are identified by the meta-learning system, they will
+be turned into reusable subroutines - much like functions and classes in software engineering - and added to the global libary. This will achieve *abstraction.*
