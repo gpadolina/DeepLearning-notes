@@ -190,3 +190,9 @@ and *abstraction,* the lack of which is the fundamental weakness of current mode
 #### Models are programs
 As noted in the previous section, a necessary transformational development that we can expect in the field of machine learning is a move away from models that perform purely
 *pattern recognition* and can only achieve *local generalization,* toward models capable of *abstraction* and *reasoning* that can achieve *extreme generalization.*
+
+It's important to note that RNNs have slightly fewer limitations than feedforward networks. That's because RNNs are a bit more than mere geometric transformations: they're
+geometric transformations *repeatedly applied inside a for loop.* The temporal for loop is itself hardcoded by human developers: it's a built-in assumption of the network.
+
+A realted subfield of AI that I think may be about to take off in a big way is *program synthesis,* in particular neural program systhesis. Program synthesis consists of
+automatically generating simple programs by using a search algorithm (possibly genetic search, as in genetic programming) to explore a large space of possible programs.
