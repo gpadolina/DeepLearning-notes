@@ -184,3 +184,9 @@ large amounts of human-annotated data. Doing this well is a game-changer for ess
 At a high level, these are the main directions where deep learning is heading:
 * *Models closer to general-purpose computer programs,* built on top of far richer primitives than the current differentiable layers. This is how we'll get to *reasoning*
 and *abstraction,* the lack of which is the fundamental weakness of current models.
+* *New forms of learning that make the previous point possible,* allowing models to move away from differentiable transforms.
+* *Models that require less involvement from human engineers.* It shouldn't be your jobs to tune knobs endlessly.
+* *Greater, systematics reuse of previously learned features and architectures,* such as meta-learning systems using reusable and modular program subroutines.
+#### Models are programs
+As noted in the previous section, a necessary transformational development that we can expect in the field of machine learning is a move away from models that perform purely
+*pattern recognition* and can only achieve *local generalization,* toward models capable of *abstraction* and *reasoning* that can achieve *extreme generalization.*
